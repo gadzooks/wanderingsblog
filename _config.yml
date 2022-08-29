@@ -29,6 +29,17 @@ github_username: gadzooks
 
 # Build settings
 theme: minima
+show_excerpts: true
+
+minima:
+  skin: dark
+  # date_format: "%b %-d, %Y"
+
+  # generate social links in footer
+  social_links:
+    github:  gadzooks
+    flickr: amityville
+
 plugins:
   - jekyll-seo-tag
   - jekyll-feed
