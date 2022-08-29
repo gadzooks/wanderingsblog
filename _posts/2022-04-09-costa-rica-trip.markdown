@@ -27,10 +27,11 @@ categories: travel international
 | 9 	| Fly to Seattle  	| 	|  Marriott Hotel   	|   	|
 
 
-# Things to get in Costa Rica
+# Local services we used
 - Car rental (Vamos). They dropped off and picked up the car from the hotels we stayed in for a very reasonable price ($20ish)
+- Get a SIM card with Kolbi. great coverage
 
-# Things to take
+# What you will need to bring with you
 - Head lamps
 - Baby wipes ?
 - Small hand sanitizer(s)
