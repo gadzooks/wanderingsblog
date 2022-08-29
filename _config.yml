@@ -22,7 +22,7 @@ title: Weekend wanderings
 email: karwande@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   This is my personal blog to document my travels / experiences
-baseurl: '' # the subpath of your site, e.g. /blog
+baseurl: '/wanderingsblog' # the subpath of your site, e.g. /blog
 url: https://gadzooks.github.io # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: whereisamit
 github_username: gadzooks
