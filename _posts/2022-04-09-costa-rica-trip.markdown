@@ -5,7 +5,7 @@ date: 2022-04-09 17:16:42 -0700
 categories: travel international
 ---
 
-![beautiful Arenal mountain]({{ site.baseurl }}/assets/images/arenal.jpg)
+{% flickr 52074759950 "Arenal in the clouds" style="float: right;" %}
 
 >I fell in love with Costa Rica the first time I went there. I was my first trip outside of the US and I was amazed by the natural beauty and kindness of the people.
 

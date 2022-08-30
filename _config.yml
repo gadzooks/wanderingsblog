@@ -44,10 +44,12 @@ plugins:
   - jekyll-seo-tag
   - jekyll-feed
   - jekyll-assets
+  - jekyll-flickr
 # https://thestartledbadger.github.io/2017/09/24/Adding_SEO_to_github_pages.html
 
 whitelist:
   - jekyll-seo-tag
+  - jekyll-flickr
 
 # github pages : https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/about-github-pages-and-jekyll
 lsi: false
@@ -60,6 +62,14 @@ gist:
 kramdown:
   math_engine: mathjax
   syntax_highlighter: rouge
+
+flickr:
+  widths: [320, 640, 800, 1024, 1600]
+  width_legacy: 1024
+  width_viewport: 100vw
+  figcaption: true
+  license: true
+  caption: true
 
 assets:
   sources:
