@@ -19,6 +19,5 @@ jobs:
       - uses: helaili/jekyll-action@2.4.0    # Choose any one of the Jekyll Actions
         with:                                # Some relative inputs of your action
           token: ${{ secrets.GITHUB_TOKEN }}
-        env:                                # Some relative inputs of your action
           FLICKR_API_KEY: ${{ FLICKR_API_KEY }}
           FLICKR_API_SECRET: ${{ FLICKR_API_SECRET }}
