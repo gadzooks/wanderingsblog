@@ -24,11 +24,12 @@ jobs:
         env:
           KEY: ${{ secrets.FLICKR_API_KEY }}
           SECRET: ${{ secrets.FLICKR_API_SECRET }}
-      - name: echo api key
-        run: echo "api key is ${{ env.F_API }} and name is ${{ env.F_SECRET }} "
-      # - uses: helaili/jekyll-action@2.4.0    # Choose any one of the Jekyll Actions
-      #   with:                                # Some relative inputs of your action
-      #     token: ${{ secrets.GITHUB_TOKEN }}
-      #   env:
-      #     FLICKR_API_KEY: ${{ env.FLICKR_API_KEY }}
-      #     FLICKR_API_SECRET: ${{ env.FLICKR_API_SECRET }}
+      # for debugging
+      # - name: echo api key
+      #   run: echo "api key is ${{ env.F_API }} and name is ${{ env.F_SECRET }} "
+      - uses: helaili/jekyll-action@2.4.0    # Choose any one of the Jekyll Actions
+        with:                                # Some relative inputs of your action
+          token: ${{ secrets.GITHUB_TOKEN }}
+        env:
+          FLICKR_API_KEY: ${{ env.F_API }}
+          FLICKR_API_SECRET: ${{ env.F_SECRET }}
