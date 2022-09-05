@@ -14,6 +14,14 @@ permalink: /:title/
 
 # Authors
 authors:
+  amit:
+    name: Amit
+    display_name: Amit
+    gravatar: e56154546cf4be74e393c62d1ae9f9d4
+    email: kareande@gmail.com
+    web: https://www.weekendwanderings.com
+    twitter: https://twitter.com/whereisamit
+    description: "Author of WeekendWanderings"
   sal:
     name: Sal
     display_name: Sal
