@@ -1,5 +1,5 @@
 # from http://www.marran.com/tech/integrating-flickr-and-jekyll
-require 'flickraw'
+require 'flickr'
 
 module Jekyll
 
@@ -46,9 +46,9 @@ module Jekyll
     
       # Alternatively, if the API key and Shared Secret are not provided, FlickRaw will attempt to read them
       # from environment variables:
-      # ENV['FLICKRAW_API_KEY']
-      # ENV['FLICKRAW_SHARED_SECRET']
-      flickr = FlickRaw::Flickr.new
+      # ENV['FLICKR_API_KEY']
+      # ENV['FLICKR_SHARED_SECRET']
+      flickr = ::Flickr.new
     
       photos = flickr.photosets.getPhotos :photoset_id => photoset
     
