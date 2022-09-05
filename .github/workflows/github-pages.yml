@@ -19,17 +19,13 @@ jobs:
       - name: Decode flickr api key and secret and save in env
         id: step_one
         run: |
-          echo "F_API=$(echo -n $KEY | base64 -d)" >> $GITHUB_ENV
-          echo "F_SECRET=$(echo -n $SECRET | base64 -d)" >> $GITHUB_ENV
-        env:
-          KEY: ${{ secrets.FLICKR_API_KEY }}
-          SECRET: ${{ secrets.FLICKR_API_SECRET }}
+          echo "FLICKR_API_KEY=$(echo -n ${{ secrets.FLICKR_API_KEY }} | base64 -d)" >> $GITHUB_ENV
+          echo "FLICKR_API_SECRET=$(echo -n ${{ secrets.FLICKR_API_SECRET }} | base64 -d)" >> $GITHUB_ENV
       # for debugging
-      # - name: echo api key
-      #   run: echo "api key is ${{ env.F_API }} and name is ${{ env.F_SECRET }} "
-      - uses: helaili/jekyll-action@2.4.0    # Choose any one of the Jekyll Actions
-        with:                                # Some relative inputs of your action
+      - name: echo api key
+        run: |
+          echo ${{ env.FLICKR_API_KEY }}
+          # echo ${{ env.FLICKR_API_SECRET }}
+      - uses: helaili/jekyll-action@2.4.0 # Choose any one of the Jekyll Actions
+        with: # Some relative inputs of your action
           token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          FLICKR_API_KEY: ${{ env.F_API }}
-          FLICKR_API_SECRET: ${{ env.F_SECRET }}
