@@ -48,6 +48,9 @@ module Jekyll
       # from environment variables:
       # ENV['FLICKR_API_KEY']
       # ENV['FLICKR_SHARED_SECRET']
+      
+      # the Flickr gem can be configured to cache the API definition to a local file
+      ::Flickr.cache = '/tmp/flickr-api.yml'
       flickr = ::Flickr.new
     
       photos = flickr.photosets.getPhotos :photoset_id => photoset

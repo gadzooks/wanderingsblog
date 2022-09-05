@@ -9,17 +9,25 @@ jobs:
   github-pages:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/cache@v2
-        with:
-          path: vendor/bundle
-          key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
-          restore-keys: |
-            ${{ runner.os }}-gems-
-      - uses: helaili/jekyll-action@2.4.0 # Choose any one of the Jekyll Actions
-        with: # Some relative inputs of your action
-          token: ${{ secrets.GITHUB_TOKEN }}
-        env:
-          FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
-          FLICKR_API_SECRET: ${{ secrets.FLICKR_API_SECRET }}
-
+    - uses: actions/checkout@v2
+    - uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: '3.1.2' # Not needed with a .ruby-version file
+        bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+    # - uses: actions/cache@v2
+    #   with:
+    #     path: vendor/bundle
+    #     key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
+    #     restore-keys: |
+    #       ${{ runner.os }}-gems-
+    - uses: helaili/jekyll-action@2.4.0 # Choose any one of the Jekyll Actions
+      with: # Some relative inputs of your action
+        token: ${{ secrets.GITHUB_TOKEN }}
+        ruby-version: '3.1.2' # Not needed with a .ruby-version file
+      env:
+        # needed for flickr and jekyll-flickr gems
+        FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
+        # needed for jekyll-flickr gem
+        FLICKR_API_SECRET: ${{ secrets.FLICKR_API_SECRET }}
+        # needed for flickr gem
+        FLICKR_SHARED_SECRET: ${{ secrets.FLICKR_API_SECRET }}
