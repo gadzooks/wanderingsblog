@@ -15,7 +15,7 @@ module Jekyll
 
     # e find any posts that have a photoset parameter in their YAML front matter and process the photoset. 
     def generate_photosets(site)
-      site.posts.each do |p|
+      site.posts.docs.each do |p|
         p.data['photos'] = load_photos(p.data['photoset'], site) if p.data['photoset']
       end
     end
