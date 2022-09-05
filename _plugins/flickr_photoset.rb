@@ -82,13 +82,14 @@ module Jekyll
     
         photo = FlickrPhoto.new(title, urlFull, urlThumb, thumbType)
         returnSet.push photo
-    end
+      end
 
       #sleep a little so that you don't get in trouble for bombarding the Flickr servers
-  sleep 1
+      sleep 1
 
-  returnSet
+      returnSet
 
+    end
   end
 
   # It has a to_liquid function to determine what values get passed to the templates.
