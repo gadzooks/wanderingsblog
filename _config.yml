@@ -65,8 +65,6 @@ flickr:
   widths: [320, 640, 800, 1024, 1600]
   width_legacy: 1024
   width_viewport: 100vw
-  figcaption: true
-  license: true
   caption: true
     
 # Other
