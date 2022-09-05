@@ -52,14 +52,34 @@
   "frontMatter.taxonomy.categories": [
     " ",
     "a",
+    "b",
+    "c",
     "d",
     "e",
+    "g",
+    "h",
+    "i",
     "j",
     "k",
     "l",
+    "m",
+    "n",
+    "o",
     "p",
+    "r",
     "t",
     "u",
+    "v",
+    "w",
     "y"
+  ],
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "_pages",
+      "path": "[[workspace]]/_pages"
+    },
+    {
+      "path": "[[workspace]]/_posts"
+    }
   ]
 }

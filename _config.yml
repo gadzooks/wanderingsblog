@@ -67,6 +67,9 @@ flickr:
   width_viewport: 100vw
   caption: true
     
+flickr-photoset:
+  enabled: true
+    
 # Other
 markdown: kramdown
 
