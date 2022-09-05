@@ -3,7 +3,7 @@ name: gh-pages
 on:
   push:
     branches:
-      - ci-with-github-pages # or master before October 2020
+      - master # or master before October 2020
 
 jobs:
   github-pages:
@@ -16,16 +16,6 @@ jobs:
           key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile') }}
           restore-keys: |
             ${{ runner.os }}-gems-
-      # - name: Decode flickr api key and secret and save in env
-      #   id: step_one
-      #   run: |
-      #     echo "FLICKR_API_KEY=$(echo -n ${{ secrets.FLICKR_API_KEY }} | base64 -d)" >> $GITHUB_ENV
-      #     echo "FLICKR_API_SECRET=$(echo -n ${{ secrets.FLICKR_API_SECRET }} | base64 -d)" >> $GITHUB_ENV
-      # # for debugging
-      # - name: echo api key
-      #   run: |
-      #     echo ${{ env.FLICKR_API_KEY }}
-      #     # echo ${{ env.FLICKR_API_SECRET }}
       - uses: helaili/jekyll-action@2.4.0 # Choose any one of the Jekyll Actions
         with: # Some relative inputs of your action
           token: ${{ secrets.GITHUB_TOKEN }}
