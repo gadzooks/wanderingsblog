@@ -7,7 +7,7 @@ featured: false
 photoset: 72157650991053255
 ---
 
->[Mt Dickerman](https://www.wta.org/go-hiking/hikes/mount-dickerman) is one of the premier hikes in the Pacific North West. It is a beast of a climb but the rewards are amazing. 
+>[Mt Dickerman](https://www.wta.org/go-hiking/hikes/mount-dickerman){:target="_blank"} is one of the premier hikes in the Pacific North West. It is a beast of a climb but the rewards are amazing. 
 
 I decided to climb via the winter route for a change. The winter route, mainly follows the summer route but towards the top instead of taking switch-backs you go straight up as the crow flies.
 

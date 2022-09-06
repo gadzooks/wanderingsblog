@@ -9,7 +9,7 @@ featured: true
 photoset: 72157667203421688
 ---
 
->This was my first "solo" backpacking adventure. I decided to go on a long 4 day hike in the North Cascades and I picked a tough scenic one - [North Fork Sauk Trail](https://www.wta.org/go-hiking/hikes/white-pass-pilot-ridge-loop)
+>This was my first "solo" backpacking adventure. I decided to go on a long 4 day hike in the North Cascades and I picked a tough scenic one - [North Fork Sauk Trail](https://www.wta.org/go-hiking/hikes/white-pass-pilot-ridge-loop){:target="_blank"}
 
 Some of the things that made this very challenging were : 
 - My first solo trip

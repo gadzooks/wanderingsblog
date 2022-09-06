@@ -2,7 +2,7 @@
 layout: post
 title: 'Anatomy of a picture'
 # date: 2022-04-09 17:16:42 -0700
-categories: amit alaska whale travel sony
+categories: alaska humpback whale travel sony kenai-fjords national-park
 author: amit
 image: assets/images/08-14-21/whale-breach.jpg
 featured: true
