@@ -10,6 +10,7 @@ module ReadingTimeFilter
 
     words = input.split.size;
     minutes = ( words / words_per_minute ).floor
+    minutes = 1 if minutes == 0
     "#{minutes} min read"
   end
 end
