@@ -6,6 +6,7 @@ categories: travel international
 author: amit
 image: assets/images/costa-rica.jpeg
 featured: true
+photoset: 72177720298949036
 ---
 
 >I fell in love with Costa Rica the first time I went there. I was my first trip outside of the US and I was amazed by the natural beauty and kindness of the people.

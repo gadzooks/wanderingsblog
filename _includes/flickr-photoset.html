@@ -2,8 +2,15 @@
 
   <div class="box">
     <div class="box-title title clearfix">
-      <div class="left">Photos!</div>
-      <div class="right"><a href="http://www.flickr.com/photos/keith-marran/sets/{{ page.photoset }}/" target="_blank" title="View on Flickr"><img src="/images/icons/hand_drawn_flickr.png" alt="View on Flickr" /></a></div>
+      <div class="left">
+        <a href="http://www.flickr.com/photos/amityville/albums/{{ page.photoset }}/" target="_blank" title="View all pictures on Flickr">
+          View on Flickr
+          </a>
+
+      </div>
+      <!-- <div class="right"><a href="http://www.flickr.com/photos/amityville/sets/{{ page.photoset }}/" target="_blank" title="View on Flickr">
+        <img max-width="40px" width="100%" src="/assets/images/icons/Flickr-Logo.jpeg" alt="View on Flickr" /></a>
+      </div> -->
     </div>
     <div class="photo-thumbs">
     {% for photo in page.photos %}

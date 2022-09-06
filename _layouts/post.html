@@ -61,10 +61,6 @@ post_class: post-template
             {% endif %}
             <!-- End Featured Image -->
 
-            {% if page.photoset %}
-                {% include flickr-photoset.html %}
-            {% endif %}
-
             <!-- Post Content -->
             <div class="article-post">
                 <!-- Toc if any -->
@@ -80,6 +76,12 @@ post_class: post-template
                 <!-- End Toc -->
                 {{content}}
             </div>
+
+            {% if page.photoset %}
+                <div class="flickr-photoset-container">
+                {% include flickr-photoset.html %}
+                </div>
+            {% endif %}
 
             <!-- Rating -->
             {% if page.rating %}
