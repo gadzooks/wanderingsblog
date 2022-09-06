@@ -3,7 +3,7 @@ name: Build and deploy jekyll site
 on:
   push:
     branches:
-      - master
+      - upgrade-jekyll-action
       # - source
       # It is highly recommended that you only run this action on push to a
       # specific branch, eg. master or source (if on *.github.io repo)
@@ -27,6 +27,10 @@ jobs:
 
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
+        env:
+          FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
+          FLICKR_API_SECRET: ${{ secrets.FLICKR_API_SECRET }}
+          FLICKR_SHARED_SECRET: ${{ secrets.FLICKR_SHARED_SECRET }}
         with:
           enable_cache: true
           ### Enables caching. Similar to https://github.com/actions/cache.
