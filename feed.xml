@@ -5,8 +5,8 @@
     <description>My personal blog on travel / random musings</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 Sep 2022 00:53:37 +0000</pubDate>
-    <lastBuildDate>Tue, 06 Sep 2022 00:53:37 +0000</lastBuildDate>
+    <pubDate>Tue, 06 Sep 2022 01:14:18 +0000</pubDate>
+    <lastBuildDate>Tue, 06 Sep 2022 01:14:18 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -163,6 +163,42 @@
         <category>travel</category>
         
         <category>international</category>
+        
+      </item>
+    
+      <item>
+        <title>Anatomy of a picture</title>
+        <description>&lt;p&gt;This was one of the hardest (and luckiest) picture I have taken in a very long time. There is a lot that goes on behind taking a picture like this one. At the minimum :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;you to be at the right place (on a crowded whale watching boat deck) and at the right time (✔).&lt;/li&gt;
+  &lt;li&gt;your camera settings should be correct (in this case fast shutter speed and burst mode)&lt;/li&gt;
+  &lt;li&gt;you need to be pointing in the right direction. This was &lt;em&gt;the&lt;/em&gt; trickiest part since you could not really predict where the whale would breach. They seem to love diving deep in the ocean and surfacing at a different part.&lt;/li&gt;
+  &lt;li&gt;assuming you have all the above ready to go, you have to make sure that you click on the trigger the moment you see the whale breaching. Too soon and your camera buffer may fill up (you made sure you are using a fast camera card right ? 😄), too late and you miss key moments.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;All these things came together and I was able to capture this wonderful beast, not once but twice. The 2nd time was further away and so I didnt get as good shots (though I would have been happy with just those by themselves too.)&lt;/p&gt;
+
+&lt;figure class=&quot;flickr&quot;&gt;
+  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52337333795_5383381f54_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52337333795_5383381f54_n.jpg 320w, https://live.staticflickr.com/65535/52337333795_5383381f54_z.jpg 640w, https://live.staticflickr.com/65535/52337333795_5383381f54_c.jpg 800w, https://live.staticflickr.com/65535/52337333795_5383381f54_b.jpg 1024w, https://live.staticflickr.com/65535/52337333795_d75e6713b5_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Here is a picture of a typical whale watching boat&quot; /&gt;
+  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Here is a picture of a typical whale watching boat&lt;/div&gt;&lt;div class=&quot;license&quot;&gt;&amp;copy; Flickr/&lt;a href=&quot;https://www.flickr.com/photos/amityville/52337333795/&quot;&gt;Am-it&lt;/a&gt; &lt;a href=&quot;&quot;&gt;All Rights Reserved&lt;/a&gt;&lt;/div&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+</description>
+        <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+        <link>/whale-breach/</link>
+        <guid isPermaLink="true">/whale-breach/</guid>
+        
+        
+        <category>amit</category>
+        
+        <category>alaska</category>
+        
+        <category>whale</category>
+        
+        <category>travel</category>
+        
+        <category>sony</category>
         
       </item>
     
