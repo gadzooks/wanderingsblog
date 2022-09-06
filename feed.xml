@@ -5,8 +5,8 @@
     <description>My personal blog on travel / random musings</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 Sep 2022 01:14:18 +0000</pubDate>
-    <lastBuildDate>Tue, 06 Sep 2022 01:14:18 +0000</lastBuildDate>
+    <pubDate>Tue, 06 Sep 2022 01:45:52 +0000</pubDate>
+    <lastBuildDate>Tue, 06 Sep 2022 01:45:52 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -190,9 +190,9 @@
         <guid isPermaLink="true">/whale-breach/</guid>
         
         
-        <category>amit</category>
-        
         <category>alaska</category>
+        
+        <category>humpback</category>
         
         <category>whale</category>
         
@@ -200,12 +200,53 @@
         
         <category>sony</category>
         
+        <category>kenai-fjords</category>
+        
+        <category>national-park</category>
+        
+      </item>
+    
+      <item>
+        <title>Kenai Fjords National Park Alaska</title>
+        <description>&lt;blockquote&gt;
+  &lt;p&gt;You know you are in for a treat when you go whale watching in the Kenai Fjords national parks in Alaska. This was my second time in Seward and I went with the trusted &lt;a href=&quot;https://majormarine.com/&quot; target=&quot;_blank&quot;&gt;Major Marines Tours !&lt;/a&gt;. I think we picked the 6 or 7 hour version (the longer the better I feel)&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Some of the highlights of the trip were :&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Seeing Humpback whales breaching and playing with each other&lt;/li&gt;
+  &lt;li&gt;Seeing massive glaciers up close&lt;/li&gt;
+  &lt;li&gt;Puffins, otters, bald eagles&lt;/li&gt;
+  &lt;li&gt;Amazing drinks they make off the freshly harvested ice from the glacier&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;figure class=&quot;flickr&quot;&gt;
+  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52337295215_00719d819c_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52337295215_00719d819c_n.jpg 320w, https://live.staticflickr.com/65535/52337295215_00719d819c_z.jpg 640w, https://live.staticflickr.com/65535/52337295215_00719d819c_c.jpg 800w, https://live.staticflickr.com/65535/52337295215_00719d819c_b.jpg 1024w, https://live.staticflickr.com/65535/52337295215_fa737a0f2c_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;I believe I can fly!&quot; /&gt;
+  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;I believe I can fly!&lt;/div&gt;&lt;div class=&quot;license&quot;&gt;&amp;copy; Flickr/&lt;a href=&quot;https://www.flickr.com/photos/amityville/52337295215/&quot;&gt;Am-it&lt;/a&gt; &lt;a href=&quot;&quot;&gt;All Rights Reserved&lt;/a&gt;&lt;/div&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+</description>
+        <pubDate>Sat, 14 Aug 2021 00:00:00 +0000</pubDate>
+        <link>/kenai-fjords-national-park/</link>
+        <guid isPermaLink="true">/kenai-fjords-national-park/</guid>
+        
+        
+        <category>alaska</category>
+        
+        <category>whale-watching</category>
+        
+        <category>travel</category>
+        
+        <category>kenai-fjords</category>
+        
+        <category>national-park</category>
+        
       </item>
     
       <item>
         <title>My first solo backpacking with Baloo</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;This was my first “solo” backpacking adventure. I decided to go on a long 4 day hike in the North Cascades and I picked a tough scenic one - &lt;a href=&quot;https://www.wta.org/go-hiking/hikes/white-pass-pilot-ridge-loop&quot;&gt;North Fork Sauk Trail&lt;/a&gt;&lt;/p&gt;
+  &lt;p&gt;This was my first “solo” backpacking adventure. I decided to go on a long 4 day hike in the North Cascades and I picked a tough scenic one - &lt;a href=&quot;https://www.wta.org/go-hiking/hikes/white-pass-pilot-ridge-loop&quot; target=&quot;_blank&quot;&gt;North Fork Sauk Trail&lt;/a&gt;&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;Some of the things that made this very challenging were :&lt;/p&gt;
@@ -258,7 +299,7 @@
       <item>
         <title>Mt Dickerman Winter Route</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://www.wta.org/go-hiking/hikes/mount-dickerman&quot;&gt;Mt Dickerman&lt;/a&gt; is one of the premier hikes in the Pacific North West. It is a beast of a climb but the rewards are amazing.&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.wta.org/go-hiking/hikes/mount-dickerman&quot; target=&quot;_blank&quot;&gt;Mt Dickerman&lt;/a&gt; is one of the premier hikes in the Pacific North West. It is a beast of a climb but the rewards are amazing.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;I decided to climb via the winter route for a change. The winter route, mainly follows the summer route but towards the top instead of taking switch-backs you go straight up as the crow flies.&lt;/p&gt;
