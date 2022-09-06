@@ -5,8 +5,8 @@
     <description>My personal blog on travel / random musings</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 06 Sep 2022 04:47:16 +0000</pubDate>
-    <lastBuildDate>Tue, 06 Sep 2022 04:47:16 +0000</lastBuildDate>
+    <pubDate>Tue, 06 Sep 2022 05:19:30 +0000</pubDate>
+    <lastBuildDate>Tue, 06 Sep 2022 05:19:30 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -28,7 +28,7 @@
   &lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h1 id=&quot;our-itinerary--high-level-plan&quot;&gt;Our itinerary / high level plan&lt;/h1&gt;
+&lt;h2 id=&quot;our-itinerary--high-level-plan&quot;&gt;Our itinerary / high level plan&lt;/h2&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
