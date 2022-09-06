@@ -61,6 +61,10 @@ post_class: post-template
             {% endif %}
             <!-- End Featured Image -->
 
+            {% if page.photoset %}
+                {% include flickr-photoset.html %}
+            {% endif %}
+
             <!-- Post Content -->
             <div class="article-post">
                 <!-- Toc if any -->

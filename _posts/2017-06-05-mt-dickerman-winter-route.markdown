@@ -4,6 +4,7 @@ categories: hiking pnw amit baloo winter
 author: amit
 image: assets/images/06-05-17/mt-dickerman.jpg
 featured: false
+photoset: 72157625943484513
 ---
 
 >[Mt Dickerman](https://www.wta.org/go-hiking/hikes/mount-dickerman) is one of the premier hikes in the Pacific North West. It is a beast of a climb but the rewards are amazing. 
