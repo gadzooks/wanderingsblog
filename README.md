@@ -8,6 +8,8 @@ www.weekendwanderings.com static website built using jekyll
 
 ## resources
 - https://github.com/captaincanine/marran.com
+- https://shopify.github.io/liquid/basics/introduction/
+- https://jekyllrb.com/docs/variables/
 
 ## running locally : 
 - Debug gh-pages locally with `act -s GITHUB_TOKEN=<base64 encoded> -s FLICKR_API_KEY=<base64 encoded> -s FLICKR_API_SECRET=<base64 encoded>`

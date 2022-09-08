@@ -85,6 +85,7 @@ flickr:
   width_legacy: 1024
   width_viewport: 100vw
   caption: true
+  license: false
     
 flickr-photoset:
   enabled: true
