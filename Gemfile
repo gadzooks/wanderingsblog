@@ -26,6 +26,7 @@ group :jekyll_plugins do
     gem 'rouge'
     gem "jekyll-assets"
     gem 'jekyll-compose'
+    gem 'jekyll-linkpreview'
 end
 
 gem 'jekyll-flickr'

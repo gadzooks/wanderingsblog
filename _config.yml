@@ -1,7 +1,7 @@
 # Site
 name: "Weekend Wanderings"
 title: "Weekend Wanderings"
-description: "My personal blog on travel / random musings"
+description: "A blog dedicated to travel, hiking, amazing experiences."
 # logo: 'assets/images/logo.png'
 logo: 'assets/images/favicon.png'
 favicon: 'assets/images/favicon.png'
@@ -52,6 +52,14 @@ plugins:
 collections_dir: _collections
 collections:
   - things
+    
+# jekyll-seo-tag related
+tagline: "A blog dedicated to documenting the most amazing hikes, places to explore"
+url: https://www.weekendwanderings.com
+author:
+  twitter: whereisamit
+# jekyll-seo-tag related
+
     
 jekyll_compose:
   auto_open: true
