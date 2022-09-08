@@ -49,6 +49,25 @@ plugins:
   - jekyll-archives
   - jekyll-flickr
     
+jekyll_compose:
+  auto_open: true
+  default_front_matter:
+    drafts:
+      description:
+      image:
+      category:
+      tags:
+      author: amit
+      feature: false
+      layout: post
+    posts:
+      description:
+      image:
+      category:
+      tags:
+      published: false
+      sitemap: false
+    
 # Archives
 jekyll-archives:
   enabled:

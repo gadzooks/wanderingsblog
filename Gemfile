@@ -25,6 +25,7 @@ group :jekyll_plugins do
     gem 'kramdown'
     gem 'rouge'
     gem "jekyll-assets"
+    gem 'jekyll-compose'
 end
 
 gem 'jekyll-flickr'

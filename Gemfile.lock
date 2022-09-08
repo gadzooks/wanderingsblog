@@ -43,6 +43,8 @@ GEM
       sprockets (~> 2.10)
       sprockets-helpers
       sprockets-sass
+    jekyll-compose (0.12.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-feed (0.16.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-flickr (0.2.0)
@@ -114,6 +116,7 @@ DEPENDENCIES
   jekyll (~> 4.2.2)
   jekyll-archives
   jekyll-assets
+  jekyll-compose
   jekyll-feed
   jekyll-flickr
   jekyll-paginate
