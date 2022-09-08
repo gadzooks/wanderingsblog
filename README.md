@@ -12,9 +12,12 @@ www.weekendwanderings.com static website built using jekyll
 - https://jekyllrb.com/docs/variables/
 
 ## running locally : 
-- Debug gh-pages locally with `act -s GITHUB_TOKEN=<base64 encoded> -s FLICKR_API_KEY=<base64 encoded> -s FLICKR_API_SECRET=<base64 encoded>`
-- run server locally with `bundle exec jekyll serve --livereload --trace `
-
+```bash
+#Debug gh-pages locally with
+act -s GITHUB_TOKEN=<base64 encoded> -s FLICKR_API_KEY=<base64 encoded> -s FLICKR_API_SECRET=<base64 encoded>
+#run server locally with 
+bundle exec jekyll serve --livereload --trace
+```
 
 ## jekyll compose
 ```bash
