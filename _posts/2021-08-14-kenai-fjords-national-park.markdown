@@ -5,6 +5,7 @@ title: 'Kenai Fjords National Park Alaska'
 categories: alaska whale-watching travel kenai-fjords national-park
 author: amit
 image: assets/images/08-14-21/kenai-fjords.jpg
+image_alt_text: kenai fjords
 featured: true
 photoset: 72177720301863060
 ---

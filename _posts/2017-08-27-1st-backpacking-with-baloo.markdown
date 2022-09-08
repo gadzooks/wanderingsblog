@@ -5,6 +5,7 @@ title: 'My first solo backpacking with Baloo'
 categories: backpacking pnw amit baloo
 author: amit
 image: assets/images/08-27-17/sunset.jpg
+image_alt_text: sun setting over the mountains
 featured: true
 photoset: 72157667203421688
 ---

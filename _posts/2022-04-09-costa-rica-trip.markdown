@@ -6,6 +6,7 @@ tags: costa-rica travel
 categories: travel international
 author: amit
 image: assets/images/costa-rica.jpeg
+image_alt_text: mt arenal
 featured: false
 photoset: 72177720298949036
 toc: true
