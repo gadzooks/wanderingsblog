@@ -69,10 +69,8 @@ jobs:
           ### Flags accepted can be found here https://jekyllrb.com/docs/configuration/options/#build-command-options
 
       - name: check html generated via html-proofer
-        uses: athackst/htmlproofer-action@main
-        with:
-          directory: ./_site
-          ignore-urls: "/localhost/,/www.tripadvisor.com/,/www.reddit.com/"
+        run: |
+          ./scripts/cibuid 
       - name: 🚀 deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
