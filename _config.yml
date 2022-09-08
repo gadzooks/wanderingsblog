@@ -48,6 +48,10 @@ plugins:
   - jekyll-seo-tag
   - jekyll-archives
   - jekyll-flickr
+
+collections_dir: _collections
+collections:
+  - things
     
 jekyll_compose:
   auto_open: true

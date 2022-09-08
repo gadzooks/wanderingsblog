@@ -17,6 +17,8 @@ www.weekendwanderings.com static website built using jekyll
 ## jekyll compose
 ```bash
 bundle exec jekyll page "My New Page"
+bundle exec jekyll publish _drafts/my-new-draft.md --date 2014-01-24
+bundle exec jekyll unpublish _posts/2014-01-24-my-new-draft.md
 
 draft      # Creates a new draft post with the given NAME
 post       # Creates a new post with the given NAME
