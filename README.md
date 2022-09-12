@@ -19,6 +19,13 @@ act -s GITHUB_TOKEN=<base64 encoded> -s FLICKR_API_KEY=<base64 encoded> -s FLICK
 bundle exec jekyll serve --livereload --trace
 ```
 
+## Debugging jekyl performance : 
+```bash
+be jekyll build --profile --verbose
+```
+- https://cloudcannon.com/blog/speed-up-your-jekyll-builds
+- https://blog.mastykarz.nl/improve-jekyll-setup/
+
 ## jekyll compose
 ```bash
 bundle exec jekyll page "My New Page"
