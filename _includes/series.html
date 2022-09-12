@@ -1,0 +1,24 @@
+<!-- Series links -->
+
+<!-- To use series set these values in front formatter : 
+series_key: series-1
+this is global
+series_index: 1 -->
+
+{% if include.page.series_key %}
+  {% assign all_posts_in_series = site.posts | where: 'series_key', page.series_key | sort: 'series_index' %}
+  <div class="seriesNote">
+    <p>This article is <strong>Part {{ include.page.series_index }}</strong> in a <strong>{{ all_posts_in_series | size }}-Part</strong> Series.</p>
+    <ul>
+      {% for series_post in all_posts_in_series %}
+        <li>Part {{ series_post.series_index }} -
+          {% if series_post.url == include.page.url %}
+          This Article
+          {% else %}
+          <a href="{{series_post.url}}">{{series_post.title}}</a>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+{% endif %}

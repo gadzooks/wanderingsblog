@@ -25,6 +25,7 @@ be jekyll build --profile --verbose
 ```
 - https://cloudcannon.com/blog/speed-up-your-jekyll-builds
 - https://blog.mastykarz.nl/improve-jekyll-setup/
+- https://github.com/benbalter/jekyll-include-cache
 
 ## jekyll compose
 ```bash
