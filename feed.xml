@@ -5,8 +5,8 @@
     <description>My personal blog on travel / random musings</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 12 Sep 2022 03:43:58 +0000</pubDate>
-    <lastBuildDate>Mon, 12 Sep 2022 03:43:58 +0000</lastBuildDate>
+    <pubDate>Mon, 12 Sep 2022 05:16:00 +0000</pubDate>
+    <lastBuildDate>Mon, 12 Sep 2022 05:16:00 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -305,7 +305,7 @@
       <item>
         <title>Mt Dickerman Winter Route</title>
         <description>&lt;blockquote&gt;
-  &lt;p&gt;&lt;a href=&quot;https://www.wta.org/go-hiking/hikes/mount-dickerman&quot; target=&quot;_blank&quot;&gt;Mt Dickerman&lt;/a&gt; is one of the premier hikes in the Pacific North West. It is a beast of a climb but the rewards are amazing.&lt;/p&gt;
+  &lt;p&gt;&lt;a href=&quot;https://www.wta.org/go-hiking/hikes/mount-dickerman&quot; target=&quot;\_blank&quot;&gt;Mt Dickerman&lt;/a&gt; is one of the premier hikes in the Pacific North West. It is a beast of a climb but the rewards are amazing.&lt;/p&gt;
 &lt;/blockquote&gt;
 
 &lt;p&gt;I decided to climb via the winter route for a change. The winter route, mainly follows the summer route but towards the top instead of taking switch-backs you go straight up as the crow flies.&lt;/p&gt;
@@ -363,6 +363,7 @@
   &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/8607/16618278951_f89ed35407_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/8607/16618278951_f89ed35407_n.jpg 320w, https://live.staticflickr.com/8607/16618278951_f89ed35407_z.jpg 640w, https://live.staticflickr.com/8607/16618278951_f89ed35407_c.jpg 800w, https://live.staticflickr.com/8607/16618278951_f89ed35407_b.jpg 1024w, https://live.staticflickr.com/8607/16618278951_5b207bf972_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Snow capped mountains&quot; /&gt;
   &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Snow capped mountains&lt;/div&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
+
 </description>
         <pubDate>Mon, 05 Jun 2017 00:00:00 +0000</pubDate>
         <link>/mt-dickerman-winter-route/</link>
