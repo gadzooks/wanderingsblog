@@ -25,7 +25,10 @@ module Jekyll
       if cache_dir = site.config[CONFIG_KEY]['cache_dir']
         path = File.join(cache_dir, "#{Digest::MD5.hexdigest(photoset.to_s)}.yml")
         if File.exist?(path)
-          photos = YAML::load(File.read(path))
+          photos = YAML::load(
+            File.read(path),
+            permitted_classes: [Jekyll::FlickrPhoto]
+          )
         else
           photos = generate_photo_data(photoset, site)
           File.open(path, 'w') {|f| f.print(YAML::dump(photos)) }

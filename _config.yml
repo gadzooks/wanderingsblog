@@ -89,6 +89,7 @@ flickr:
     
 flickr-photoset:
   enabled: true
+  cache_dir: _cache/flickr-photoset
     
 # Other
 markdown: kramdown

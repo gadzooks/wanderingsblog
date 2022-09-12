@@ -30,7 +30,6 @@ end
 
 gem 'jekyll-flickr'
 gem 'flickr'
-# gem 'rake'
 
 gem 'html-proofer'
 
