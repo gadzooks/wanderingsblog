@@ -11,6 +11,7 @@ sitemap: false
 photoset: 72177720301903481
 series_key: yellowstone-road-trip-2018
 series_index: 1
+series_total: 5
 ---
 
 > We drove from Seattle to Yellowstone and entered from the northern entrance where we saw the Mammoth Hot Springs and a lot of wild life.

@@ -7,8 +7,10 @@ series_index: 1 -->
 
 {% if include.page.series_key %}
   {% assign all_posts_in_series = site.posts | where: 'series_key', page.series_key | sort: 'series_index' %}
+  {% assign num_posts = all_posts_in_series | size %}
+  {% assign series_total = all_posts_in_series[0].series_total %}
   <div class="seriesNote">
-    <p>This article is <strong>Part {{ include.page.series_index }}</strong> in a <strong>{{ all_posts_in_series | size }}-Part</strong> Series.</p>
+    <p>This article is <strong>Part {{ include.page.series_index }}</strong> in a <strong>{{ series_total | at_least: num_posts }}-Part</strong> Series.</p>
     <ul>
       {% for series_post in all_posts_in_series %}
         <li>Part {{ series_post.series_index }} -
@@ -19,6 +21,12 @@ series_index: 1 -->
           {% endif %}
         </li>
       {% endfor %}
+      {% for i in (num_posts..series_total) -%}
+        {% if i != num_posts %}
+          <li>Part {{ i }} -
+          Coming soon !
+        {% endif %}
+      {%- endfor %}
     </ul>
   </div>
 {% endif %}
