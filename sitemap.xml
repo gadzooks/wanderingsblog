@@ -51,7 +51,10 @@
 <loc>/category/winter/</loc>
 </url>
 <url>
-<loc>/category/backpacking/</loc>
+<loc>/category/backpacking-pnw-amit-baloo/</loc>
+</url>
+<url>
+<loc>/category/yellowstone-road-trip/</loc>
 </url>
 <url>
 <loc>/category/alaska/</loc>
@@ -70,5 +73,8 @@
 </url>
 <url>
 <loc>/category/international/</loc>
+</url>
+<url>
+<loc>/page2/</loc>
 </url>
 </urlset>
