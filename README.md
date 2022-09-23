@@ -10,6 +10,7 @@ www.weekendwanderings.com static website built using jekyll
 - https://github.com/captaincanine/marran.com
 - https://shopify.github.io/liquid/basics/introduction/
 - https://jekyllrb.com/docs/variables/
+- [npm with jekyll](https://gwtrev.medium.com/how-the-f-do-i-add-a-js-pipeline-to-a-jekyll-website-you-ask-822a45ffb2cb)
 
 ## running locally : 
 ```bash
