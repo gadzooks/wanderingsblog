@@ -19,10 +19,14 @@
   },
   "devDependencies": {},
   "scripts": {
+    "test": "echo 'INFO: No tests specified'",
+    "build": "npm run build:scripts && bundle exec jekyll build --config _config.yml,_config-dev.yml",
     "watch": "bundle exec jekyll serve  --livereload",
-    "build": "npm run build:scripts && bundle exec jekyll build",
     "watch:scripts": "npm run build:scripts -- -w",
-    "build:scripts": "rollup -c"
+    "clean:scripts": "rm -rf site/assets/js/",
+    "build:prod": "npm run build:scripts:prod && JEKYLL_ENV=production bundle exec jekyll build --config _config.yml,_config-prod.yml",
+    "build:scripts": "rollup -c",
+    "build:scripts:prod": "npm run clean:scripts && BABEL_ENV=production rollup -c"
   },
   "repository": {
     "type": "git",
