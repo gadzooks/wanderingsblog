@@ -6,3 +6,5 @@ _site
 vendor
 .vscode
 .DS_Store
+node_modules
+assets/js/generated
