@@ -16,7 +16,10 @@ www.weekendwanderings.com static website built using jekyll
 #Debug gh-pages locally with
 act -s GITHUB_TOKEN=<base64 encoded> -s FLICKR_API_KEY=<base64 encoded> -s FLICKR_API_SECRET=<base64 encoded> --reuse
 #run server locally with 
+# window 1
 bundle exec jekyll serve --livereload --trace
+# window 2
+npm run watch:scripts
 ```
 
 ## Debugging jekyl performance : 
