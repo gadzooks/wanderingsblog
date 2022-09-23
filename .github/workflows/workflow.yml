@@ -3,7 +3,7 @@ name: Build and deploy jekyll site
 on:
   push:
     branches:
-      - master
+      - add-npm
       # - source
       # It is highly recommended that you only run this action on push to a
       # specific branch, eg. master or source (if on *.github.io repo)
@@ -14,6 +14,16 @@ jobs:
     steps:
       - name: 📂 setup
         uses: actions/checkout@v2
+
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with: { node-version: '12.x' }
+
+      - name: Set up dependencies
+        run: npm install
+
+      - name: Generate javascript
+        run: npm run build:scripts
 
         # include the lines below if you are using jekyll-last-modified-at
         # or if you would otherwise need to fetch the full commit history
