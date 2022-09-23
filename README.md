@@ -14,7 +14,7 @@ www.weekendwanderings.com static website built using jekyll
 ## running locally : 
 ```bash
 #Debug gh-pages locally with
-act -s GITHUB_TOKEN=<base64 encoded> -s FLICKR_API_KEY=<base64 encoded> -s FLICKR_API_SECRET=<base64 encoded>
+act -s GITHUB_TOKEN=<base64 encoded> -s FLICKR_API_KEY=<base64 encoded> -s FLICKR_API_SECRET=<base64 encoded> --reuse
 #run server locally with 
 bundle exec jekyll serve --livereload --trace
 ```
