@@ -32,6 +32,8 @@ GEM
       terminal-table (~> 2.0)
     jekyll-archives (2.2.1)
       jekyll (>= 3.6, < 5.0)
+    jekyll-compose (0.12.0)
+      jekyll (>= 3.7, < 5.0)
     jekyll-feed (0.16.0)
       jekyll (>= 3.7, < 5.0)
     jekyll-flickr (0.2.0)
@@ -82,6 +84,7 @@ DEPENDENCIES
   http_parser.rb (~> 0.6.0)
   jekyll (~> 4.2.2)
   jekyll-archives
+  jekyll-compose
   jekyll-feed
   jekyll-flickr
   jekyll-paginate
