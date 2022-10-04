@@ -5,7 +5,7 @@ description: "My personal blog on travel / random musings"
 # logo: 'assets/images/logo.png'
 logo: 'assets/images/favicon.png'
 favicon: 'assets/images/favicon.png'
-baseurl: ''
+baseurl: 
 # google_analytics: 'UA-46278016-1'
 # disqus: 'demowebsite'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
@@ -64,6 +64,25 @@ plugins:
   - jekyll-archives
   - jekyll-flickr
     
+jekyll_compose:
+  auto_open: true
+  default_front_matter:
+    drafts:
+      description:
+      image:
+      category:
+      tags:
+      author: amit
+      feature: false
+      layout: post
+    posts:
+      description:
+      image:
+      category:
+      tags:
+      published: false
+      sitemap: false
+    
 # Archives
 jekyll-archives:
   enabled:
@@ -81,6 +100,11 @@ flickr:
   width_legacy: 1024
   width_viewport: 100vw
   caption: true
+  license: false
+    
+flickr-photoset:
+  enabled: true
+  cache_dir: _cache/flickr-photoset
     
 # Other
 markdown: kramdown
@@ -100,4 +124,4 @@ adsense-data-ad-slot: "1363087678"
 # Lazy Images ("enabled" or "disabled")
 lazyimages: "disabled"
 
-exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock]
+exclude: [changelog.md, LICENSE.txt, README.md, Gemfile, Gemfile.lock node_modules]

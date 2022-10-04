@@ -1,0 +1,236 @@
+---
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC8028.jpg
+  urlFullSize: https://live.staticflickr.com/888/40191448025_09e1e3131f_b.jpg
+  urlThumbnail: https://live.staticflickr.com/888/40191448025_09e1e3131f_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC8026.jpg
+  urlFullSize: https://live.staticflickr.com/801/41085427691_ede25db89d_b.jpg
+  urlThumbnail: https://live.staticflickr.com/801/41085427691_ede25db89d_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC8025.jpg
+  urlFullSize: https://live.staticflickr.com/889/40376117974_c8b01c46b3_b.jpg
+  urlThumbnail: https://live.staticflickr.com/889/40376117974_c8b01c46b3_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC8018.jpg
+  urlFullSize: https://live.staticflickr.com/811/41042167102_b9b111bf4d_b.jpg
+  urlThumbnail: https://live.staticflickr.com/811/41042167102_b9b111bf4d_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC8016.jpg
+  urlFullSize: https://live.staticflickr.com/868/26214014257_a973c3e929_b.jpg
+  urlThumbnail: https://live.staticflickr.com/868/26214014257_a973c3e929_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC8013.jpg
+  urlFullSize: https://live.staticflickr.com/899/40191436655_38dcee9360_b.jpg
+  urlThumbnail: https://live.staticflickr.com/899/40191436655_38dcee9360_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC8006.jpg
+  urlFullSize: https://live.staticflickr.com/866/41085418491_c735910ac4_b.jpg
+  urlThumbnail: https://live.staticflickr.com/866/41085418491_c735910ac4_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC8004.jpg
+  urlFullSize: https://live.staticflickr.com/789/27212732038_676a2f34a7_b.jpg
+  urlThumbnail: https://live.staticflickr.com/789/27212732038_676a2f34a7_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC8003.jpg
+  urlFullSize: https://live.staticflickr.com/885/41042155822_f6c8ff064b_b.jpg
+  urlThumbnail: https://live.staticflickr.com/885/41042155822_f6c8ff064b_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC8000.jpg
+  urlFullSize: https://live.staticflickr.com/881/26214005097_dd5eae8c50_b.jpg
+  urlThumbnail: https://live.staticflickr.com/881/26214005097_dd5eae8c50_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7998.jpg
+  urlFullSize: https://live.staticflickr.com/814/40191428405_bce239b264_b.jpg
+  urlThumbnail: https://live.staticflickr.com/814/40191428405_bce239b264_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7995.jpg
+  urlFullSize: https://live.staticflickr.com/783/39276172130_f48562f616_b.jpg
+  urlThumbnail: https://live.staticflickr.com/783/39276172130_f48562f616_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7993.jpg
+  urlFullSize: https://live.staticflickr.com/812/41042148002_6178750d7c_b.jpg
+  urlThumbnail: https://live.staticflickr.com/812/41042148002_6178750d7c_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7989.jpg
+  urlFullSize: https://live.staticflickr.com/809/40376100324_bbd1e8e449_b.jpg
+  urlThumbnail: https://live.staticflickr.com/809/40376100324_bbd1e8e449_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7982.jpg
+  urlFullSize: https://live.staticflickr.com/877/40376098764_6811b6c0ae_b.jpg
+  urlThumbnail: https://live.staticflickr.com/877/40376098764_6811b6c0ae_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7962.jpg
+  urlFullSize: https://live.staticflickr.com/793/39276167330_2875650cc4_b.jpg
+  urlThumbnail: https://live.staticflickr.com/793/39276167330_2875650cc4_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7957.jpg
+  urlFullSize: https://live.staticflickr.com/804/40191421075_f30d1e2c00_b.jpg
+  urlThumbnail: https://live.staticflickr.com/804/40191421075_f30d1e2c00_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7955.jpg
+  urlFullSize: https://live.staticflickr.com/867/39276165790_c41a92905c_b.jpg
+  urlThumbnail: https://live.staticflickr.com/867/39276165790_c41a92905c_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7946.jpg
+  urlFullSize: https://live.staticflickr.com/788/40376093584_1523bff350_b.jpg
+  urlThumbnail: https://live.staticflickr.com/788/40376093584_1523bff350_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7938.jpg
+  urlFullSize: https://live.staticflickr.com/881/40191415275_000ca66834_b.jpg
+  urlThumbnail: https://live.staticflickr.com/881/40191415275_000ca66834_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7931.jpg
+  urlFullSize: https://live.staticflickr.com/819/41085398971_32717639c3_b.jpg
+  urlThumbnail: https://live.staticflickr.com/819/41085398971_32717639c3_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7929.jpg
+  urlFullSize: https://live.staticflickr.com/878/26213972777_77a65967af_b.jpg
+  urlThumbnail: https://live.staticflickr.com/878/26213972777_77a65967af_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7925.jpg
+  urlFullSize: https://live.staticflickr.com/897/40376089224_a80354dfdf_b.jpg
+  urlThumbnail: https://live.staticflickr.com/897/40376089224_a80354dfdf_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7918.jpg
+  urlFullSize: https://live.staticflickr.com/892/26213968177_4b7d39f85b_b.jpg
+  urlThumbnail: https://live.staticflickr.com/892/26213968177_4b7d39f85b_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7914.jpg
+  urlFullSize: https://live.staticflickr.com/867/26213965817_2916823d39_b.jpg
+  urlThumbnail: https://live.staticflickr.com/867/26213965817_2916823d39_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7907.jpg
+  urlFullSize: https://live.staticflickr.com/796/27212714538_3d31acec47_b.jpg
+  urlThumbnail: https://live.staticflickr.com/796/27212714538_3d31acec47_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7902.jpg
+  urlFullSize: https://live.staticflickr.com/879/39276152980_1d57b82e8a_b.jpg
+  urlThumbnail: https://live.staticflickr.com/879/39276152980_1d57b82e8a_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7901.jpg
+  urlFullSize: https://live.staticflickr.com/873/40376080584_6424f37d09_b.jpg
+  urlThumbnail: https://live.staticflickr.com/873/40376080584_6424f37d09_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7898.jpg
+  urlFullSize: https://live.staticflickr.com/794/26213957067_4559976159_b.jpg
+  urlThumbnail: https://live.staticflickr.com/794/26213957067_4559976159_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7896.jpg
+  urlFullSize: https://live.staticflickr.com/877/41085379771_951bcc4822_b.jpg
+  urlThumbnail: https://live.staticflickr.com/877/41085379771_951bcc4822_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7892.jpg
+  urlFullSize: https://live.staticflickr.com/878/41042121902_f4ab76c9f7_b.jpg
+  urlThumbnail: https://live.staticflickr.com/878/41042121902_f4ab76c9f7_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7888.jpg
+  urlFullSize: https://live.staticflickr.com/810/39276148430_28ca6b01a5_b.jpg
+  urlThumbnail: https://live.staticflickr.com/810/39276148430_28ca6b01a5_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7886.jpg
+  urlFullSize: https://live.staticflickr.com/893/41042119162_d940cbd5b5_b.jpg
+  urlThumbnail: https://live.staticflickr.com/893/41042119162_d940cbd5b5_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7885.jpg
+  urlFullSize: https://live.staticflickr.com/871/40191386785_f0e96ff11a_b.jpg
+  urlThumbnail: https://live.staticflickr.com/871/40191386785_f0e96ff11a_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7881.jpg
+  urlFullSize: https://live.staticflickr.com/799/41085366131_e42ef46d34_b.jpg
+  urlThumbnail: https://live.staticflickr.com/799/41085366131_e42ef46d34_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7876.jpg
+  urlFullSize: https://live.staticflickr.com/814/40376060234_4b04d674d3_b.jpg
+  urlThumbnail: https://live.staticflickr.com/814/40376060234_4b04d674d3_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7875.jpg
+  urlFullSize: https://live.staticflickr.com/815/40191381455_38e5e11398_b.jpg
+  urlThumbnail: https://live.staticflickr.com/815/40191381455_38e5e11398_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7873.jpg
+  urlFullSize: https://live.staticflickr.com/883/39276141590_f898310242_b.jpg
+  urlThumbnail: https://live.staticflickr.com/883/39276141590_f898310242_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7871.jpg
+  urlFullSize: https://live.staticflickr.com/873/40191378505_ee73e951ef_b.jpg
+  urlThumbnail: https://live.staticflickr.com/873/40191378505_ee73e951ef_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7867.jpg
+  urlFullSize: https://live.staticflickr.com/870/39276137640_f94212b6db_b.jpg
+  urlThumbnail: https://live.staticflickr.com/870/39276137640_f94212b6db_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7865.jpg
+  urlFullSize: https://live.staticflickr.com/886/39276136030_2870325011_b.jpg
+  urlThumbnail: https://live.staticflickr.com/886/39276136030_2870325011_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7860.jpg
+  urlFullSize: https://live.staticflickr.com/895/41042104032_3077288073_b.jpg
+  urlThumbnail: https://live.staticflickr.com/895/41042104032_3077288073_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7859.jpg
+  urlFullSize: https://live.staticflickr.com/893/41042102682_1e23a86c37_b.jpg
+  urlThumbnail: https://live.staticflickr.com/893/41042102682_1e23a86c37_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7852.jpg
+  urlFullSize: https://live.staticflickr.com/786/40191371345_f3ac377735_b.jpg
+  urlThumbnail: https://live.staticflickr.com/786/40191371345_f3ac377735_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7848.jpg
+  urlFullSize: https://live.staticflickr.com/895/40376042224_c47d8fc673_b.jpg
+  urlThumbnail: https://live.staticflickr.com/895/40376042224_c47d8fc673_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7838.jpg
+  urlFullSize: https://live.staticflickr.com/804/39276127570_784e72e19e_b.jpg
+  urlThumbnail: https://live.staticflickr.com/804/39276127570_784e72e19e_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _DSC7834.jpg
+  urlFullSize: https://live.staticflickr.com/808/40376035254_7eea098086_b.jpg
+  urlThumbnail: https://live.staticflickr.com/808/40376035254_7eea098086_s.jpg
+  thumbType: square

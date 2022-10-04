@@ -2,10 +2,14 @@
 layout: post
 title: 'Costa Rica - part deux'
 date: 2022-04-09 17:16:42 -0700
+tags: costa-rica travel
 categories: travel international
 author: amit
 image: assets/images/costa-rica.jpeg
-featured: true
+image_alt_text: mt arenal
+featured: false
+photoset: 72177720298949036
+toc: true
 ---
 
 >I fell in love with Costa Rica the first time I went there. I was my first trip outside of the US and I was amazed by the natural beauty and kindness of the people.
@@ -13,7 +17,7 @@ featured: true
 * A markdown unordered list which will be replaced with the ToC, excluding the "Contents header" from above
 {:toc}
 
-# Our itinerary / high level plan
+## Our itinerary / high level plan
 
 | Date  	| Activity   	| Driving  	| Stay  	| Notes  	|
 |:-:	|:-:	|:-:	|:-:	|:-:	|

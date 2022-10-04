@@ -34,14 +34,20 @@ post_class: post-template
                     <div class="col-xs-12 col-md-9 col-lg-10 text-center text-md-left">
                         <a target="_blank" class="link-dark" href="{{ author.web }}">{{ author.display_name }}</a><a target="_blank" href="{{ author.twitter }}" class="btn follow">Follow</a>
                         <span class="author-description">{{ author.description }}</span>
+                        <div class="reading-time">
+                            <span class="date">{{ page.date | date: '%B %d, %Y' }}</span>
+                            {{ page.category }} -
+                            <span class="time-in-words">{{ content | reading_time }}</span>
+                        </div>
                     </div>
                 </div>
                 {% endif %}
 
                 <!-- Post Title -->
-                <h1 class="posttitle">{{ page.title }}</h1>
+                <h1 class="posttitle">{{ page.title | upcase }}</h1>
 
             </div>
+
 
             <!-- Adsense if enabled from _config.yml (change your pub id and slot) -->
             {% if site.adsense == "enabled" %}
@@ -60,6 +66,12 @@ post_class: post-template
 
             {% endif %}
             <!-- End Featured Image -->
+
+            {% if page.photoset %}
+                <div class="flickr-photoset-container">
+                {% include flickr-photoset.html %}
+                </div>
+            {% endif %}
 
             <!-- Post Content -->
             <div class="article-post">
@@ -94,39 +106,43 @@ post_class: post-template
                 </small>
             </p>
 
-            <!-- Post Categories -->
+            <!-- Show links to series linked to this one     -->
+            {% include series.html page=page %}
+            <!-- Show links to series linked to this one     -->
+
+            <!-- Post Categories
             <div class="after-post-cats">
                 <ul class="tags mb-4">
                     {% assign sortedCategories = page.categories | sort %}
                     {% for category in sortedCategories %}
                     <li>
-                        <a class="smoothscroll" href="{{site.baseurl}}/categories#{{ category | replace: " ","-" }}">{{ category }}</a>
+                        <a class="smoothscroll" href="categories#{{ category | replace: " ","-" }}">{{ category }}</a>
                     </li>
                     {% endfor %}
                 </ul>
-            </div>
+            </div> -->
             <!-- End Categories -->
 
             <!-- Post Tags -->
-            <div class="after-post-tags">
+            <!-- <div class="after-post-tags">
                 <ul class="tags">
                     {% assign sortedTags = page.tags | sort %}
                     {% for tag in sortedTags %}
                     <li>
-                        <a class="smoothscroll" href="{{site.baseurl}}/tags#{{ tag | replace: " ","-" }}">#{{ tag }}</a>
+                        <a class="smoothscroll" href="tags#{{ tag | replace: " ","-" }}">#{{ tag }}</a>
                     </li>
                     {% endfor %}
                 </ul>
-            </div>
+            </div> -->
             <!-- End Tags -->
 
             <!-- Prev/Next -->
             <div class="row PageNavigation d-flex justify-content-between font-weight-bold">
             {% if page.previous.url %}
-            <a class="prev d-block col-md-6" href="{{ site.baseurl }}/{{page.previous.url}}"> &laquo; {{page.previous.title}}</a>
+            <a class="prev d-block col-md-6" href="{{page.previous.url}}"> &laquo; {{page.previous.title}}</a>
             {% endif %}
             {% if page.next.url %}
-            <a class="next d-block col-md-6 text-lg-right" href="{{ site.baseurl }}/{{page.next.url}}">{{page.next.title}} &raquo; </a>
+            <a class="next d-block col-md-6 text-lg-right" href="{{page.next.url}}">{{page.next.title}} &raquo; </a>
             {% endif %}
             <div class="clearfix"></div>
             </div>
@@ -142,7 +158,7 @@ post_class: post-template
 
 <!-- Begin Comments
 ================================================== -->
-{% if page.comments != false %}
+<!-- {% if page.comments != false %}
     <div class="container">
         <div id="comments" class="row justify-content-center mb-5">
             <div class="col-md-8">
@@ -150,7 +166,7 @@ post_class: post-template
             </div>
         </div>
     </div>
-{% endif %}
+{% endif %} -->
 <!--End Comments
 ================================================== -->
 
