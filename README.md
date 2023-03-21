@@ -23,6 +23,10 @@ bundle exec jekyll serve --livereload --trace
 npm run watch:scripts
 ```
 
+## flickr ruby API docs
+- http://hanklords.github.io/flickraw/FlickRaw/ResponseList.html
+- 
+
 ## Debugging jekyl performance : 
 ```bash
 be jekyll build --profile --verbose
