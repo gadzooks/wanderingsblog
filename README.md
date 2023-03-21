@@ -25,7 +25,7 @@ npm run watch:scripts
 
 ## flickr ruby API docs
 - http://hanklords.github.io/flickraw/FlickRaw/ResponseList.html
-- 
+- https://www.flickr.com/services/api/flickr.people.getPublicPhotos.htm
 
 ## Debugging jekyl performance : 
 ```bash

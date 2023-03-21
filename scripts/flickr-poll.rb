@@ -33,14 +33,52 @@ original = sizes.find { |s| s.label == 'Original' }
 info = flickr.photos.getInfo(:photo_id => "3839885270")
 Flickr.url_short(info) # => "https://flic.kr/p/6Rjq7s"
 
-puts ([flickr.methods - '1'.methods]).sort.join("\n")
-photos = flickr.people.getPublicPhotos(:user_id => '57125599@N00', :extras => 'description,tags,geo', per_page: 2)
+photos = flickr.people.getPublicPhotos(:user_id => '57125599@N00', :extras => 'description,tags,geo,date_taken,url_m', per_page: 25)
+
+=begin
+---
+layout: post
+categories: hiking pnw amit baloo winter
+author: amit
+image: assets/images/06-05-17/mt-dickerman.jpg
+image_alt_text: snow capped Mt Dickerman
+featured: false
+photoset: 72157650991053255
+---
+
+> [Mt Dickerman](https://www.wta.org/go-hiking/hikes/mount-dickerman){:target="\_blank"} is one of the premier hikes in the Pacific North West. It is a beast of a climb but the rewards are amazing.
+
+Not too shabby along the way too
+{% flickr 16432337040 "Blue bird day" style="float: right;" %}
+{% flickr 16618229831 "My buddy Eric hiking up" style="float: right;" %}
+
+=end
+
+photosets_by_id = {}
 
 photos.each do |photo|
-  puts 
-  puts photo.inspect
-  puts flickr.photos.getAllContexts(photo_id: photo.id).inspect
+  puts photo.id
+  unless photo.tags.include?('jekyllsite')
+    next
+    puts "Skipping photo due to missing tag " + photo.tags + " " + photo.id
+  end
+  if photo.tags.include? 'main'
+    puts "main photo found " + photo.id
+    # FIXME : using the 1st photoset for now
+    context = flickr.photos.getAllContexts(photo_id: photo.id)['set'].last
+    # puts "photoset id : " + context.inspect
+    if photosets_by_id.include? context.id
+      puts "already handled this photoset so skipping " + context.id 
+    else
+      puts "found new photoset " + context.id
+      hsh = photosets_by_id[context.id] = {}
+      hsh['categories'] = photo.tags
+      hsh['image_alt_text'] = context.title
+    end
+  end
 end
+
+puts photosets_by_id.inspect
 
 # get all photos in last 1h
 # get unique albums for each photo with a main photo
