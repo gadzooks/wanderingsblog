@@ -76,6 +76,9 @@ jobs:
           ### If you need to specify any Jekyll build options, enable the above input
           ### Flags accepted can be found here https://jekyllrb.com/docs/configuration/options/#build-command-options
 
+      - name: generate posts based on flickr metadata
+        run: |
+          ./scripts/flickr-poll.rb
       - name: check html generated via html-proofer
         run: |
           ./scripts/cibuid 
