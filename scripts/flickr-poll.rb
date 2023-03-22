@@ -1,5 +1,4 @@
 #!/usr/bin/env ruby
-require 'ostruct'
 require 'flickr'
 require "down"
 require "fileutils"
@@ -13,10 +12,26 @@ require "fileutils"
 # ENV['FLICKR_API_KEY']
 # ENV['FLICKR_SHARED_SECRET']
 
-PostDetails = Struct.new(:tags, :image_path, )
+PostDetails = Struct.new(:featured, :photoset, :main_photo, :post_file_name, keyword_init: true) do 
+  def categories
+    main_photo.tags
+  end
+
+  def image_alt_text
+    photoset.title
+  end
+
+  def image_dir
+    dir_path = './assets/images/' +  main_photo["datetaken"].split(' ').first + '/'
+  end
+
+  def image_file_name
+    main_photo['title'].gsub(' ', '-') + '.jpg'
+  end
+end
 
 class Main
-  def self.run
+  def self.get_flickr_updates
 
     Flickr.cache = '/tmp/flickr-api.yml'
     flickr = Flickr.new
@@ -61,35 +76,35 @@ Not too shabby along the way too
 
 =end
 
-    photosets_by_id = {}
+    post_details_by_id = {}
 
     photos.each do |photo|
-      puts photo.id
+      # puts photo.id
       unless photo.tags.include?('jekyllsite')
         next
         puts "Skipping photo due to missing tag " + photo.tags + " " + photo.id
       end
       if photo.tags.include? 'main'
         puts "main photo found " + photo.inspect
-        post_name = get_post_name(photo)
-        puts post_name
-        puts File.exists? '_posts/' + post_name
+        post_file_name = get_post_filename(photo)
+        puts post_file_name
+        puts File.exists? '_posts/' + post_file_name
         # FIXME : using the 1st photoset for now
         context = flickr.photos.getAllContexts(photo_id: photo.id)['set'].last
         # puts "photoset id : " + context.inspect
-        if photosets_by_id.include? context.id
+        if post_details_by_id.include? context.id
           puts "already handled this photoset so skipping " + context.id 
         else
           puts "found new photoset " + context.id
-          post_details = OpenStruct.new()
-          hsh = photosets_by_id[context.id] = {}
-          hsh['categories'] = photo.tags
-          hsh['image_alt_text'] = context.title
+          post_details = PostDetails.new(featured: true, photoset: context, main_photo: photo, post_file_name: post_file_name)
+          post_details_by_id[context.id] = post_details
+          # hsh['categories'] = photo.tags
+          # hsh['image_alt_text'] = context.title
         end
       end
     end
 
-    puts photosets_by_id.inspect
+    post_details_by_id.values
   end
 
   def self.save_main_image(photo)
@@ -100,7 +115,7 @@ Not too shabby along the way too
     puts "saving to location #{file_name}"
     if File.exists? file_name
       puts "Image already downloaded. Skipping : " + file_name
-      return
+      return file_name
     end
     url = photo['url_m']
     puts "saving iamge to #{file_name}" 
@@ -131,41 +146,62 @@ layout: post
 categories: %{categories}
 author: amit
 image: %{image_path}
-image_alt_text: %{alt_image_text}
-featured: false
+image_alt_text: %{image_alt_text}
+featured: %{featured}
 photoset: %{photoset_id}
 ---
 %{description}
   '
 
-  def self.create_post(file_path, post_details)
+  def self.create_post(post_details)
+    puts post_details.inspect
+    file_path = post_details[:post_file_name]
+    puts "post file path : #{file_path}"
     if File.exists? file_path
       puts file_path + ' already exists. NOT overriding'
       return
     end
 
-    puts post_details
     post_str = POST_TEMPLATE % post_details
     puts "writing to file : " + file_path
     File.open(file_path, 'w') do |out_file|
       out_file.puts post_str
     end
-    puts post_str
+    # puts post_str
+  end
+
+  def self.run
+    all_post_details = get_flickr_updates()
+    all_post_details.each do |post_details|
+      puts '-------------------'
+      puts post_details.inspect
+      image_path = save_main_image(post_details.main_photo)
+      post_hash = {
+        post_file_name: post_details.post_file_name,
+        categories: post_details.categories,
+        image_path: image_path,
+        image_alt_text: post_details.photoset['title'],
+        featured: post_details.featured,
+        photoset_id: post_details.photoset['id'],
+        description: post_details.main_photo['description']
+      }
+      create_post(post_hash)
+    end
   end
 
 end
 
-# Main.run
+Main.run
 
-file_name = Main.get_post_filename({'datetaken' => '2023-03-16 12:25:05', 'title' => 'mt dickerman winter route 2023'})
+# file_name = Main.get_post_filename({'datetaken' => '2023-03-16 12:25:05', 'title' => 'mt dickerman winter route 2023'})
 
-post_details = {categories: 'snow capped mt', image_path: 'assets/images/06-05-17/mt-dickerman.jpg',
-  alt_image_text: 'mt dickerman', photoset_id: 72177720306901699, description: 'some desci'
-}
-Main.create_post(file_name, post_details)
+# post_details = {categories: 'snow capped mt', image_path: 'assets/images/06-05-17/mt-dickerman.jpg',
+#   alt_image_text: 'mt dickerman', photoset_id: 72177720306901699, description: 'some desci'
+# }
+# Main.create_post(file_name, post_details)
 
-photo = {"id"=>"52762914260", "owner"=>"57125599@N00", "secret"=>"14aa2ef94b", "server"=>"65535", "farm"=>66, "title"=>"Main", "ispublic"=>1, "isfriend"=>0, "isfamily"=>0, "description"=>"Great hike", "datetaken"=>"2023-03-16 12:25:05", "datetakengranularity"=>0, "datetakenunknown"=>"0", "tags"=>"jekyllsite anothertag yet another tag main", "latitude"=>"47.429444", "longitude"=>"-121.381578", "accuracy"=>"16", "context"=>0, "place_id"=>"", "woeid"=>"5798083", "geo_is_public"=>1, "geo_is_contact"=>0, "geo_is_friend"=>0, "geo_is_family"=>0, "url_m"=>"https://live.staticflickr.com/65535/52762914260_14aa2ef94b.jpg", "height_m"=>500, "width_m"=>361}
-Main.save_main_image(photo)
+# photo = {"id"=>"52762914260", "owner"=>"57125599@N00", "secret"=>"14aa2ef94b", "server"=>"65535", "farm"=>66, "title"=>"Main", "ispublic"=>1, "isfriend"=>0, "isfamily"=>0, "description"=>"Great hike", "datetaken"=>"2023-03-16 12:25:05", "datetakengranularity"=>0, "datetakenunknown"=>"0", "tags"=>"jekyllsite anothertag yet another tag main", "latitude"=>"47.429444", "longitude"=>"-121.381578", "accuracy"=>"16", "context"=>0, "place_id"=>"", "woeid"=>"5798083", "geo_is_public"=>1, "geo_is_contact"=>0, "geo_is_friend"=>0, "geo_is_family"=>0, "url_m"=>"https://live.staticflickr.com/65535/52762914260_14aa2ef94b.jpg", "height_m"=>500, "width_m"=>361}
+# Main.save_main_image(photo)
 
 # get all photos in last 1h
 # get unique albums for each photo with a main photo
