@@ -33,6 +33,14 @@ jobs:
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
 
+      - name: generate posts based on flickr metadata
+        run: |
+          ./scripts/run-flickr-poll
+        env:
+          FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
+          FLICKR_API_SECRET: ${{ secrets.FLICKR_API_SECRET }}
+          FLICKR_SHARED_SECRET: ${{ secrets.FLICKR_SHARED_SECRET }}
+
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
         env:
@@ -76,13 +84,6 @@ jobs:
           ### If you need to specify any Jekyll build options, enable the above input
           ### Flags accepted can be found here https://jekyllrb.com/docs/configuration/options/#build-command-options
 
-      - name: generate posts based on flickr metadata
-        run: |
-          ./scripts/run-flickr-poll
-        env:
-          FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
-          FLICKR_API_SECRET: ${{ secrets.FLICKR_API_SECRET }}
-          FLICKR_SHARED_SECRET: ${{ secrets.FLICKR_SHARED_SECRET }}
       - name: check html generated via html-proofer
         run: |
           ./scripts/cibuid 
