@@ -1,6 +1,8 @@
 #!/usr/bin/env ruby
-
+require 'ostruct'
 require 'flickr'
+require "down"
+require "fileutils"
 
 # The credentials can be provided as parameters:
 
@@ -10,6 +12,8 @@ require 'flickr'
 # from environment variables:
 # ENV['FLICKR_API_KEY']
 # ENV['FLICKR_SHARED_SECRET']
+
+PostDetails = Struct.new(:tags, :image_path, )
 
 class Main
   def self.run
@@ -77,6 +81,7 @@ Not too shabby along the way too
           puts "already handled this photoset so skipping " + context.id 
         else
           puts "found new photoset " + context.id
+          post_details = OpenStruct.new()
           hsh = photosets_by_id[context.id] = {}
           hsh['categories'] = photo.tags
           hsh['image_alt_text'] = context.title
@@ -85,6 +90,24 @@ Not too shabby along the way too
     end
 
     puts photosets_by_id.inspect
+  end
+
+  def self.save_main_image(photo)
+    dir_path = './assets/images/' +  photo["datetaken"].split(' ').first + '/'
+    puts "dir name is #{dir_path}"
+      FileUtils.mkdir_p(dir_path)
+    file_name = dir_path + photo['title'].gsub(' ', '-') + '.jpg'
+    puts "saving to location #{file_name}"
+    if File.exists? file_name
+      puts "Image already downloaded. Skipping : " + file_name
+      return
+    end
+    url = photo['url_m']
+    puts "saving iamge to #{file_name}" 
+    tempfile = Down.download(url)
+    FileUtils.mv(tempfile.path, "#{file_name}")
+
+    return file_name
   end
 
   def self.get_post_filename(photo)
@@ -140,6 +163,9 @@ post_details = {categories: 'snow capped mt', image_path: 'assets/images/06-05-1
   alt_image_text: 'mt dickerman', photoset_id: 72177720306901699, description: 'some desci'
 }
 Main.create_post(file_name, post_details)
+
+photo = {"id"=>"52762914260", "owner"=>"57125599@N00", "secret"=>"14aa2ef94b", "server"=>"65535", "farm"=>66, "title"=>"Main", "ispublic"=>1, "isfriend"=>0, "isfamily"=>0, "description"=>"Great hike", "datetaken"=>"2023-03-16 12:25:05", "datetakengranularity"=>0, "datetakenunknown"=>"0", "tags"=>"jekyllsite anothertag yet another tag main", "latitude"=>"47.429444", "longitude"=>"-121.381578", "accuracy"=>"16", "context"=>0, "place_id"=>"", "woeid"=>"5798083", "geo_is_public"=>1, "geo_is_contact"=>0, "geo_is_friend"=>0, "geo_is_family"=>0, "url_m"=>"https://live.staticflickr.com/65535/52762914260_14aa2ef94b.jpg", "height_m"=>500, "width_m"=>361}
+Main.save_main_image(photo)
 
 # get all photos in last 1h
 # get unique albums for each photo with a main photo
