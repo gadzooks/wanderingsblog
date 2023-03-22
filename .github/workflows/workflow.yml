@@ -1,6 +1,7 @@
 name: Build and deploy jekyll site
 
 on:
+  issue_comment:
   push:
     branches:
       - master
@@ -35,7 +36,7 @@ jobs:
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
 
-      - name: generate posts based on flickr metadata
+      - name:  💪🏻 generate posts based on flickr metadata
         run: |
           ./scripts/run-flickr-poll
         env:
