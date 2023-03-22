@@ -78,7 +78,7 @@ jobs:
 
       - name: generate posts based on flickr metadata
         run: |
-          ./scripts/flickr-poll.rb
+          ./scripts/run-flickr-poll
       - name: check html generated via html-proofer
         run: |
           ./scripts/cibuid 
