@@ -79,7 +79,7 @@ Not too shabby along the way too
     post_details_by_id = {}
 
     photos.each do |photo|
-      # puts photo.id
+      puts photo.id
       unless photo.tags.include?('jekyllsite')
         next
         puts "Skipping photo due to missing tag " + photo.tags + " " + photo.id
