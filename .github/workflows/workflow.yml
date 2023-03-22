@@ -1,8 +1,8 @@
 name: Build and deploy jekyll site
 
 on:
-  issue_comment:
-    types: [created, deleted, edited]
+  issues:
+    types: [deleted, edited]
   # push:
   #   branches:
   #     - master
