@@ -5,9 +5,60 @@
     <description>My personal blog on travel / random musings</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 22 Mar 2023 05:00:56 +0000</pubDate>
-    <lastBuildDate>Wed, 22 Mar 2023 05:00:56 +0000</lastBuildDate>
+    <pubDate>Wed, 22 Mar 2023 05:17:56 +0000</pubDate>
+    <lastBuildDate>Wed, 22 Mar 2023 05:17:56 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
+    
+      <item>
+        <title>Kendal Peak Lake</title>
+        <description>&lt;p&gt;Awesome hike to Kendal Peak Lake.
+Stats : 9+ miles round trip with 2k+ elevation gain.&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
+        <link>/Kendal-Peak-Lake/</link>
+        <guid isPermaLink="true">/Kendal-Peak-Lake/</guid>
+        
+        
+        <category>jekyllsite</category>
+        
+        <category>snowshoe</category>
+        
+        <category>hiking</category>
+        
+        <category>main</category>
+        
+      </item>
+    
+      <item>
+        <title>Middle Fork Trail</title>
+        <description>&lt;p&gt;Less well known but still amazing scenic park close to Seattle. This little gem has a lot of lovely hikes with beautiful scenery&lt;/p&gt;
+
+</description>
+        <pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate>
+        <link>/Middle-fork-trail/</link>
+        <guid isPermaLink="true">/Middle-fork-trail/</guid>
+        
+        
+        <category>jekyllsite</category>
+        
+        <category>middle</category>
+        
+        <category>fork</category>
+        
+        <category>trail</category>
+        
+        <category>hiking</category>
+        
+        <category>snow</category>
+        
+        <category>mountain</category>
+        
+        <category>river</category>
+        
+        <category>main</category>
+        
+      </item>
     
       <item>
         <title>Costa Rica - part deux</title>
