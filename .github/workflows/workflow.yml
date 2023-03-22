@@ -3,9 +3,9 @@ name: Build and deploy jekyll site
 on:
   issue_comment:
     types: [created, deleted, edited]
-  push:
-    branches:
-      - master
+  # push:
+  #   branches:
+  #     - master
       # - source
       # It is highly recommended that you only run this action on push to a
       # specific branch, eg. master or source (if on *.github.io repo)
