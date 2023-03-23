@@ -17,14 +17,14 @@ jobs:
     steps:
       - name: my-step
         run: echo "Hello World!"
-      - uses: jmatsu/detect-issue-comment-to-pr-action@1.0
-        id: filter
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: echo "I'm a pull request (${{ steps.filter.outputs.pull_number }})"
-        if: steps.filter.outputs.is_pull_request == 'true'
-      - run: echo "I'm not a pull request"
-        if: steps.filter.outputs.is_pull_request != 'true'
+      # - uses: jmatsu/detect-issue-comment-to-pr-action@1.0
+      #   id: filter
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - run: echo "I'm a pull request (${{ steps.filter.outputs.pull_number }})"
+      #   if: steps.filter.outputs.is_pull_request == 'true'
+      # - run: echo "I'm not a pull request"
+      #   if: steps.filter.outputs.is_pull_request != 'true'
   # jekyll:
   #   runs-on: ubuntu-latest
   #   steps:
