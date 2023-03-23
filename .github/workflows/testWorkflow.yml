@@ -1,3 +1,4 @@
+name: Issue comment workflow
 on: issue_comment
 
 jobs:
