@@ -36,25 +36,6 @@ class Main
     Flickr.cache = '/tmp/flickr-api.yml'
     flickr = Flickr.new
 
-    # Flickr will raise an error if either parameter is not explicitly provided, or available via environment variables.
-
-    list   = flickr.photos.getRecent
-
-    id     = list[0].id
-    secret = list[0].secret
-    info   = flickr.photos.getInfo :photo_id => id, :secret => secret
-
-    puts info.title           # => "PICT986"
-    puts info.dates.taken     # => "2006-07-06 15:16:18"
-
-    sizes = flickr.photos.getSizes :photo_id => id
-
-    original = sizes.find { |s| s.label == 'Original' }
-    # puts original.width       # => "800" -- may fail if they have no original marked image
-
-    info = flickr.photos.getInfo(:photo_id => "3839885270")
-    Flickr.url_short(info) # => "https://flic.kr/p/6Rjq7s"
-
     photos = flickr.people.getPublicPhotos(:user_id => '57125599@N00', :extras => 'description,tags,geo,date_taken,url_m', per_page: 25)
 
 =begin
@@ -80,26 +61,18 @@ Not too shabby along the way too
 
     photos.each do |photo|
       puts photo.id
-      unless photo.tags.include?('jekyllsite')
-        next
-        puts "Skipping photo due to missing tag " + photo.tags + " " + photo.id
-      end
-      if photo.tags.include? 'main'
+      if photo.tags.include?('js') && photo.tags.include?('main')
         puts "main photo found " + photo.inspect
         post_file_name = get_post_filename(photo)
-        puts post_file_name
-        puts File.exists? '_posts/' + post_file_name
         # FIXME : using the 1st photoset for now
         context = flickr.photos.getAllContexts(photo_id: photo.id)['set'].last
         # puts "photoset id : " + context.inspect
-        if post_details_by_id.include? context.id
+        if post_details_by_id.include?(context.id) && !photo.tags.include?('jsu')
           puts "already handled this photoset so skipping " + context.id 
         else
           puts "found new photoset " + context.id
-          post_details = PostDetails.new(featured: true, photoset: context, main_photo: photo, post_file_name: post_file_name)
+          post_details = PostDetails.new(featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, post_file_name: post_file_name)
           post_details_by_id[context.id] = post_details
-          # hsh['categories'] = photo.tags
-          # hsh['image_alt_text'] = context.title
         end
       end
     end
@@ -150,13 +123,19 @@ photoset: %{photoset_id}
 %{description}
   '
 
-  def self.create_post(post_details)
-    puts post_details.inspect
+  def self.create_post(post_details, overwrite = true)
+    # puts post_details.inspect
     file_path = post_details[:post_file_name]
     puts "post file path : #{file_path}"
+
     if File.exists? file_path
-      puts file_path + ' already exists. NOT overriding'
-      return
+      if overwrite
+        puts 'overwrite flag is set so deleting existing file'
+        File.delete(file_path)
+      else
+        puts file_path + ' already exists. NOT overriding'
+        return
+      end
     end
 
     post_str = POST_TEMPLATE % post_details
@@ -189,22 +168,3 @@ photoset: %{photoset_id}
 end
 
 Main.run
-
-# file_name = Main.get_post_filename({'datetaken' => '2023-03-16 12:25:05', 'title' => 'mt dickerman winter route 2023'})
-
-# post_details = {categories: 'snow capped mt', image_path: 'assets/images/06-05-17/mt-dickerman.jpg',
-#   alt_image_text: 'mt dickerman', photoset_id: 72177720306901699, description: 'some desci'
-# }
-# Main.create_post(file_name, post_details)
-
-# photo = {"id"=>"52762914260", "owner"=>"57125599@N00", "secret"=>"14aa2ef94b", "server"=>"65535", "farm"=>66, "title"=>"Main", "ispublic"=>1, "isfriend"=>0, "isfamily"=>0, "description"=>"Great hike", "datetaken"=>"2023-03-16 12:25:05", "datetakengranularity"=>0, "datetakenunknown"=>"0", "tags"=>"jekyllsite anothertag yet another tag main", "latitude"=>"47.429444", "longitude"=>"-121.381578", "accuracy"=>"16", "context"=>0, "place_id"=>"", "woeid"=>"5798083", "geo_is_public"=>1, "geo_is_contact"=>0, "geo_is_friend"=>0, "geo_is_family"=>0, "url_m"=>"https://live.staticflickr.com/65535/52762914260_14aa2ef94b.jpg", "height_m"=>500, "width_m"=>361}
-# Main.save_main_image(photo)
-
-# get all photos in last 1h
-# get unique albums for each photo with a main photo
-# for each album see if there is a post already created - store in yml file ? 
-# if not found 
-  #  get album meta data to make draft post
-  #  create new draft post via jekyll draft command line
-  #  add tag listing that photo was added to jekyll blog
-  #  print out message
