@@ -109,16 +109,13 @@ Not too shabby along the way too
 
   def self.save_main_image(photo)
     dir_path = './assets/images/' +  photo["datetaken"].split(' ').first + '/'
-    puts "dir name is #{dir_path}"
-      FileUtils.mkdir_p(dir_path)
+    FileUtils.mkdir_p(dir_path)
     file_name = dir_path + photo['title'].gsub(' ', '-') + '.jpg'
-    puts "saving to location #{file_name}"
     if File.exists? file_name
       puts "Image already downloaded. Skipping : " + file_name
       return file_name
     end
     url = photo['url_m']
-    puts "saving iamge to #{file_name}" 
     tempfile = Down.download(url)
     FileUtils.mv(tempfile.path, "#{file_name}")
 
