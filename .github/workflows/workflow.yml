@@ -1,7 +1,7 @@
 name: Build and deploy jekyll site
 
 on:
-  issue_comment:
+  # issue_comment:
   issues:
     types: [deleted, edited, opened]
   push:
