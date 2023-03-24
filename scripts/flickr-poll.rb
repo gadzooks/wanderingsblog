@@ -137,6 +137,8 @@ Not too shabby along the way too
   # result = "Breed %{b} size %{z}" % {b: breed, z: size}
   POST_TEMPLATE = '---
 layout: post
+title: %{title}
+date: %{date}
 categories: %{categories}
 author: amit
 image: %{image_path}
@@ -154,6 +156,8 @@ photoset: %{photoset_id}
     image_path = post_details.save_main_image
     post_hash = {
       post_file_name: post_details.post_file_name,
+      title: post_details.photoset['title'],
+      date: post_details.main_photo['datetaken'],
       categories: post_details.categories,
       image_path: image_path,
       image_alt_text: post_details.photoset['title'],
