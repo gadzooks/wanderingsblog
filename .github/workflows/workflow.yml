@@ -2,10 +2,12 @@ name: Build and deploy jekyll site
 
 on:
   issue_comment:
-  push:
-    branches:
-      - master
-      # - source
+  issues:
+    types: [opened, edited, milestoned, closed]
+  # push:
+  #   branches:
+  #     - master
+  #     # - source
       # It is highly recommended that you only run this action on push to a
       # specific branch, eg. master or source (if on *.github.io repo)
   schedule:
