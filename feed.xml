@@ -5,46 +5,43 @@
     <description>My personal blog on travel / random musings</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 23 Mar 2023 05:57:59 +0000</pubDate>
-    <lastBuildDate>Thu, 23 Mar 2023 05:57:59 +0000</lastBuildDate>
+    <pubDate>Fri, 24 Mar 2023 04:42:20 +0000</pubDate>
+    <lastBuildDate>Fri, 24 Mar 2023 04:42:20 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
-        <title>Kendal Peak Lake</title>
-        <description>&lt;p&gt;Awesome hike to Kendal Peak Lake.
-Stats : 9+ miles round trip with 2k+ elevation gain.&lt;/p&gt;
+        <title>Kendal Peak Lake Snowshoe</title>
+        <description>&lt;p&gt;Kendal Peak is a picturesque lake located in the Cascade Mountains of Washington State. Boasting crystal clear waters, the lake is surrounded by snow-capped peaks, making it a perfect setting for snowshoeing. With easy to follow trails and stunning views, Kendal Peak is the ideal destination for a winter getaway. From peaceful strolls near the shore, to challenging treks up the mountainous slopes, Kendal Peak promises unforgettable experiences for all levels of snowshoe enthusiasts.&lt;/p&gt;
 
 </description>
-        <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
-        <link>/Kendal-Peak-Lake/</link>
-        <guid isPermaLink="true">/Kendal-Peak-Lake/</guid>
+        <pubDate>Thu, 16 Mar 2023 12:23:56 +0000</pubDate>
+        <link>/snowshoe-kendal-peak-lake-wa-state/</link>
+        <guid isPermaLink="true">/snowshoe-kendal-peak-lake-wa-state/</guid>
         
-        
-        <category>jekyllsite</category>
         
         <category>snowshoe</category>
         
-        <category>hiking</category>
+        <category>kendal</category>
         
-        <category>main</category>
+        <category>peak</category>
         
-        <category>jekyll</category>
+        <category>lake</category>
         
-        <category>jsu</category>
+        <category>wa</category>
+        
+        <category>state</category>
         
       </item>
     
       <item>
         <title>Middle Fork Trail</title>
-        <description>&lt;p&gt;Less well known but still amazing scenic park close to Seattle. This little gem has a lot of lovely hikes with beautiful scenery&lt;/p&gt;
+        <description>&lt;p&gt;The Middle Fork Trail is a hiking trail that provides a beautiful and serene experience in the Cascade Mountains of Washington State. The trail follows along the Middle Fork of the Snoqualmie River in the shadow of snow-capped peaks for 8 miles. You’ll experience stunning views and chances for fishing, spotting wildlife and other outdoor recreational activities. Year-round access and minimal elevation gain make this trail accessible to hike all year. The Middle Fork Trail is a must-do in the Washington area, and perfect for any outdoor enthusiast.&lt;/p&gt;
 
 </description>
-        <pubDate>Sun, 05 Mar 2023 00:00:00 +0000</pubDate>
+        <pubDate>Sun, 05 Mar 2023 14:00:48 +0000</pubDate>
         <link>/Middle-fork-trail/</link>
         <guid isPermaLink="true">/Middle-fork-trail/</guid>
         
-        
-        <category>jekyllsite</category>
         
         <category>middle</category>
         
@@ -60,7 +57,9 @@ Stats : 9+ miles round trip with 2k+ elevation gain.&lt;/p&gt;
         
         <category>river</category>
         
-        <category>main</category>
+        <category>wa</category>
+        
+        <category>state</category>
         
       </item>
     
