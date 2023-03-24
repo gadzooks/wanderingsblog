@@ -2,6 +2,7 @@ name: Build and deploy jekyll site
 
 on:
   issue_comment:
+  issues:
   push:
     branches:
       - jekyll-cron
