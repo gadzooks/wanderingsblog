@@ -5,7 +5,7 @@ on:
   issues:
   push:
     branches:
-      - jekyll-cron
+      - master
       # - source
       # It is highly recommended that you only run this action on push to a
       # specific branch, eg. master or source (if on *.github.io repo)
