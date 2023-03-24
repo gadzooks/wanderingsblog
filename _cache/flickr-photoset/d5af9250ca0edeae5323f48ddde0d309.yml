@@ -1,0 +1,31 @@
+---
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Heather lake trail
+  urlFullSize: https://live.staticflickr.com/65535/52769097968_32e6bbee75_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52769097968_32e6bbee75_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Heather lake trail
+  urlFullSize: https://live.staticflickr.com/65535/52769098008_8e71477c99_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52769098008_8e71477c99_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Heather lake trail
+  urlFullSize: https://live.staticflickr.com/65535/52768608791_909eb6896b_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768608791_909eb6896b_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Heather lake trail
+  urlFullSize: https://live.staticflickr.com/65535/52768070652_6c7df7f4df_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768070652_6c7df7f4df_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Heather lake trail
+  urlFullSize: https://live.staticflickr.com/65535/52769023680_f08790bbb1_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52769023680_f08790bbb1_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Heather lake trail
+  urlFullSize: https://live.staticflickr.com/65535/52769023770_fa509b0b6b_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52769023770_fa509b0b6b_s.jpg
+  thumbType: square
