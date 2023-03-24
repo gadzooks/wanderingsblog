@@ -90,8 +90,10 @@ Not too shabby along the way too
     photos_by_album_id = Hash.new {|h, k| h[k] = []} 
 
     photos.each do |photo|
+      contexts = flickr.photos.getAllContexts(photo_id: photo.id)['set']
+      next unless contexts && !contexts.empty?
       # FIXME : using the 1st photoset for now
-      context = flickr.photos.getAllContexts(photo_id: photo.id)['set'].last
+      context = contexts.first
       if photo.tags.include?('js') && photo.tags.include?('main')
         puts "main photo found " + photo.inspect
         if post_details_by_id.include?(context.id) && !photo.tags.include?('jsu')
@@ -100,7 +102,7 @@ Not too shabby along the way too
           puts "found new photoset " + context.id
           # puts context.inspect
           post_details = PostDetails.new(featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, description: "")
-          post_details.description = chatgpt(post_details.categories)
+          post_details.description = post_description(post_details, photo)
           post_details_by_id[context.id] = post_details
         end
       else
@@ -109,6 +111,15 @@ Not too shabby along the way too
     end
 
     { post_details_by_id: post_details_by_id, other_photos_by_album_id: photos_by_album_id }
+  end
+
+  def self.post_description(post_details, photo)
+    if (photo['description'] || '').length > 10
+      puts "skipping chatgpt call since description found in main photo"
+      return photo['description']
+    end
+
+    return chatgpt(post_details.categories)
   end
 
   FLICKR_IMAGE_TEMPLATE = '
