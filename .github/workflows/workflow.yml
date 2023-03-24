@@ -16,11 +16,6 @@ on:
   schedule:
     - cron: '* 10-23 * * *'
 
-permissions:
-  contents: read
-  issues: read
-  pull-requests: write
-
 jobs:
   my-job:
     runs-on: ubuntu-latest
