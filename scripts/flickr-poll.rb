@@ -87,12 +87,13 @@ Not too shabby along the way too
 =end
 
     post_details_by_id = {}
+    photos_by_album_id = Hash.new {|h, k| h[k] = []} 
 
     photos.each do |photo|
+      # FIXME : using the 1st photoset for now
+      context = flickr.photos.getAllContexts(photo_id: photo.id)['set'].last
       if photo.tags.include?('js') && photo.tags.include?('main')
         puts "main photo found " + photo.inspect
-        # FIXME : using the 1st photoset for now
-        context = flickr.photos.getAllContexts(photo_id: photo.id)['set'].last
         if post_details_by_id.include?(context.id) && !photo.tags.include?('jsu')
           puts "already handled this photoset so skipping " + context.id 
         else
@@ -102,11 +103,17 @@ Not too shabby along the way too
           post_details.description = chatgpt(post_details.categories)
           post_details_by_id[context.id] = post_details
         end
+      else
+        photos_by_album_id[context.id] << photo
       end
     end
 
-    post_details_by_id.values
+    { post_details_by_id: post_details_by_id, other_photos_by_album_id: photos_by_album_id }
   end
+
+  FLICKR_IMAGE_TEMPLATE = '
+  flickr %{photo_id} "%{photo_title}" style="float: right;"
+  '
 
   POST_TEMPLATE = '---
 layout: post
@@ -120,9 +127,11 @@ featured: %{featured}
 photoset: %{photoset_id}
 ---
 %{description}
+
+%{flickr_images}
   '
 
-  def self.create_post(post_details, overwrite = true)
+  def self.create_post(post_details, other_photos_by_album, overwrite = true)
     post_hash = {
       post_file_name: post_details.post_file_name,
       title: post_details.photoset['title'],
@@ -147,6 +156,22 @@ photoset: %{photoset_id}
       end
     end
 
+    # TODO : flickr tag plugin not working so commented out
+    flickr_images = ''
+    # other_photos = other_photos_by_album[post_details.photoset['id']]
+    # other_photos.each_with_index do |photo, i|
+    #   puts photo.inspect
+    #   hsh = {
+    #     photo_id: photo['id'],
+    #     photo_title: (photo['title'] || ''),
+    #   }
+    #   str = FLICKR_IMAGE_TEMPLATE % hsh
+    #   flickr_images += "{% #{str} %}"
+    #   break if i == 5
+    # end
+
+    post_hash[:flickr_images] = flickr_images
+
     post_str = POST_TEMPLATE % post_hash
     # puts "writing to file : " + file_path
     File.open(file_path, 'w') do |out_file|
@@ -156,9 +181,11 @@ photoset: %{photoset_id}
   end
 
   def self.run
-    all_post_details = get_flickr_updates()
-    all_post_details.each do |post_details|
-      create_post(post_details)
+    data = get_flickr_updates()
+
+
+    data[:post_details_by_id].each do |photoset_id, post_details|
+      create_post(post_details, data[:other_photos_by_album_id])
     end
   end
 
