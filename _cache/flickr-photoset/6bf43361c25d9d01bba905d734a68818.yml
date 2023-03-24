@@ -1,0 +1,36 @@
+---
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Middle fork trail
+  urlFullSize: https://live.staticflickr.com/65535/52763865043_e704a1ef66_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52763865043_e704a1ef66_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Middle fork trail
+  urlFullSize: https://live.staticflickr.com/65535/52763628474_d42fcb2c44_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52763628474_d42fcb2c44_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Middle fork trail
+  urlFullSize: https://live.staticflickr.com/65535/52763628524_ed2d041ef5_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52763628524_ed2d041ef5_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Middle fork trail
+  urlFullSize: https://live.staticflickr.com/65535/52763865093_1faf626095_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52763865093_1faf626095_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Middle fork trail
+  urlFullSize: https://live.staticflickr.com/65535/52763783145_c39a78c15c_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52763783145_c39a78c15c_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Middle fork trail
+  urlFullSize: https://live.staticflickr.com/65535/52763628554_615d8cee60_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52763628554_615d8cee60_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Middle fork trail
+  urlFullSize: https://live.staticflickr.com/65535/52762834122_12c78e961c_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52762834122_12c78e961c_s.jpg
+  thumbType: square
