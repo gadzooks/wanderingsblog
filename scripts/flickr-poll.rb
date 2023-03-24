@@ -14,10 +14,6 @@ require "openai"
 # ENV['FLICKR_SHARED_SECRET']
 
 PostDetails = Struct.new(:featured, :photoset, :main_photo, :description, keyword_init: true) do 
-  # def categories
-  #   main_photo.tags
-  # end
-
   def image_alt_text
     photoset.title
   end
@@ -28,10 +24,7 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :description, keywor
 
   def post_id
     str = main_photo['title'].strip.empty? ? categories : main_photo['title']
-    ret_str = str.gsub(/\s+/, ' ').gsub(' ', '-')
-    puts "post_id"
-    puts ret_str
-    ret_str
+    str.gsub(/\s+/, ' ').gsub(' ', '-')
   end
 
   def image_file_name
@@ -45,8 +38,6 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :description, keywor
   def post_file_name
     file_name = main_photo["datetaken"].split(' ').first + '-' + self.post_id
     file_path = '_posts/' + file_name + '.markdown'
-    puts file_path
-    puts File.exists? file_path
     return file_path
   end
 
@@ -98,17 +89,15 @@ Not too shabby along the way too
     post_details_by_id = {}
 
     photos.each do |photo|
-      puts photo.id
       if photo.tags.include?('js') && photo.tags.include?('main')
         puts "main photo found " + photo.inspect
         # FIXME : using the 1st photoset for now
         context = flickr.photos.getAllContexts(photo_id: photo.id)['set'].last
-        # puts "photoset id : " + context.inspect
         if post_details_by_id.include?(context.id) && !photo.tags.include?('jsu')
           puts "already handled this photoset so skipping " + context.id 
         else
           puts "found new photoset " + context.id
-          puts context.inspect
+          # puts context.inspect
           post_details = PostDetails.new(featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, description: "")
           post_details.description = chatgpt(post_details.categories)
           post_details_by_id[context.id] = post_details
@@ -119,22 +108,6 @@ Not too shabby along the way too
     post_details_by_id.values
   end
 
-  # def self.get_post_filename(photo)
-  #   # {"id"=>"52762914260", "owner"=>"57125599@N00", "secret"=>"14aa2ef94b", "server"=>"65535", "farm"=>66, "title"=>"Main",
-  #   # "ispublic"=>1, "isfriend"=>0, "isfamily"=>0, "description"=>"Great hike", "datetaken"=>"2023-03-16 12:25:05",
-  #   # "datetakengranularity"=>0, "datetakenunknown"=>"0", "tags"=>"jekyllsite anothertag yet another tag main", 
-  #   # "latitude"=>"47.429444", "longitude"=>"-121.381578", "accuracy"=>"16", "context"=>0, "place_id"=>"", "woeid"=>"5798083", 
-  #   # "geo_is_public"=>1, "geo_is_contact"=>0, "geo_is_friend"=>0, "geo_is_family"=>0, 
-  #   # "url_m"=>"https://live.staticflickr.com/65535/52762914260_14aa2ef94b.jpg", "height_m"=>500, "width_m"=>361}
-
-  #   file_name = photo["datetaken"].split(' ').first + '-' + photo["title"].gsub(' ', '-')
-  #   file_path = '_posts/' + file_name + '.markdown'
-  #   puts file_path
-  #   puts File.exists? file_path
-  #   return file_path
-  # end
-
-  # result = "Breed %{b} size %{z}" % {b: breed, z: size}
   POST_TEMPLATE = '---
 layout: post
 title: %{title}
@@ -150,16 +123,12 @@ photoset: %{photoset_id}
   '
 
   def self.create_post(post_details, overwrite = true)
-    puts 'aaaaaaaaaaaaaaaaaaa'
-    puts post_details.inspect
-    puts 'aaaaaaaaaaaaaaaaaaa'
-    image_path = post_details.save_main_image
     post_hash = {
       post_file_name: post_details.post_file_name,
       title: post_details.photoset['title'],
       date: post_details.main_photo['datetaken'],
       categories: post_details.categories,
-      image_path: image_path,
+      image_path: post_details.save_main_image,
       image_alt_text: post_details.photoset['title'],
       featured: post_details.featured,
       photoset_id: post_details.photoset['id'],
@@ -167,7 +136,6 @@ photoset: %{photoset_id}
     }
 
     file_path = post_details.post_file_name
-    puts "post file path : #{file_path}"
 
     if File.exists? file_path
       if overwrite
@@ -180,7 +148,7 @@ photoset: %{photoset_id}
     end
 
     post_str = POST_TEMPLATE % post_hash
-    puts "writing to file : " + file_path
+    # puts "writing to file : " + file_path
     File.open(file_path, 'w') do |out_file|
       out_file.puts post_str
     end
@@ -204,6 +172,8 @@ photoset: %{photoset_id}
     prompt = "Write 2 paragraphs on middle fork trail hiking snow winter river in wa state"
     prompt = "write 2 paragraphs on #{description}"
     prompt = "write description with keywords #{description}"
+    puts '-----------------'
+    puts prompt
 
     # response = client.chat(
     #   parameters: {
@@ -224,7 +194,6 @@ photoset: %{photoset_id}
       })
   puts response["choices"].map { |c| c["text"] }
 
-  puts '-----------------'
   puts response.inspect
   # => [", there lived a great"]
 
