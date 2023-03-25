@@ -5,8 +5,8 @@
     <description>My personal blog on travel / random musings</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 24 Mar 2023 23:56:44 +0000</pubDate>
-    <lastBuildDate>Fri, 24 Mar 2023 23:56:44 +0000</lastBuildDate>
+    <pubDate>Sat, 25 Mar 2023 00:04:46 +0000</pubDate>
+    <lastBuildDate>Sat, 25 Mar 2023 00:04:46 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -65,9 +65,7 @@
     
       <item>
         <title>Heather Lake Trail</title>
-        <description>&lt;p&gt;ou&lt;/p&gt;
-
-&lt;p&gt;The Heather Lake Trail in Washington is a main trail that offers breathtaking views of the North Cascades. This 5.7 mile roundtrip is great for any skill level as it has an even, gradual climb to its destination, Heather Lake. It is one of the most popular trails in the Mount Baker-Snoqualmie National Forest. The trail itself is magnificent, taking you through meadows filled with maps, firs, and cedars. As you step into the lake basin at the end, you are greeted with stunning views of the surrounding jagged peaks, deep blue water and the icy glacier. Enjoy a quick dip in the lake before heading back to the main trail.&lt;/p&gt;
+        <description>&lt;p&gt;The Heather Lake Trail in Washington State is a stunning hike that winds through majestic old-growth forest, peaceful meadows, and near to tranquil Heather Lake, located in the Mount Baker-Snoqualmie National Forest. The trail is a moderately strenuous five-mile out-and-back hike, featuring a gradual climb that takes you around the lake’s shore. With its stunning views, abundance of wildlife and fascinating geological features, this hike is a must-see in Washington State.&lt;/p&gt;
 
 </description>
         <pubDate>Sun, 22 Jan 2023 14:52:55 +0000</pubDate>
@@ -75,7 +73,15 @@
         <guid isPermaLink="true">/Heather-lake-trail/</guid>
         
         
-        <category>heatherlaketrailwashingtonmainjsu</category>
+        <category>heather</category>
+        
+        <category>lake</category>
+        
+        <category>trail</category>
+        
+        <category>washington</category>
+        
+        <category>state</category>
         
       </item>
     
