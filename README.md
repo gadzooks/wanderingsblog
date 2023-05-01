@@ -24,7 +24,7 @@ https://michaelcurrin.github.io/code-cookbook/recipes/ci-cd/github-actions/workf
 ## running locally : 
 ```bash
 #Debug gh-pages locally with
-act -s GITHUB_TOKEN=<GH_TOKEN> -s FLICKR_API_KEY=edc405009fa021ce9816f5a75dfe5801 -s FLICKR_API_SECRET=<secret> -s FLICKR_SHARED_SECRET=<secret> --reuse
+act -s GITHUB_TOKEN=<GH_TOKEN> -s FLICKR_API_KEY=edc405009fa021ce9816f5a75dfe5801 -s FLICKR_API_SECRET=<secret> -s FLICKR_SHARED_SECRET=<secret> -s OPENAI_ACCESS_TOKEN=<chatgpt-token> --reuse
 # window 1
 export FLICKR_SHARED_SECRET=asdfasdf
 export FLICKRAW_API_KEY=asdfasdf
