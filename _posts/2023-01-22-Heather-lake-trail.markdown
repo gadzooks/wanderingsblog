@@ -11,7 +11,7 @@ photoset: 72177720306967512
 ---
 
 
-Heather Lake Trail is a stunning 4.5 mile out-and-back trail located in Washington State. Situated along the western slopes of the Cascade Mountains, this enchanted hike winds through majestic old-growth forest, past a breathtaking alpine lake, and offers views of jagged peaks, lush meadows, and tall evergreen trees. While the entirety of the hike is difficult and rocky, it is worth the effort as hikers are rewarded with stunning views of the surrounding mountains. Wildlife is abundant throughout the hike including deer, bear, and osprey. Bring a camera and plenty of water as the hike can be quite strenuous due to the altitude and terrain.
+Heather Lake Trail is a 6.5 mile out-and-back hike located in the Cascade Mountains of Washington State. This beautiful trail winds through evergreen forests and wildflower-laden meadows, providing stunning views of the nearby peaks. The trail culminates at Heather Lake, a pristine alpine lake tucked away in the mountainside. Thanks to its breathtaking landscape, Heather Lake Trail is a popular trail among outdoor enthusiasts in Washington State. It's perfect for those looking for a peaceful, picturesque hike.
 
 {% 
   flickr 52769023770 "Heather lake trail" style="float: right;"
