@@ -111,9 +111,9 @@ section.recent-posts {
 }
 
 .listfeaturedtag .wrapthumbnail {
-    height: 290px;
+    height: 200px;
     flex: 0 0 auto;
-    height: 100%;
+    /* height: 100%; */
 }
 
 .maxthumb {

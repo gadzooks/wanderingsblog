@@ -65,7 +65,10 @@ class Main
     Flickr.cache = '/tmp/flickr-api.yml'
     flickr = Flickr.new
 
-    photos = flickr.people.getPublicPhotos(:user_id => '57125599@N00', :extras => 'description,tags,geo,date_taken,url_m', per_page: 25)
+    # puts flickr.photos.getSizes(:photo_id => '52769098008').inspect
+    # puts flickr.photos.getSizes(:photo_id => '16432337040').inspect
+
+    photos = flickr.people.getPublicPhotos(:user_id => '57125599@N00', :extras => 'description,tags,geo,date_taken,url_m,widths,sizes', per_page: 25)
 
 =begin
 ---
@@ -119,6 +122,7 @@ Not too shabby along the way too
       return photo['description']
     end
 
+    # return ""
     return chatgpt(post_details.categories)
   end
 
@@ -169,17 +173,17 @@ photoset: %{photoset_id}
 
     # TODO : flickr tag plugin not working so commented out
     flickr_images = ''
-    # other_photos = other_photos_by_album[post_details.photoset['id']]
-    # other_photos.each_with_index do |photo, i|
-    #   puts photo.inspect
-    #   hsh = {
-    #     photo_id: photo['id'],
-    #     photo_title: (photo['title'] || ''),
-    #   }
-    #   str = FLICKR_IMAGE_TEMPLATE % hsh
-    #   flickr_images += "{% #{str} %}"
-    #   break if i == 5
-    # end
+    other_photos = other_photos_by_album[post_details.photoset['id']]
+    other_photos.each_with_index do |photo, i|
+      puts photo.inspect
+      hsh = {
+        photo_id: photo['id'],
+        photo_title: (photo['title'] || ''),
+      }
+      str = FLICKR_IMAGE_TEMPLATE % hsh
+      flickr_images += "{% #{str} %}\n"
+      break if i == 5
+    end
 
     post_hash[:flickr_images] = flickr_images
 
