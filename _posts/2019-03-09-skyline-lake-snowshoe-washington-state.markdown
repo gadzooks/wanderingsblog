@@ -15,5 +15,23 @@ Make sure to get there early enough since parking can be limited at the Stevens 
 
 See <a href="https://www.wta.org/go-hiking/hikes/skyline-lake-snowshoe" rel="noreferrer nofollow">www.wta.org/go-hiking/hikes/skyline-lake-snowshoe</a> for more details.
 
+{% 
+  flickr 52768988463 "" style="float: right;"
+   %}
+{% 
+  flickr 52768988428 "" style="float: right;"
+   %}
+{% 
+  flickr 52768914395 "" style="float: right;"
+   %}
+{% 
+  flickr 52767960952 "" style="float: right;"
+   %}
+{% 
+  flickr 52768988328 "" style="float: right;"
+   %}
+{% 
+  flickr 52768914260 "" style="float: right;"
+   %}
 
   

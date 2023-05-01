@@ -35,6 +35,12 @@ bundle exec jekyll serve --livereload --trace
 npm run watch:scripts
 ```
 
+## running flick script locally
+```bash
+# export flickr secrets
+./scripts/run-flickr-poll 
+```
+
 ## flickr ruby API docs
 - http://hanklords.github.io/flickraw/FlickRaw/ResponseList.html
 - https://www.flickr.com/services/api/flickr.people.getPublicPhotos.htm

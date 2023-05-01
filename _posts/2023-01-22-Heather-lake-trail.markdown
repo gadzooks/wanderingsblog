@@ -2,7 +2,7 @@
 layout: post
 title: Heather Lake Trail
 date: 2023-01-22 14:52:55
-categories: heatherlaketrailwashingtonmainjsu
+categories: heather lake trail washington state
 author: amit
 image: ./assets/images/2023-01-22/Heather-lake-trail.jpg
 image_alt_text: Heather Lake Trail
@@ -11,7 +11,22 @@ photoset: 72177720306967512
 ---
 
 
-The Heather Lake Trail in Washington State is a 3.2-mile moderate loop trail located near Mount Pilchuck. It's the perfect spot to take in stunning views of the region, including views of surrounding mountains and lakes. Featuring cascading waterfalls, lush foliage, and diverse wildlife, you can easily enjoy a day of exploration in this quiet, peaceful setting. Make sure to bring your camera – you won't want to forget all the amazing wildlife you will see! Whether you choose to hike or bike, the effort is well worth it. After a few hours taking in the views and soaking up the sun, you can make your way back to the main JSU trailhead and plan your next adventure!
+Heather Lake Trail is a stunning 4.5 mile out-and-back trail located in Washington State. Situated along the western slopes of the Cascade Mountains, this enchanted hike winds through majestic old-growth forest, past a breathtaking alpine lake, and offers views of jagged peaks, lush meadows, and tall evergreen trees. While the entirety of the hike is difficult and rocky, it is worth the effort as hikers are rewarded with stunning views of the surrounding mountains. Wildlife is abundant throughout the hike including deer, bear, and osprey. Bring a camera and plenty of water as the hike can be quite strenuous due to the altitude and terrain.
 
+{% 
+  flickr 52769023770 "Heather lake trail" style="float: right;"
+   %}
+{% 
+  flickr 52769023680 "Heather lake trail" style="float: right;"
+   %}
+{% 
+  flickr 52768070652 "Heather lake trail" style="float: right;"
+   %}
+{% 
+  flickr 52768608791 "Heather lake trail" style="float: right;"
+   %}
+{% 
+  flickr 52769098008 "Heather lake trail" style="float: right;"
+   %}
 
   
