@@ -2,6 +2,8 @@
 www.weekendwanderings.com static website built using jekyll
 
 ## set up
+## very useful recipes for jekyl 
+https://michaelcurrin.github.io/code-cookbook/recipes/ci-cd/github-actions/workflows/commit.html
 ### custom domain
 - https://stackoverflow.com/questions/9082499/custom-domain-for-github-project-pages
 - https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
@@ -12,12 +14,22 @@ www.weekendwanderings.com static website built using jekyll
 - https://jekyllrb.com/docs/variables/
 - [npm with jekyll](https://gwtrev.medium.com/how-the-f-do-i-add-a-js-pipeline-to-a-jekyll-website-you-ask-822a45ffb2cb)
 
+## use flickr tags to drive descriptions etc
+### create albums with : 
+#### 1 flickr image with tags js and main
+#### jsu : update the post if provided
+#### provide any other tags which will be fed to chatgpt to generate description for post
+
+
 ## running locally : 
 ```bash
 #Debug gh-pages locally with
-act -s GITHUB_TOKEN=<base64 encoded> -s FLICKR_API_KEY=<base64 encoded> -s FLICKR_API_SECRET=<base64 encoded> --reuse
-#run server locally with 
+act -s GITHUB_TOKEN=<GH_TOKEN> -s FLICKR_API_KEY=edc405009fa021ce9816f5a75dfe5801 -s FLICKR_API_SECRET=<secret> -s FLICKR_SHARED_SECRET=<secret> --reuse
 # window 1
+export FLICKR_SHARED_SECRET=asdfasdf
+export FLICKRAW_API_KEY=asdfasdf
+export FLICKR_API_KEY=dfasdfk
+export FLICKR_API_SECRET=asdfkas
 bundle exec jekyll serve --livereload --trace
 # window 2
 npm run watch:scripts
