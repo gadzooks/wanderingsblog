@@ -8,3 +8,5 @@ vendor
 .DS_Store
 node_modules
 assets/js/generated
+# ruby
+.bundle
