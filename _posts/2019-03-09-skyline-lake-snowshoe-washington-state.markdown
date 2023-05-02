@@ -4,7 +4,7 @@ title: Skyline Lake Snowshoe
 date: 2019-03-09 14:13:38
 categories: skyline lake snowshoe washington state
 author: amit
-image: ./assets/images/2019-03-09/skyline-lake-snowshoe-washington-state.jpg
+image: https://live.staticflickr.com/65535/52768914225_a9608185da.jpg
 image_alt_text: Skyline Lake Snowshoe
 featured: false
 photoset: 72177720306967300

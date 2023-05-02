@@ -49,9 +49,6 @@ class Main
     Flickr.cache = '/tmp/flickr-api.yml'
     flickr = Flickr.new
 
-    # puts flickr.photos.getSizes(:photo_id => '52769098008').inspect
-    # puts flickr.photos.getSizes(:photo_id => '16432337040').inspect
-
     photos = flickr.people.getPublicPhotos(:user_id => '57125599@N00', :extras => 'description,tags,geo,date_taken,url_m,widths,sizes', per_page: 25)
 
 =begin
@@ -214,22 +211,27 @@ photoset: %{photoset_id}
           prompt: prompt,
           max_tokens: 256
       })
-  puts response["choices"].map { |c| c["text"] }
 
-  puts response.inspect
-  # => [", there lived a great"]
+    if response["choices"]
+      puts response["choices"].map { |c| c["text"] }
 
-    # response = client.chat(
-    #   parameters: {
-    #       model: "gpt-3.5-turbo", # Required.
-    #       messages: [{ role: "user", content: "Hello!"}], # Required.
-    #       temperature: 0.7,
-    #   })
-    # puts response.dig("choices", 0, "message", "content")
+      puts response.inspect
+      # => [", there lived a great"]
 
-    # => "Hello! How may I assist you today?"
+        # response = client.chat(
+        #   parameters: {
+        #       model: "gpt-3.5-turbo", # Required.
+        #       messages: [{ role: "user", content: "Hello!"}], # Required.
+        #       temperature: 0.7,
+        #   })
+        # puts response.dig("choices", 0, "message", "content")
 
-    return response["choices"].first["text"] 
+        # => "Hello! How may I assist you today?"
+
+      return response["choices"].first["text"] 
+    else 
+      return ""
+    end
 
   end
 
