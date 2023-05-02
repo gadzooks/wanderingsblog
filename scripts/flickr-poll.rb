@@ -41,22 +41,6 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :description, keywor
     return file_path
   end
 
-  def save_main_image
-    # dir_path = './assets/images/' +  main_photo["datetaken"].split(' ').first + '/'
-    FileUtils.mkdir_p(self.image_dir)
-    file_name = self.image_dir + self.image_file_name
-    if File.exists? file_name
-      puts "Image already downloaded. Skipping : " + file_name
-      return file_name
-    end
-    url = main_photo['url_m']
-    tempfile = Down.download(url)
-    FileUtils.mv(tempfile.path, "#{file_name}")
-
-    return file_name
-  end
-
-
 end
 
 class Main
