@@ -41,22 +41,6 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :description, keywor
     return file_path
   end
 
-  def save_main_image
-    # dir_path = './assets/images/' +  main_photo["datetaken"].split(' ').first + '/'
-    FileUtils.mkdir_p(self.image_dir)
-    file_name = self.image_dir + self.image_file_name
-    if File.exists? file_name
-      puts "Image already downloaded. Skipping : " + file_name
-      return file_name
-    end
-    url = main_photo['url_m']
-    tempfile = Down.download(url)
-    FileUtils.mv(tempfile.path, "#{file_name}")
-
-    return file_name
-  end
-
-
 end
 
 class Main
@@ -152,7 +136,7 @@ photoset: %{photoset_id}
       title: post_details.photoset['title'],
       date: post_details.main_photo['datetaken'],
       categories: post_details.categories,
-      image_path: post_details.save_main_image,
+      image_path: post_details.main_photo['url_m'],
       image_alt_text: post_details.photoset['title'],
       featured: post_details.featured,
       photoset_id: post_details.photoset['id'],
@@ -211,11 +195,7 @@ photoset: %{photoset_id}
 
     client = OpenAI::Client.new
 
-    prompt = "Write 2 paragraphs on middle fork trail hiking snow winter river in wa state"
-    prompt = "write 2 paragraphs on #{description}"
     prompt = "write description with keywords #{description}"
-    puts '-----------------'
-    puts prompt
 
     # response = client.chat(
     #   parameters: {
