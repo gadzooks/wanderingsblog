@@ -152,7 +152,7 @@ photoset: %{photoset_id}
       title: post_details.photoset['title'],
       date: post_details.main_photo['datetaken'],
       categories: post_details.categories,
-      image_path: post_details.save_main_image,
+      image_path: post_details.main_photo['url_m'],
       image_alt_text: post_details.photoset['title'],
       featured: post_details.featured,
       photoset_id: post_details.photoset['id'],
@@ -211,11 +211,7 @@ photoset: %{photoset_id}
 
     client = OpenAI::Client.new
 
-    prompt = "Write 2 paragraphs on middle fork trail hiking snow winter river in wa state"
-    prompt = "write 2 paragraphs on #{description}"
     prompt = "write description with keywords #{description}"
-    puts '-----------------'
-    puts prompt
 
     # response = client.chat(
     #   parameters: {
