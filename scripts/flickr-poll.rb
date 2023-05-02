@@ -3,6 +3,8 @@ require 'flickr'
 require "down"
 require "fileutils"
 require "openai"
+require "date"
+require "set"
 
 # The credentials can be provided as parameters:
 
@@ -43,13 +45,20 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :description, keywor
 
 end
 
+PHOTOSETS_ADD_ENTRIES = '72177720307946395'
+USER_ID = '57125599@N00'
+PUBLIC_PHOTOS = 1
+META_DATA = 'description,tags,date_taken,url_m,widths,sizes,views'
+
 class Main
   def self.get_flickr_updates
 
     Flickr.cache = '/tmp/flickr-api.yml'
     flickr = Flickr.new
 
-    photos = flickr.people.getPublicPhotos(:user_id => '57125599@N00', :extras => 'description,tags,geo,date_taken,url_m,widths,sizes', per_page: 25)
+    # photos = flickr.people.getPublicPhotos(:user_id => '57125599@N00', :extras => 'description,tags,geo,date_taken,url_m,widths,sizes', per_page: 25)
+    photos = flickr.photosets.getPhotos(user_id: USER_ID, photoset_id: PHOTOSETS_ADD_ENTRIES, extras: META_DATA, privacy_filter: PUBLIC_PHOTOS)['photo'] || []
+    puts photos.inspect
 
 =begin
 ---
@@ -76,25 +85,41 @@ Not too shabby along the way too
     photos.each do |photo|
       contexts = flickr.photos.getAllContexts(photo_id: photo.id)['set']
       next unless contexts && !contexts.empty?
-      # FIXME : using the 1st photoset for now
-      context = contexts.first
-      if photo.tags.include?('js') && photo.tags.include?('main')
-        puts "main photo found " + photo.inspect
-        if post_details_by_id.include?(context.id) && !photo.tags.include?('jsu')
-          puts "already handled this photoset so skipping " + context.id 
-        else
-          puts "found new photoset " + context.id
-          # puts context.inspect
-          post_details = PostDetails.new(featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, description: "")
-          post_details.description = post_description(post_details, photo)
-          post_details_by_id[context.id] = post_details
-        end
-      else
-        photos_by_album_id[context.id] << photo
+      puts "--------------- contexts are ---------------- "
+      puts contexts.inspect
+      context = contexts.find {|c| c.id != PHOTOSETS_ADD_ENTRIES}
+      unless context
+        puts "for photo #{photo.id} could not find any other albums so skipping entry"
+        next
       end
+
+      post_details = PostDetails.new(featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, description: "")
+      post_details.description = post_description(post_details, photo)
+      post_details_by_id[context.id] = post_details
+
+      # get 5 interesting pictures from that context (photoset) and add it to that post
+      photos_by_album_id[context.id] = get_interesting_photos_from_context(flickr, photo, context.id)
     end
 
     { post_details_by_id: post_details_by_id, other_photos_by_album_id: photos_by_album_id }
+  end
+
+  def self.get_interesting_photos_from_context(flickr, photo, context_id)
+    date_taken = DateTime.parse(photo.datetaken).strftime('%Y-%m-%d')
+    puts "looking up all photos in album #{context_id}"
+    photos = (flickr.photosets.getPhotos(user_id: USER_ID, photoset_id: context_id, extras: META_DATA, privacy_filter: PUBLIC_PHOTOS)['photo'] || [])
+    
+    photos.sort! do |a, b|
+      b.views.to_i <=> a.views.to_i
+    end
+    
+    # photos[0..4].each do |photo|
+    #   if photo.description.empty? 
+    #     photo.description = chatgpt("describe this picture #{photo.url_m} in 10 words or less")
+    #   end
+    # end
+
+    return photos[0..4]
   end
 
   def self.post_description(post_details, photo)
@@ -104,7 +129,9 @@ Not too shabby along the way too
     end
 
     # return ""
-    return chatgpt(post_details.categories)
+    prompt = "write a short paragraph for a travel blog with keywords #{post_details.categories} in first person"
+    puts "chatgpt prompt is : #{prompt}"
+    return chatgpt(prompt)
   end
 
   FLICKR_IMAGE_TEMPLATE = '
@@ -163,6 +190,7 @@ photoset: %{photoset_id}
       }
       str = FLICKR_IMAGE_TEMPLATE % hsh
       flickr_images += "{% #{str} %}\n"
+      # flickr_images += "{% flickr #{photo['id']} \"#{photo['title'] || ''}\" style=\"float: right;\" %}\n"
       break if i == 5
     end
 
@@ -192,44 +220,25 @@ photoset: %{photoset_id}
 
     client = OpenAI::Client.new
 
-    prompt = "write description with keywords #{description}"
-
-    # response = client.chat(
-    #   parameters: {
-    #     model: "text-davinci-003",
-    #     prompt: prompt,
-    #     # temperature: 0, # show the low risk text options
-    #     max_tokens: 256,
-    #     # frequency_penalty: 0,
-    #     # presence_penalty: 0,
-    # })
-    # puts response["choices"].map { |c| c["text"] }
+    prompt = "write a short paragraph for a blog with keywords #{description}"
 
     response = client.completions(
       parameters: {
           model: "text-davinci-003",
           prompt: prompt,
           max_tokens: 256
+    #     # temperature: 0, # show the low risk text options
+    #     # frequency_penalty: 0,
+    #     # presence_penalty: 0,
       })
 
     if response["choices"]
       puts response["choices"].map { |c| c["text"] }
 
       puts response.inspect
-      # => [", there lived a great"]
-
-        # response = client.chat(
-        #   parameters: {
-        #       model: "gpt-3.5-turbo", # Required.
-        #       messages: [{ role: "user", content: "Hello!"}], # Required.
-        #       temperature: 0.7,
-        #   })
-        # puts response.dig("choices", 0, "message", "content")
-
-        # => "Hello! How may I assist you today?"
-
       return response["choices"].first["text"] 
     else 
+      STDERR.puts response.inspect
       return ""
     end
 
