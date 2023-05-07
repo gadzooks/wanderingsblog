@@ -129,7 +129,7 @@ Not too shabby along the way too
     end
 
     # return ""
-    prompt = "write a short paragraph for a travel blog with keywords #{post_details.categories} in first person"
+    prompt = "write a short paragraph for a travel blog with keywords #{post_details.categories} in first person point of view."
     puts "chatgpt prompt is : #{prompt}"
     return chatgpt(prompt)
   end
