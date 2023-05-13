@@ -7,6 +7,7 @@ require "date"
 require "set"
 require "colorize"
 require "slop"
+require "logger"
 
 # The credentials can be provided as parameters:
 
@@ -319,7 +320,20 @@ photoset: %{photoset_id}
     end
   end
 
-  def run
+  def initialize
+    @log = Logger.new(STDOUT)
+    @log.debug("Running script...")
+
+    @log.formatter = proc do |severity, datetime, progname, msg|
+      "#{severity}: [ #{datetime.strftime("%I:%M%p")} ] -- #{msg}\n"
+    end
+
+    # original_formatter = Logger::Formatter.new
+    # @log.formatter = proc { |severity, datetime, progname, msg|
+    #   original_formatter.call(severity, datetime, progname, msg.dump)
+    # }
+    @log.debug("Running script...")
+
     @options = Slop.parse do |o|
       o.bool '-o', '--overwrite', 'overwrite existing blog entries', default: false
       o.bool '-d', '--dry-run', 'dont create any posts'
@@ -341,5 +355,4 @@ photoset: %{photoset_id}
 
 end
 
-program = Main.new
-program.run
+Main.new
