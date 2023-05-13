@@ -3,7 +3,7 @@ layout: post
 title: 'Costa Rica - part deux'
 date: 2022-04-09 17:16:42 -0700
 tags: costa-rica travel
-categories: travel international
+categories: [travel]
 author: amit
 image: assets/images/costa-rica.jpeg
 image_alt_text: mt arenal

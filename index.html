@@ -33,7 +33,7 @@ title: Home
     </div>
 
     <div class="row listrecent">
-        {% for post in paginator.posts %}
+        {% for post in site.posts %}
 
         {% if post.featured != true %}
             {% include postbox.html %}

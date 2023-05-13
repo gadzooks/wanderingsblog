@@ -15,10 +15,12 @@ https://michaelcurrin.github.io/code-cookbook/recipes/ci-cd/github-actions/workf
 - [npm with jekyll](https://gwtrev.medium.com/how-the-f-do-i-add-a-js-pipeline-to-a-jekyll-website-you-ask-822a45ffb2cb)
 
 ## use flickr tags to drive descriptions etc
+- https://www.flickr.com/services/api/explore/flickr.photosets.getPhotos
 ### create albums with : 
 #### 1 flickr image with tags js and main
 #### jsu : update the post if provided
 #### provide any other tags which will be fed to chatgpt to generate description for post
+- https://platform.openai.com/docs/guides/chat/introduction
 
 
 ## running locally : 

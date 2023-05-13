@@ -9,7 +9,8 @@ on:
       - closed
   push:
     branches:
-      - master
+      - add-for-each-entry-in-flickr-album
+      # - master
       # - source
       # It is highly recommended that you only run this action on push to a
       # specific branch, eg. master or source (if on *.github.io repo)
