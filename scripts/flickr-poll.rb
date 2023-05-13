@@ -15,7 +15,7 @@ require "set"
 # ENV['FLICKR_API_KEY']
 # ENV['FLICKR_SHARED_SECRET']
 
-PostDetails = Struct.new(:featured, :photoset, :main_photo, :description, keyword_init: true) do 
+PostDetails = Struct.new(:featured, :photoset, :main_photo, :categories, :description, keyword_init: true) do 
   def image_alt_text
     photoset.title
   end
@@ -33,9 +33,9 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :description, keywor
      self.post_id + '.jpg'
   end
 
-  def categories
-    main_photo.tags.split(' ').select {|tag| !['jsu', 'js', 'jsd', 'main'].include?(tag)}.uniq.join(' ')
-  end
+  # def categories
+  #   main_photo.tags.split(' ').select {|tag| !['jsu', 'js', 'jsd', 'main'].include?(tag)}.uniq.join(' ')
+  # end
 
   def post_file_name
     file_name = main_photo["datetaken"].split(' ').first + '-' + self.post_id
@@ -93,7 +93,15 @@ Not too shabby along the way too
         next
       end
 
-      post_details = PostDetails.new(featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, description: "")
+      raw_categories = photo.tags.split(' ').select {|tag| !['jsu', 'js', 'jsd', 'main'].include?(tag)}.uniq.join(' ')
+      if raw_categories.strip == ""
+        puts "skipping entry for photo #{photo.id} because no categories were found"
+        next
+      end
+
+      messages = compute_turbo_input(raw_categories)
+      categories = chatgpt_turbo_35(messages)
+      post_details = PostDetails.new(featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, categories: categories, description: "")
       post_details.description = post_description(post_details, photo)
       post_details_by_id[context.id] = post_details
 
@@ -102,6 +110,19 @@ Not too shabby along the way too
     end
 
     { post_details_by_id: post_details_by_id, other_photos_by_album_id: photos_by_album_id }
+  end
+
+  def self.compute_turbo_input(categories)
+    return [
+        {
+            "role": "system",
+            "content": "You return valid words in groups as csv"
+        },
+        {
+            "role": "user",
+            "content": "Give me the valid words from #{categories}"
+        }
+    ]
   end
 
   def self.get_interesting_photos_from_context(flickr, photo, context_id)
@@ -113,12 +134,6 @@ Not too shabby along the way too
       b.views.to_i <=> a.views.to_i
     end
     
-    # photos[0..4].each do |photo|
-    #   if photo.description.empty? 
-    #     photo.description = chatgpt("describe this picture #{photo.url_m} in 10 words or less")
-    #   end
-    # end
-
     return photos[0..4]
   end
 
@@ -207,26 +222,52 @@ photoset: %{photoset_id}
   def self.run
     data = get_flickr_updates()
 
-
     data[:post_details_by_id].each do |photoset_id, post_details|
+      raw_categories = post_details.main_photo.tags.split(' ').select {|tag| !['jsu', 'js', 'jsd', 'main'].include?(tag)}.uniq.join(' ')
       create_post(post_details, data[:other_photos_by_album_id])
     end
   end
 
-  def self.chatgpt(description)
+  def self.chatgpt_turbo_35(messages)
     OpenAI.configure do |config|
       config.access_token = ENV.fetch('OPENAI_ACCESS_TOKEN')
     end
 
     client = OpenAI::Client.new
 
-    prompt = "write a short paragraph for a blog with keywords #{description}"
+    puts client.methods.sort.inspect
+    response = client.chat(
+      parameters: {
+        "model" => "gpt-3.5-turbo",
+        "messages" => messages,
+        "temperature" => 0,
+      }
+    )
+
+    puts '------------------'
+    puts response.inspect
+    puts '------------------'
+    if response["choices"]
+      return response["choices"].first["message"]["content"]
+    else 
+      STDERR.puts response.inspect
+      return ""
+    end
+
+  end
+
+  def self.chatgpt(prompt)
+    OpenAI.configure do |config|
+      config.access_token = ENV.fetch('OPENAI_ACCESS_TOKEN')
+    end
+
+    client = OpenAI::Client.new
 
     response = client.completions(
       parameters: {
           model: "text-davinci-003",
           prompt: prompt,
-          max_tokens: 256
+          max_tokens: 512
     #     # temperature: 0, # show the low risk text options
     #     # frequency_penalty: 0,
     #     # presence_penalty: 0,
