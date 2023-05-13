@@ -2,7 +2,7 @@
 layout: post
 title: Kendal Peak Lake Snowshoe
 date: 2023-03-16 12:23:56
-categories: snowshoe kendal peak lake wa state
+categories: [hiking]
 author: amit
 image: ./assets/images/2023-03-16/snowshoe-kendal-peak-lake-wa-state.jpg
 image_alt_text: Kendal Peak Lake Snowshoe

@@ -170,7 +170,7 @@ Not too shabby along the way too
 layout: post
 title: %{title}
 date: %{date}
-categories: %{categories}
+categories: [%{categories}]
 author: amit
 image: %{image_path}
 image_alt_text: %{image_alt_text}
@@ -182,12 +182,22 @@ photoset: %{photoset_id}
 %{flickr_images}
   '
 
+  def self.categorize(categories)
+    if categories.match?('travel')
+      'travel'
+    elsif categories.match?('hike|hiking|trail|mountain|climb')
+      'hiking'
+    else
+      'all'
+    end
+  end
+
   def self.create_post(post_details, other_photos_by_album, overwrite = true)
     post_hash = {
       post_file_name: post_details.post_file_name,
       title: post_details.photoset['title'],
       date: post_details.main_photo['datetaken'],
-      categories: post_details.categories,
+      categories: categorize(post_details.categories),
       image_path: post_details.main_photo['url_m'],
       image_alt_text: post_details.photoset['title'],
       featured: post_details.featured,

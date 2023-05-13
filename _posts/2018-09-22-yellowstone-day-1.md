@@ -4,7 +4,7 @@ title: Yellowstone day 1
 # date: 2018-09-22 00:00 +0000
 description:
 image: assets/images/09-21-18/yellowstone-day-1.jpg
-category: yellowstone road-trip
+categories: [travel]
 author: amit
 featured: true
 sitemap: false

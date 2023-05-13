@@ -2,7 +2,7 @@
 layout: post
 title: Yellowstone 09-25 Grand Teton
 date: 2018-09-25 14:18:01
-categories: grand, teton, grandteton
+categories: [travel]
 author: amit
 image: https://live.staticflickr.com/65535/52341188922_f890a40499.jpg
 image_alt_text: Yellowstone 09-25 Grand Teton
@@ -11,7 +11,7 @@ photoset: 72177720301914714
 ---
 
 
-I recently visited Grand Teton. The first thing I noticed when I stepped out of the car was the grandeur of the mountains around me - it was a truly awe-inspiring sight. Everywhere I turned, I was met with breathtaking views. I took in the rocky peaks and glacial valleys, amazed by the beauty of Grand Teton's natural landscape. It was an unforgettable experience.
+If you’re looking to escape the hustle and bustle of everyday life and embrace the beauty of nature, then you’ll want to visit Grand Teton National Park. With towering mountains and breathtaking glaciers, Grand Teton offers a great opportunity to explore and get lost in some of nature’s finest wonders. The glacial valleys, wildlife, and outstanding views are among some of the highlights of the park. For anyone looking to reconnect with the natural world, Grand Teton is an ideal destination.
 
 {% 
   flickr 52342398013 "" style="float: right;"

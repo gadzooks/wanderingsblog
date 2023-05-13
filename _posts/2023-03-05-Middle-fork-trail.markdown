@@ -2,7 +2,7 @@
 layout: post
 title: Middle Fork Trail
 date: 2023-03-05 14:00:48
-categories: middle fork trail hiking snow mountain river wa state
+categories: [hiking]
 author: amit
 image: ./assets/images/2023-03-05/Middle-fork-trail.jpg
 image_alt_text: Middle Fork Trail

@@ -2,7 +2,7 @@
 layout: post
 title: Heather Lake Trail
 date: 2023-01-22 14:52:55
-categories: heather lake trail washington state
+categories: [hiking]
 author: amit
 image: https://live.staticflickr.com/65535/52769097968_32e6bbee75.jpg
 image_alt_text: Heather Lake Trail
