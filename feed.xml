@@ -5,8 +5,8 @@
     <description>My personal blog on travel / random musings</description>
     <link>/</link>
     <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Tue, 02 May 2023 05:38:06 +0000</pubDate>
-    <lastBuildDate>Tue, 02 May 2023 05:38:06 +0000</lastBuildDate>
+    <pubDate>Sat, 13 May 2023 13:52:56 +0000</pubDate>
+    <lastBuildDate>Sat, 13 May 2023 13:52:56 +0000</lastBuildDate>
     <generator>Jekyll v4.2.2</generator>
     
       <item>
@@ -19,17 +19,7 @@
         <guid isPermaLink="true">/snowshoe-kendal-peak-lake-wa-state/</guid>
         
         
-        <category>snowshoe</category>
-        
-        <category>kendal</category>
-        
-        <category>peak</category>
-        
-        <category>lake</category>
-        
-        <category>wa</category>
-        
-        <category>state</category>
+        <category>hiking</category>
         
       </item>
     
@@ -43,29 +33,15 @@
         <guid isPermaLink="true">/Middle-fork-trail/</guid>
         
         
-        <category>middle</category>
-        
-        <category>fork</category>
-        
-        <category>trail</category>
-        
         <category>hiking</category>
-        
-        <category>snow</category>
-        
-        <category>mountain</category>
-        
-        <category>river</category>
-        
-        <category>wa</category>
-        
-        <category>state</category>
         
       </item>
     
       <item>
         <title>Heather Lake Trail</title>
-        <description>&lt;figure class=&quot;flickr&quot;&gt;
+        <description>&lt;p&gt;Heather Lake Trail is a 4.5-mile out-and-back hiking trail near Stevens Pass in Washington State. The trail offers a variety of scenery, including glimpses of the surrounding Cascade Mountains, a peaceful subalpine lake, and cascading waterfalls. Along the route, hikers will find breathtaking views, an abundance of vibrant wildflowers, and glimpses of local wildlife. The trail is great for a day hike, with an elevation change of 1,100 feet and plenty of spots to enjoy a picnic lunch or a dip in the lake.&lt;/p&gt;
+
+&lt;figure class=&quot;flickr&quot;&gt;
   &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52769023770_fa509b0b6b_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52769023770_fa509b0b6b_n.jpg 320w, https://live.staticflickr.com/65535/52769023770_fa509b0b6b_z.jpg 640w, https://live.staticflickr.com/65535/52769023770_fa509b0b6b_c.jpg 800w, https://live.staticflickr.com/65535/52769023770_fa509b0b6b_b.jpg 1024w, https://live.staticflickr.com/65535/52769023770_0625b8e822_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Heather lake trail&quot; /&gt;
   &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Heather lake trail&lt;/div&gt;&lt;/figcaption&gt;
 &lt;/figure&gt;
@@ -96,15 +72,46 @@
         <guid isPermaLink="true">/Heather-lake-trail/</guid>
         
         
-        <category>heather</category>
+        <category>hiking</category>
         
-        <category>lake</category>
+      </item>
+    
+      <item>
+        <title>Caño Negro Wildlife Refuge</title>
+        <description>&lt;p&gt;Costa Rica is an incredible destination for the avid birdwatcher and animal enthusiast. The tropical wildlife refuge is home to a wide variety of birds, including some unique and rare species, as well as sloths, monkeys and an abundance of other wildlife. From the colorful toucans and parrots, to the playful coatimundi, Costa Rica is a paradise for any nature lover. A short drive outside of the bustling city of San Jose leads visitors to the haven of natural beauty, filled with vibrant life.&lt;/p&gt;
+
+&lt;figure class=&quot;flickr&quot;&gt;
+  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52074759950_52a80cc2ef_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52074759950_52a80cc2ef_n.jpg 320w, https://live.staticflickr.com/65535/52074759950_52a80cc2ef_z.jpg 640w, https://live.staticflickr.com/65535/52074759950_52a80cc2ef_c.jpg 800w, https://live.staticflickr.com/65535/52074759950_52a80cc2ef_b.jpg 1024w, https://live.staticflickr.com/65535/52074759950_14a38dc117_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;costa rica0076.jpg&quot; /&gt;
+  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;costa rica0076.jpg&lt;/div&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;flickr&quot;&gt;
+  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52074276781_401b631bf9_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52074276781_401b631bf9_n.jpg 320w, https://live.staticflickr.com/65535/52074276781_401b631bf9_z.jpg 640w, https://live.staticflickr.com/65535/52074276781_401b631bf9_c.jpg 800w, https://live.staticflickr.com/65535/52074276781_401b631bf9_b.jpg 1024w, https://live.staticflickr.com/65535/52074276781_3d15da3447_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;_DSC0916.jpg&quot; /&gt;
+  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;_DSC0916.jpg&lt;/div&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;flickr&quot;&gt;
+  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52074276836_45ec728d06_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52074276836_45ec728d06_n.jpg 320w, https://live.staticflickr.com/65535/52074276836_45ec728d06_z.jpg 640w, https://live.staticflickr.com/65535/52074276836_45ec728d06_c.jpg 800w, https://live.staticflickr.com/65535/52074276836_45ec728d06_b.jpg 1024w, https://live.staticflickr.com/65535/52074276836_1b49d02b5c_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;_DSC0971.jpg&quot; /&gt;
+  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;_DSC0971.jpg&lt;/div&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;flickr&quot;&gt;
+  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52074505074_01d75fd009_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52074505074_01d75fd009_n.jpg 320w, https://live.staticflickr.com/65535/52074505074_01d75fd009_z.jpg 640w, https://live.staticflickr.com/65535/52074505074_01d75fd009_c.jpg 800w, https://live.staticflickr.com/65535/52074505074_01d75fd009_b.jpg 1024w, https://live.staticflickr.com/65535/52074505074_779f0ea3fd_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;_DSC0885.jpg&quot; /&gt;
+  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;_DSC0885.jpg&lt;/div&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;flickr&quot;&gt;
+  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52074276066_59126f4bc2_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52074276066_59126f4bc2_n.jpg 320w, https://live.staticflickr.com/65535/52074276066_59126f4bc2_z.jpg 640w, https://live.staticflickr.com/65535/52074276066_59126f4bc2_c.jpg 800w, https://live.staticflickr.com/65535/52074276066_59126f4bc2_b.jpg 1024w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;_DSC0492.jpg&quot; /&gt;
+  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;_DSC0492.jpg&lt;/div&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+</description>
+        <pubDate>Mon, 11 Apr 2022 11:54:19 +0000</pubDate>
+        <link>/costa-rica-vacation/</link>
+        <guid isPermaLink="true">/costa-rica-vacation/</guid>
         
-        <category>trail</category>
         
-        <category>washington</category>
-        
-        <category>state</category>
+        <category>travel</category>
         
       </item>
     
@@ -265,8 +272,6 @@
         
         <category>travel</category>
         
-        <category>international</category>
-        
       </item>
     
       <item>
@@ -336,15 +341,7 @@
         <guid isPermaLink="true">/kenai-fjords-national-park/</guid>
         
         
-        <category>alaska</category>
-        
-        <category>whale-watching</category>
-        
         <category>travel</category>
-        
-        <category>kenai-fjords</category>
-        
-        <category>national-park</category>
         
       </item>
     
@@ -392,15 +389,46 @@
         <guid isPermaLink="true">/skyline-lake-snowshoe-washington-state/</guid>
         
         
-        <category>skyline</category>
+        <category>hiking</category>
         
-        <category>lake</category>
+      </item>
+    
+      <item>
+        <title>Yellowstone 09-25 Grand Teton</title>
+        <description>&lt;p&gt;If you’re looking to escape the hustle and bustle of everyday life and embrace the beauty of nature, then you’ll want to visit Grand Teton National Park. With towering mountains and breathtaking glaciers, Grand Teton offers a great opportunity to explore and get lost in some of nature’s finest wonders. The glacial valleys, wildlife, and outstanding views are among some of the highlights of the park. For anyone looking to reconnect with the natural world, Grand Teton is an ideal destination.&lt;/p&gt;
+
+&lt;figure class=&quot;flickr&quot;&gt;
+  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52342398013_65b1ca35be_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52342398013_65b1ca35be_n.jpg 320w, https://live.staticflickr.com/65535/52342398013_65b1ca35be_z.jpg 640w, https://live.staticflickr.com/65535/52342398013_65b1ca35be_c.jpg 800w, https://live.staticflickr.com/65535/52342398013_65b1ca35be_b.jpg 1024w, https://live.staticflickr.com/65535/52342398013_732a0208c4_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;&lt;/div&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;flickr&quot;&gt;
+  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52342150261_6ef9466957_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52342150261_6ef9466957_n.jpg 320w, https://live.staticflickr.com/65535/52342150261_6ef9466957_z.jpg 640w, https://live.staticflickr.com/65535/52342150261_6ef9466957_c.jpg 800w, https://live.staticflickr.com/65535/52342150261_6ef9466957_b.jpg 1024w, https://live.staticflickr.com/65535/52342150261_050501a8f9_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;&lt;/div&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;flickr&quot;&gt;
+  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52342146901_a6a482311c_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52342146901_a6a482311c_n.jpg 320w, https://live.staticflickr.com/65535/52342146901_a6a482311c_z.jpg 640w, https://live.staticflickr.com/65535/52342146901_a6a482311c_c.jpg 800w, https://live.staticflickr.com/65535/52342146901_a6a482311c_b.jpg 1024w, https://live.staticflickr.com/65535/52342146901_d92cb3c96d_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;&lt;/div&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;flickr&quot;&gt;
+  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52340501534_b2b959dcc9_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52340501534_b2b959dcc9_n.jpg 320w, https://live.staticflickr.com/65535/52340501534_b2b959dcc9_z.jpg 640w, https://live.staticflickr.com/65535/52340501534_b2b959dcc9_c.jpg 800w, https://live.staticflickr.com/65535/52340501534_b2b959dcc9_b.jpg 1024w, https://live.staticflickr.com/65535/52340501534_22956fc434_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;&lt;/div&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+&lt;figure class=&quot;flickr&quot;&gt;
+  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52340443803_0964c5160f_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52340443803_0964c5160f_n.jpg 320w, https://live.staticflickr.com/65535/52340443803_0964c5160f_z.jpg 640w, https://live.staticflickr.com/65535/52340443803_0964c5160f_c.jpg 800w, https://live.staticflickr.com/65535/52340443803_0964c5160f_b.jpg 1024w, https://live.staticflickr.com/65535/52340443803_c020215236_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;&quot; /&gt;
+  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;&lt;/div&gt;&lt;/figcaption&gt;
+&lt;/figure&gt;
+
+</description>
+        <pubDate>Tue, 25 Sep 2018 14:18:01 +0000</pubDate>
+        <link>/grand-teton/</link>
+        <guid isPermaLink="true">/grand-teton/</guid>
         
-        <category>snowshoe</category>
         
-        <category>washington</category>
-        
-        <category>state</category>
+        <category>travel</category>
         
       </item>
     
@@ -415,134 +443,7 @@
         <guid isPermaLink="true">/yellowstone-day-2/</guid>
         
         
-        <category>yellowstone road-trip</category>
-        
-      </item>
-    
-      <item>
-        <title>Yellowstone day 1</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;We drove from Seattle to Yellowstone and entered from the northern entrance where we saw the Mammoth Hot Springs and a lot of wild life.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;h3 id=&quot;some-of-the-highlights-of-the-day-were-&quot;&gt;Some of the highlights of the day were :&lt;/h3&gt;
-
-&lt;h4 id=&quot;rivers-of-yellowstone&quot;&gt;Rivers of Yellowstone&lt;/h4&gt;
-
-&lt;p&gt;This one was an unexpected and pleasant surprise for us. We had no idea about the beauty and serenity of the river system in Yellowstone. I could have spent a few days taking pictures and drawing them if I could. Something to do on a longer visit some day 😄&lt;/p&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52339104012_0ebac48872_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52339104012_0ebac48872_n.jpg 320w, https://live.staticflickr.com/65535/52339104012_0ebac48872_z.jpg 640w, https://live.staticflickr.com/65535/52339104012_0ebac48872_c.jpg 800w, https://live.staticflickr.com/65535/52339104012_0ebac48872_b.jpg 1024w, https://live.staticflickr.com/65535/52339104012_857f872d7b_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Im not into fishing but there is something very peaceful in watching these guys fly fishing&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Im not into fishing but there is something very peaceful in watching these guys fly fishing&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52340489435_efc8a0708e_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52340489435_efc8a0708e_n.jpg 320w, https://live.staticflickr.com/65535/52340489435_efc8a0708e_z.jpg 640w, https://live.staticflickr.com/65535/52340489435_efc8a0708e_c.jpg 800w, https://live.staticflickr.com/65535/52340489435_efc8a0708e_b.jpg 1024w, https://live.staticflickr.com/65535/52340489435_3ee0b0dcf5_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;The rivers had this wonderful foreground to the great plains and majestic mountains in the distance.&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;The rivers had this wonderful foreground to the great plains and majestic mountains in the distance.&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;mammoth-hot-springs&quot;&gt;Mammoth Hot Springs&lt;/h4&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52340455270_2c03f41f12_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52340455270_2c03f41f12_n.jpg 320w, https://live.staticflickr.com/65535/52340455270_2c03f41f12_z.jpg 640w, https://live.staticflickr.com/65535/52340455270_2c03f41f12_c.jpg 800w, https://live.staticflickr.com/65535/52340455270_2c03f41f12_b.jpg 1024w, https://live.staticflickr.com/65535/52340455270_ddd3e5f183_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Mammoth Hot Springs&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Mammoth Hot Springs&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52339076322_7e915e69e6_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52339076322_7e915e69e6_n.jpg 320w, https://live.staticflickr.com/65535/52339076322_7e915e69e6_z.jpg 640w, https://live.staticflickr.com/65535/52339076322_7e915e69e6_c.jpg 800w, https://live.staticflickr.com/65535/52339076322_7e915e69e6_b.jpg 1024w, https://live.staticflickr.com/65535/52339076322_eabf110318_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Beautiful and colorful patterns&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Beautiful and colorful patterns&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52340266878_106f2700d0_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52340266878_106f2700d0_n.jpg 320w, https://live.staticflickr.com/65535/52340266878_106f2700d0_z.jpg 640w, https://live.staticflickr.com/65535/52340266878_106f2700d0_c.jpg 800w, https://live.staticflickr.com/65535/52340266878_106f2700d0_b.jpg 1024w, https://live.staticflickr.com/65535/52340266878_b3c669b458_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Beautiful and colorful patterns&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Beautiful and colorful patterns&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;wild-life&quot;&gt;Wild life&lt;/h4&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52340061106_6760643e06_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52340061106_6760643e06_n.jpg 320w, https://live.staticflickr.com/65535/52340061106_6760643e06_z.jpg 640w, https://live.staticflickr.com/65535/52340061106_6760643e06_c.jpg 800w, https://live.staticflickr.com/65535/52340061106_6760643e06_b.jpg 1024w, https://live.staticflickr.com/65535/52340061106_679174caa0_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;wild life&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;wild life&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52339107172_4fab02fa6c_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52339107172_4fab02fa6c_n.jpg 320w, https://live.staticflickr.com/65535/52339107172_4fab02fa6c_z.jpg 640w, https://live.staticflickr.com/65535/52339107172_4fab02fa6c_c.jpg 800w, https://live.staticflickr.com/65535/52339107172_4fab02fa6c_b.jpg 1024w, https://live.staticflickr.com/65535/52339107172_0eddd1f67c_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Goat 🐐&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Goat 🐐&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52340065096_649c5a0bc3_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52340065096_649c5a0bc3_n.jpg 320w, https://live.staticflickr.com/65535/52340065096_649c5a0bc3_z.jpg 640w, https://live.staticflickr.com/65535/52340065096_649c5a0bc3_c.jpg 800w, https://live.staticflickr.com/65535/52340065096_649c5a0bc3_b.jpg 1024w, https://live.staticflickr.com/65535/52340065096_bb20f132fc_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Some kind of gazelle ?&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Some kind of gazelle ?&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;h4 id=&quot;bon-fire-&quot;&gt;Bon Fire !!&lt;/h4&gt;
-
-&lt;p&gt;This was on our way back to the AirBnb. &lt;strong&gt;Remind me to link the lovely place we stayed at.&lt;/strong&gt; We were heading back when we saw these huge flames in the distance. As we drove closer we saw a &lt;strong&gt;huge&lt;/strong&gt; communal bon fire which was about 2-3 storey high. There were a lot of people around it, having a great time. I wish I had had my better camera / lens, but these are the pictures I captured from a distance. It was one of those sights where you had to stop by the side of the road and take some pictures 😄&lt;/p&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52340073556_8f6cb0aa33_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52340073556_8f6cb0aa33_n.jpg 320w, https://live.staticflickr.com/65535/52340073556_8f6cb0aa33_z.jpg 640w, https://live.staticflickr.com/65535/52340073556_8f6cb0aa33_c.jpg 800w, https://live.staticflickr.com/65535/52340073556_8f6cb0aa33_b.jpg 1024w, https://live.staticflickr.com/65535/52340073556_b271ecd088_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Huge flames&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Huge flames&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/65535/52340071256_ce6fb04d6d_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/65535/52340071256_ce6fb04d6d_n.jpg 320w, https://live.staticflickr.com/65535/52340071256_ce6fb04d6d_z.jpg 640w, https://live.staticflickr.com/65535/52340071256_ce6fb04d6d_c.jpg 800w, https://live.staticflickr.com/65535/52340071256_ce6fb04d6d_b.jpg 1024w, https://live.staticflickr.com/65535/52340071256_53cd62dada_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Huge flames&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Huge flames&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-</description>
-        <pubDate>Sat, 22 Sep 2018 00:00:00 +0000</pubDate>
-        <link>/yellowstone-day-1/</link>
-        <guid isPermaLink="true">/yellowstone-day-1/</guid>
-        
-        
-        <category>yellowstone road-trip</category>
-        
-      </item>
-    
-      <item>
-        <title>My first solo backpacking with Baloo</title>
-        <description>&lt;blockquote&gt;
-  &lt;p&gt;This was my first “solo” backpacking adventure. I decided to go on a long 4 day hike in the North Cascades and I picked a tough scenic one - &lt;a href=&quot;https://www.wta.org/go-hiking/hikes/white-pass-pilot-ridge-loop&quot; target=&quot;_blank&quot;&gt;North Fork Sauk Trail&lt;/a&gt;&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Some of the things that made this very challenging were :&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;My first solo trip&lt;/li&gt;
-  &lt;li&gt;It was about 30 miles, in high country and it was a hot summer week.&lt;/li&gt;
-  &lt;li&gt;I had no idea that Baloo gets so hot and needs a lot of water himself.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/808/40376035254_7eea098086_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/808/40376035254_7eea098086_n.jpg 320w, https://live.staticflickr.com/808/40376035254_7eea098086_z.jpg 640w, https://live.staticflickr.com/808/40376035254_7eea098086_c.jpg 800w, https://live.staticflickr.com/808/40376035254_7eea098086_b.jpg 1024w, https://live.staticflickr.com/808/40376035254_d98887987d_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Baloo resting after another long day of hiking in the hot sun&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Baloo resting after another long day of hiking in the hot sun&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/794/26213957067_4559976159_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/794/26213957067_4559976159_n.jpg 320w, https://live.staticflickr.com/794/26213957067_4559976159_z.jpg 640w, https://live.staticflickr.com/794/26213957067_4559976159_c.jpg 800w, https://live.staticflickr.com/794/26213957067_4559976159_b.jpg 1024w, https://live.staticflickr.com/794/26213957067_efafe0dc66_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Mountains bathing in alipine glow!&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Mountains bathing in alipine glow!&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/893/41042119162_d940cbd5b5_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/893/41042119162_d940cbd5b5_n.jpg 320w, https://live.staticflickr.com/893/41042119162_d940cbd5b5_z.jpg 640w, https://live.staticflickr.com/893/41042119162_d940cbd5b5_c.jpg 800w, https://live.staticflickr.com/893/41042119162_d940cbd5b5_b.jpg 1024w, https://live.staticflickr.com/893/41042119162_74d1ec90bc_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Looking out into the valley&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Looking out into the valley&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/814/40376060234_4b04d674d3_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/814/40376060234_4b04d674d3_n.jpg 320w, https://live.staticflickr.com/814/40376060234_4b04d674d3_z.jpg 640w, https://live.staticflickr.com/814/40376060234_4b04d674d3_c.jpg 800w, https://live.staticflickr.com/814/40376060234_4b04d674d3_b.jpg 1024w, https://live.staticflickr.com/814/40376060234_ba0b3d5c69_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Beautiful sunset&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Beautiful sunset&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-
-&lt;figure class=&quot;flickr&quot;&gt;
-  &lt;img class=&quot;flickr&quot; src=&quot;https://live.staticflickr.com/870/39276137640_f94212b6db_b.jpg&quot; srcset=&quot;https://live.staticflickr.com/870/39276137640_f94212b6db_n.jpg 320w, https://live.staticflickr.com/870/39276137640_f94212b6db_z.jpg 640w, https://live.staticflickr.com/870/39276137640_f94212b6db_c.jpg 800w, https://live.staticflickr.com/870/39276137640_f94212b6db_b.jpg 1024w, https://live.staticflickr.com/870/39276137640_59b29cb386_h.jpg 1600w&quot; sizes=&quot;100vw&quot; style=&quot;float: right;&quot; alt=&quot;Bear grass&quot; /&gt;
-  &lt;figcaption&gt;&lt;div class=&quot;caption&quot;&gt;Bear grass&lt;/div&gt;&lt;/figcaption&gt;
-&lt;/figure&gt;
-</description>
-        <pubDate>Sun, 27 Aug 2017 00:00:00 +0000</pubDate>
-        <link>/1st-backpacking-with-baloo/</link>
-        <guid isPermaLink="true">/1st-backpacking-with-baloo/</guid>
-        
-        
-        <category>backpacking pnw amit baloo</category>
+        <category>travel</category>
         
       </item>
     
