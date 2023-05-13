@@ -205,15 +205,25 @@ photoset: %{photoset_id}
       description: post_details.description
     }
 
+    required_fields = %w{ post_file_name title date image_path photoset_id }
+    required_fields.each do |required_field|
+      if post_hash[required_field] == '' || post_hash[required_field] == nil
+        puts "skipping entry for photo due to missing required field #{required_field}. Photo details : #{post_details.inspect}"
+        return
+      end
+    end
+
     if post_details.post_id == ""
       puts "cannot create post_id so skipping for post : #{post_details}"
     end
     file_path = post_details.post_file_name
 
+    updating_post = false
     if File.exists? file_path
+      updating_post = true
       if overwrite
         puts 'overwrite flag is set so deleting existing file'
-        File.delete(file_path)
+        # File.delete(file_path)
       else
         puts file_path + ' already exists. NOT overriding'
         return
@@ -261,7 +271,6 @@ photoset: %{photoset_id}
 
     client = OpenAI::Client.new
 
-    puts client.methods.sort.inspect
     response = client.chat(
       parameters: {
         "model" => "gpt-3.5-turbo",
