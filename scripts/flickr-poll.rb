@@ -20,22 +20,30 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :categories, :descri
     photoset.title
   end
 
+  def date_taken
+    @date_taken ||= main_photo["datetaken"].split(' ').first
+  end
+
   def image_dir
     dir_path = './assets/images/' +  main_photo["datetaken"].split(' ').first + '/'
   end
 
   def post_id
-    str = main_photo['title'].strip.empty? ? categories : main_photo['title']
-    str.gsub(/\s+/, ' ').gsub(' ', '-')
+    @post_id ||= if main_photo['title'].strip.empty? 
+                    main_photo['title'].gsub(/\s+/, ' ').gsub(' ', '-')
+                    content = "pick one name of a place from #{categories}"
+                    messages = Main.compute_turbo_input(content)
+                    res = Main.chatgpt_turbo_35(messages)
+                    res.downcase.gsub(' ', '-')
+                  else 
+                    main_photo['title'].gsub(/\s+/, ' ').gsub(' ', '-')
+                  end
+    @post_id
   end
 
   def image_file_name
      self.post_id + '.jpg'
   end
-
-  # def categories
-  #   main_photo.tags.split(' ').select {|tag| !['jsu', 'js', 'jsd', 'main'].include?(tag)}.uniq.join(' ')
-  # end
 
   def post_file_name
     file_name = main_photo["datetaken"].split(' ').first + '-' + self.post_id
@@ -99,7 +107,8 @@ Not too shabby along the way too
         next
       end
 
-      messages = compute_turbo_input(raw_categories)
+      content = "Give me the valid words from #{raw_categories}"
+      messages = compute_turbo_input(content)
       categories = chatgpt_turbo_35(messages)
       post_details = PostDetails.new(featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, categories: categories, description: "")
       post_details.description = post_description(post_details, photo)
@@ -112,7 +121,7 @@ Not too shabby along the way too
     { post_details_by_id: post_details_by_id, other_photos_by_album_id: photos_by_album_id }
   end
 
-  def self.compute_turbo_input(categories)
+  def self.compute_turbo_input(content)
     return [
         {
             "role": "system",
@@ -120,7 +129,7 @@ Not too shabby along the way too
         },
         {
             "role": "user",
-            "content": "Give me the valid words from #{categories}"
+            "content": content
         }
     ]
   end
@@ -144,7 +153,11 @@ Not too shabby along the way too
     end
 
     # return ""
-    prompt = "write a short paragraph for a travel blog with keywords #{post_details.categories} in first person point of view."
+    prompt = "write a short paragraph for a travel blog with keywords #{post_details.categories}"
+    if rand() * 10 >= 5
+      prompt += " in first person point of view."
+    end
+
     puts "chatgpt prompt is : #{prompt}"
     return chatgpt(prompt)
   end
@@ -182,6 +195,9 @@ photoset: %{photoset_id}
       description: post_details.description
     }
 
+    if post_details.post_id == ""
+      puts "cannot create post_id so skipping for post : #{post_details}"
+    end
     file_path = post_details.post_file_name
 
     if File.exists? file_path
@@ -244,6 +260,8 @@ photoset: %{photoset_id}
       }
     )
 
+    puts '------------------'
+    puts messages.inspect
     puts '------------------'
     puts response.inspect
     puts '------------------'
