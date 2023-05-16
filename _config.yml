@@ -11,7 +11,8 @@ baseurl: ""
 # disqus: 'demowebsite'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 include: ["_pages"]
-permalink: /:title/
+# Produces a cleaner folder structure when using categories
+permalink: /:year/:month/:title.html
 
 # Authors
 authors:
@@ -43,7 +44,7 @@ authors:
 
 # Plugins
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
@@ -78,8 +79,16 @@ jekyll-archives:
     category: '/category/:name/'
     
 # Pagination 
-paginate: 9
-paginate_path: /page:num/
+# gems:
+#   - jekyll-paginate-v2
+pagination:
+  enabled: true
+  per_page: 5
+  permalink: '/page/:num/'
+  title: ' - page :num'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
     
 flickr:
   widths: [320, 640, 800, 1024, 1600]
