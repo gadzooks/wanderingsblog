@@ -9,6 +9,7 @@ https://michaelcurrin.github.io/code-cookbook/recipes/ci-cd/github-actions/workf
 - https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site
 
 ## resources
+- AMAZING plugins : https://jekyllcodex.org/without-plugins/
 - https://github.com/captaincanine/marran.com
 - https://shopify.github.io/liquid/basics/introduction/
 - https://jekyllrb.com/docs/variables/
