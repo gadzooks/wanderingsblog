@@ -113,6 +113,8 @@ GEM
     multipart-post (2.3.0)
     nokogiri (1.14.4-x86_64-darwin)
       racc (~> 1.4)
+    nokogiri (1.14.4-x86_64-linux)
+      racc (~> 1.4)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     pdf-reader (2.11.0)
@@ -168,6 +170,7 @@ GEM
 
 PLATFORMS
   x86_64-darwin-21
+  x86_64-linux
 
 DEPENDENCIES
   colorize
