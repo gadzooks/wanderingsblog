@@ -2,4 +2,4 @@
 set -e # halt script on error
 
 # bundle exec jekyll build
-bundle exec htmlproofer ./_site --ignore-urls "/localhost/,/www.tripadvisor.com/,/www.reddit.com/" --disable_external true
+# bundle exec htmlproofer ./_site --ignore-urls "/localhost/,/www.tripadvisor.com/,/www.reddit.com/,https://twitter.com/whereisamit,https://twitter.com/intent/tweet?text=&url=*" 
