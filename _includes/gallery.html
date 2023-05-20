@@ -27,11 +27,6 @@
   transform-style: preserve-3d;
 }
 
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-box:hover .flip-box-inner {
-  transform: rotateY(180deg);
-}
-
 /* Position the front and back side */
 .flip-box-front, .flip-box-back {
   position: absolute;
@@ -47,13 +42,6 @@
   color: black;
 }
 
-/* Style the back side */
-.flip-box-back {
-  background-color: dodgerblue;
-  color: white;
-  transform: rotateY(180deg);
-}
-
 .flip-box-image {
   width: 100%;
   height: 100%;
@@ -63,18 +51,19 @@
 
 
 <div class="image-gallery">
-  {% for post in site.posts %}
+  {% for post in paginator.posts %}
   {% if post.featured != true && post.image != "" %}
+      <!-- overflow: hidden;
+      text-overflow: ellipsis; -->
 
   <div class="flip-box">
     <div class="flip-box-inner">
       <div class="flip-box-front">
-        <img class="flip-box-image" src="{{ post.image }}" alt="{{ post.image_alt_text }}" >
+        <img class="flip-box-image" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.image_alt_text }}" >
       </div>
-      <div class="flip-box-back">
-        <h2>{{ post.title }}</h2>
-        <p>{{ post.title }}</p>
-      </div>
+    </div>
+    <div class="flip-box-title">
+      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
     </div>
   </div>
 

@@ -25,7 +25,6 @@ pagination:
 
 {% endif %}
 
-{% include gallery.html %}
 
 <section class="recent-posts">
 
@@ -33,17 +32,7 @@ pagination:
         <h2><span>All Other Stories</span></h2>
     </div>
 
-    <div class="row listrecent">
-        {% for post in paginator.posts %}
-
-        {% if post.featured != true %}
-            {% include postbox.html %}
-        {% endif %}
-
-        {% endfor %}
-
-    </div>
-
+    {% include gallery.html %}
 </section>
 
 <!-- Pagination

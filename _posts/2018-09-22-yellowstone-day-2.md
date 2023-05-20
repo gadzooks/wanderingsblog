@@ -3,7 +3,7 @@ layout: post
 title: Yellowstone day 2
 # date: 2018-09-22 00:00 +0000
 description:
-image: assets/images/09-22-18/yellowstone-day-1.jpeg
+image: ./assets/images/09-22-18/yellowstone-day-1.jpeg
 categories: [travel]
 author: amit
 featured: false

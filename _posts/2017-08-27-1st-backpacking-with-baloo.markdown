@@ -4,7 +4,7 @@ title: 'My first solo backpacking with Baloo'
 # date: 2022-04-09 17:16:42 -0700
 categories: [hiking]
 author: amit
-image: assets/images/08-27-17/sunset.jpg
+image: ./assets/images/08-27-17/sunset.jpg
 image_alt_text: sun setting over the mountains
 featured: true
 photoset: 72157667203421688

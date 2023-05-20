@@ -4,7 +4,7 @@ title: 'Kenai Fjords National Park Alaska'
 # date: 2022-04-09 17:16:42 -0700
 categories: [travel]
 author: amit
-image: assets/images/08-14-21/kenai-fjords.jpg
+image: ./assets/images/08-14-21/kenai-fjords.jpg
 image_alt_text: kenai fjords
 featured: true
 photoset: 72177720301863060
