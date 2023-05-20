@@ -23,62 +23,62 @@ var documents = [{
     "id": 4,
     "url": "/index.html",
     "title": "Home",
-    "body": "{% if paginator. page == 1 %}       Featured:       {% for post in site. posts %}    {% if post. featured == true %}      {% include featuredbox. html %}    {% endif %}  {% endfor %}  {% endif %}       All Other Stories:         {% for post in paginator. posts %}    {% if post. featured != true %}      {% include postbox. html %}    {% endif %}    {% endfor %}  1{% include pagination. html %}"
+    "body": "{% if paginator. page == 1 %}       Featured:       {% for post in site. posts %}    {% if post. featured == true %}      {% include featuredbox. html %}    {% endif %}  {% endfor %}  {% endif %}       All Other Stories:     {% include gallery. html %}1{% include pagination. html %}"
     }, {
     "id": 5,
     "url": "/page/2/index.html",
     "title": " - page 2",
-    "body": "{% if paginator. page == 1 %}       Featured:       {% for post in site. posts %}    {% if post. featured == true %}      {% include featuredbox. html %}    {% endif %}  {% endfor %}  {% endif %}       All Other Stories:         {% for post in paginator. posts %}    {% if post. featured != true %}      {% include postbox. html %}    {% endif %}    {% endfor %}  1{% include pagination. html %}"
+    "body": "{% if paginator. page == 1 %}       Featured:       {% for post in site. posts %}    {% if post. featured == true %}      {% include featuredbox. html %}    {% endif %}  {% endfor %}  {% endif %}       All Other Stories:     {% include gallery. html %}1{% include pagination. html %}"
     }, {
     "id": 6,
-    "url": "/page/3/index.html",
-    "title": " - page 3",
-    "body": "{% if paginator. page == 1 %}       Featured:       {% for post in site. posts %}    {% if post. featured == true %}      {% include featuredbox. html %}    {% endif %}  {% endfor %}  {% endif %}       All Other Stories:         {% for post in paginator. posts %}    {% if post. featured != true %}      {% include postbox. html %}    {% endif %}    {% endfor %}  1{% include pagination. html %}"
-    }, {
-    "id": 7,
     "url": "/robots.txt",
     "title": "",
     "body": "      Sitemap: {{ “sitemap. xml”   absolute_url }}   "
     }, {
-    "id": 8,
+    "id": 7,
     "url": "/2023/03/snowshoe-kendal-peak-lake-wa-state.html",
     "title": "Kendal Peak Lake Snowshoe",
     "body": "2023/03/16 - Kendal Peak in Washington State is an iconic and breathtaking winter adventure spot. With stunning views of the lake below and majestic snow-covered peaks in the distance, a day spent at Kendal Peak is the perfect escape. Take in the majestic beauty of the mountains on a snowshoe trek through the untouched powder of this pristine landscape. Explore the unspoiled wilderness and spend the day playing in the snow, breathing the crisp winter air and taking in the scenery. With its secluded location and miles of untouched terrain, Kendal Peak offers the perfect winter escape for skiers and snowshoers alike. "
     }, {
-    "id": 9,
+    "id": 8,
     "url": "/2023/03/Middle-fork-trail.html",
     "title": "Middle Fork Trail",
     "body": "2023/03/05 - The Middle Fork Trail is a beautiful hiking option in Washington State, offering stunning views of mountains, rivers, and snow-capped peaks. This trail is renowned for its natural beauty, and offers plenty of opportunities for peaceful exploration. With lush meadows, craggy cliffs, and old-growth forests, the Middle Fork Trail is a great choice for those looking to explore the outdoors. With access to areas of the mountain that attract a range of wildlife, the Middle Fork Trail provides excellent wildlife viewing opportunities, particularly in the wintertime. The stunning river views, stunning mountain vistas, and exciting wildlife encounters make this a great choice for anyone looking to explore the beauty of Washington State. "
     }, {
-    "id": 10,
+    "id": 9,
     "url": "/2023/01/Heather-lake-trail.html",
     "title": "Heather Lake Trail",
     "body": "2023/01/22 -   Heather lake trail  Heather lake trail  Heather lake trail  Heather lake trail  Heather lake trail"
     }, {
-    "id": 11,
+    "id": 10,
     "url": "/2022/04/costa-rica-vacation.html",
     "title": "Caño Negro Wildlife Refuge",
     "body": "2022/04/11 - Costa Rica is an incredible destination for the avid birdwatcher and animal enthusiast. The tropical wildlife refuge is home to a wide variety of birds, including some unique and rare species, as well as sloths, monkeys and an abundance of other wildlife. From the colorful toucans and parrots, to the playful coatimundi, Costa Rica is a paradise for any nature lover. A short drive outside of the bustling city of San Jose leads visitors to the haven of natural beauty, filled with vibrant life.   costa rica0076. jpg  _DSC0916. jpg  _DSC0971. jpg  _DSC0885. jpg  _DSC0492. jpg"
     }, {
-    "id": 12,
+    "id": 11,
     "url": "/2022/04/costa-rica-trip.html",
     "title": "Costa Rica - part deux",
     "body": "2022/04/10 -  I fell in love with Costa Rica the first time I went there. I was my first trip outside of the US and I was amazed by the natural beauty and kindness of the people.  Our itinerary / high level plan Local services we used What you will need to bring with you Driving     San Jose to Arenal :   Arenal to Monte Verde :   Monte Verde to Jaco   Jaco to San Jose   Our itinerary / high level plan:       Date   Activity   Driving   Stay   Notes         1   Fly into San Jose   -   Melrost Airport B&amp;B           2   Drive to Arenal   3-4 hrs   Arenal - Volcano Lodge, Hotel &amp; Thermal Experience   Pick up car Vamos was great       3   Canoa Negro Float    Hotel Pickup   Arenal   One of the best ways to see wild life       4   Hanging Bridge, Arenal 1968   None   Arenal   1968 trail was amazing       5   Drive to Monte Verde   3-4 hours   Hotel Claro de Luna   best roads are Route 142 to Tilaran, then Route 145 to 606. This drive takes about 3. 5-4 hours (from La Fortuna) and is along a mix of paved and dirt roads       6   In Monte Verde   None   Monte Verde   https://reservacuricancha. com/ You can also give us a call at: (506) 2645-6915 / (506) 8448-8283 Starts at 6:00.        7   Drive to Jaco       Hotel Club del Mar Oceanfront   Hotel was nice. Beach town for locals.        8   Drive to San Jose       Marriott Hotel Hacienda Belen   Beautiful hotel. Great dinner and some tennis in sandals       9   Fly to Seattle       Marriott Hotel       Local services we used Car rental (Vamos). They dropped off and picked up the car from the hotels we stayed in for a very reasonable price ($20ish) Get a SIM card with Kolbi. great coverageWhat you will need to bring with you Head lamps Baby wipes ? Small hand sanitizer(s) Diarreah pills Arnica cream or gel - in case of bumps, bruises, etc - it works wonders.  Ponchos / small umbrella Money belt Sony camera + extra batteries + charger Water shoes for beach and ocean Spanish language book / dictionary / translation app Plastic bags, zip log bags Several color copies of passport Long socks , up to knees TP roll ? Take cash $400 or so each Chafing cream Bandana Small first aid kit Summit packs (2?) Travel insurance for United flightDriving Driving in CR is very peaceful. The traffic is well behaved, especially once you are out of the capital San Jose. We planned our rentals in such a way that Vamos delivered the car to us on our 1st day of the rental and picked it up on the last day from a different location. This is the way to do it instead of figuring out a way to get to their office in SJ on pickup and return. San Jose to Arenal :: San Jose to Arenal: If you are coming from San Jose, it should take you no more than 3-4 hours to get to La Fortuna, Costa Rica. Traveling west on Route 1 will take you to San Ramon where you will then take Route 702 to La Fortuna. The total driving distance from La Fortuna/Arenal to San Jose is 139 km (86 miles). Although it doesn’t sound like a long distance, the winding roads will slow you down so be sure to plan accordingly. Arenal to Monte Verde :: ￼ Monte Verde to Jaco: ￼ Jaco to San Jose: ￼ "
     }, {
-    "id": 13,
+    "id": 12,
     "url": "/2021/08/whale-breach.html",
     "title": "Anatomy of a picture",
     "body": "2021/08/14 - This was one of the hardest (and luckiest) picture I have taken in a very long time. There is a lot that goes on behind taking a picture like this one. At the minimum :  you to be at the right place (on a crowded whale watching boat deck) and at the right time (✔).  your camera settings should be correct (in this case fast shutter speed and burst mode) you need to be pointing in the right direction. This was the trickiest part since you could not really predict where the whale would breach. They seem to love diving deep in the ocean and surfacing at a different part.  assuming you have all the above ready to go, you have to make sure that you click on the trigger the moment you see the whale breaching. Too soon and your camera buffer may fill up (you made sure you are using a fast camera card right ? 😄), too late and you miss key moments. All these things came together and I was able to capture this wonderful beast, not once but twice. The 2nd time was further away and so I didnt get as good shots (though I would have been happy with just those by themselves too. )   Here is a picture of a typical whale watching boat"
     }, {
-    "id": 14,
+    "id": 13,
     "url": "/2021/08/kenai-fjords-national-park.html",
     "title": "Kenai Fjords National Park Alaska",
     "body": "2021/08/14 -  You know you are in for a treat when you go whale watching in the Kenai Fjords national parks in Alaska. This was my second time in Seward and I went with the trusted Major Marines Tours !. I think we picked the 6 or 7 hour version (the longer the better I feel) Some of the highlights of the trip were :  Seeing Humpback whales breaching and playing with each other Seeing massive glaciers up close Puffins, otters, bald eagles Amazing drinks they make off the freshly harvested ice from the glacier  I believe I can fly!"
     }, {
-    "id": 15,
+    "id": 14,
     "url": "/2019/03/skyline-lake-snowshoe-washington-state.html",
     "title": "Skyline Lake Snowshoe",
     "body": "2019/03/09 - Skyline lake snowshoe is an amazing snowshoe by Stevens Pass East. It has incredible views, a frozen lake (depending on time of the year) and a beautiful rock garden at the top. Make sure to get there early enough since parking can be limited at the Stevens Pass parking lot (just east of the pass). See www. wta. org/go-hiking/hikes/skyline-lake-snowshoe for more details.             "
+    }, {
+    "id": 15,
+    "url": "/2018/09/here-are-some-more-examples-of-valid-words-from-grand-teton-and-grandteton-grand-teton-grant-net-not-tag-tan-ten-ton-the-output-in-csv-format-would-be-grand,teton,grant,net,not,tag,tan,ten,ton.html",
+    "title": "Yellowstone 09-25 Grand Teton",
+    "body": "2018/09/25 - Visiting Grand Teton National Park is a great way to experience the grandeur and beauty of the Teton Range. With its majestic peaks, lush valleys, and abundant wildlife, it’s no surprise this picturesque destination is a popular tourist spot. Make sure to carve out time to witness the stunning vistas of the Grand Tetons from the many trails and overlooks scattered throughout the Park. There’s no shortage of adventures to be had: rafting, fishing, picnicking, horseback riding and more, all awaiting your exploration.           "
     }, {
     "id": 16,
     "url": "/2018/09/grand-teton.html",
@@ -88,7 +88,7 @@ var documents = [{
     "id": 17,
     "url": "/2018/09/national-park.html",
     "title": "Yellowstone 09-23 - Grand Prismatic Spring",
-    "body": "2018/09/23 - I recently had the pleasure of visiting Grand Prism Spring in the spectacularly beautiful Yellow Stone National Park. I was in awe of the sheer beauty of the area - stunning views, bright and vibrant colors, and the grandeur of the spring itself. The vibrant yellow and orange hues of the stone walls surrounding the spring was simply breathtaking. I’m so glad I was able to take some time to explore this wonderful part of the world!           "
+    "body": "2018/09/23 - I recently visited Grand Prism Spring in the beautiful Yellow Stone National Park. As I drove around the landscape and looked at all the gorgeous greenery, and wildlife, I was mesmerized by the beauty of the National Park. The sight of the spectacular Grand Prism Spring was breathtaking. The clear turquoise water contrasted nicely against the warm yellow stones in the spring. Spending a few hours here was a relaxing and enjoyable experience. I highly recommend a visit here if you ever get the chance.           "
     }, {
     "id": 18,
     "url": "/2018/09/yellowstone-day-2.html",

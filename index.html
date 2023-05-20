@@ -184,7 +184,7 @@ ga('send', 'pageview');
                     <div class="wrapthumbnail">
                         <a href="/2021/08/whale-breach.html">
                             
-                            <img class="featured-box-img-cover" alt="whale breach" src="/assets/images/08-14-21/whale-breach.jpg">
+                            <img class="featured-box-img-cover" alt="whale breach" src="/./assets/images/08-14-21/whale-breach.jpg">
                             
                         </a>
                     </div>
@@ -240,7 +240,7 @@ ga('send', 'pageview');
                     <div class="wrapthumbnail">
                         <a href="/2021/08/kenai-fjords-national-park.html">
                             
-                            <img class="featured-box-img-cover" alt="kenai fjords" src="/assets/images/08-14-21/kenai-fjords.jpg">
+                            <img class="featured-box-img-cover" alt="kenai fjords" src="/./assets/images/08-14-21/kenai-fjords.jpg">
                             
                         </a>
                     </div>
@@ -294,6 +294,8 @@ ga('send', 'pageview');
         
     
         
+    
+        
             <!-- begin post -->
 
 <div class="col-md-6 mb-30px">
@@ -304,7 +306,7 @@ ga('send', 'pageview');
                     <div class="wrapthumbnail">
                         <a href="/2018/09/yellowstone-day-1.html">
                             
-                            <img class="featured-box-img-cover" alt="" src="/assets/images/09-21-18/yellowstone-day-1.jpg">
+                            <img class="featured-box-img-cover" alt="" src="/./assets/images/09-21-18/yellowstone-day-1.jpg">
                             
                         </a>
                     </div>
@@ -360,7 +362,7 @@ ga('send', 'pageview');
                     <div class="wrapthumbnail">
                         <a href="/2017/08/1st-backpacking-with-baloo.html">
                             
-                            <img class="featured-box-img-cover" alt="sun setting over the mountains" src="/assets/images/08-27-17/sunset.jpg">
+                            <img class="featured-box-img-cover" alt="sun setting over the mountains" src="/./assets/images/08-27-17/sunset.jpg">
                             
                         </a>
                     </div>
@@ -420,289 +422,193 @@ ga('send', 'pageview');
         <h2><span>All Other Stories</span></h2>
     </div>
 
-    <div class="row listrecent">
-        
+    <style>
 
-        
-            <!-- begin post -->
+.image-gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
 
+  /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent;
+  width: 330px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  margin-bottom: 40px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
 
-<div class="col-lg-4 col-md-6 mb-30px card-group">
-    <div class="card h-100">
-        <div class="maxthumb">
-            <a href="/2023/03/snowshoe-kendal-peak-lake-wa-state.html">
-                
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
 
-                    
-                        <img class="img-fluid" src="/./assets/images/2023-03-16/snowshoe-kendal-peak-lake-wa-state.jpg" alt="Kendal Peak Lake Snowshoe"> 
-                    
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
 
-                
-            </a>
-        </div>
-        <div class="card-body">
-            <h2 class="card-title">
-                <a class="text-dark" href="/2023/03/snowshoe-kendal-peak-lake-wa-state.html">Kendal Peak Lake Snowshoe</a>
-                
-            </h2>
-            <h4 class="card-text">Kendal Peak in Washington State is an iconic and breathtaking winter adventure spot. With stunning views of the lake below and majestic snow-covered peaks in the distance, a day spent...</h4>
-        </div>
-        <div class="card-footer bg-white">
-            <div class="wrapfooter">
-                
-                <span class="meta-footer-thumb">
-                
-                <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&d=mm&r=x" alt="Amit">
-                
-                </span>
-                <span class="author-meta">
-                <span class="post-name"><a target="_blank" href="https://www.weekendwanderings.com">Amit</a></span><br/>
-                
-                <span class="post-date">16 Mar 2023</span>
-                - 
-                <span class="post-date">1 min read</span>
-                </span>
-                <span class="post-read-more"><a href="/2023/03/snowshoe-kendal-peak-lake-wa-state.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end post -->
-        
+/* Style the front side (fallback if image is missing) */
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
 
-        
-
-        
-            <!-- begin post -->
+.flip-box-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
 
 
-<div class="col-lg-4 col-md-6 mb-30px card-group">
-    <div class="card h-100">
-        <div class="maxthumb">
-            <a href="/2023/03/Middle-fork-trail.html">
-                
-
-                    
-                        <img class="img-fluid" src="/./assets/images/2023-03-05/Middle-fork-trail.jpg" alt="Middle Fork Trail"> 
-                    
-
-                
-            </a>
-        </div>
-        <div class="card-body">
-            <h2 class="card-title">
-                <a class="text-dark" href="/2023/03/Middle-fork-trail.html">Middle Fork Trail</a>
-                
-            </h2>
-            <h4 class="card-text">The Middle Fork Trail is a beautiful hiking option in Washington State, offering stunning views of mountains, rivers, and snow-capped peaks. This trail is renowned for its natural beauty, and...</h4>
-        </div>
-        <div class="card-footer bg-white">
-            <div class="wrapfooter">
-                
-                <span class="meta-footer-thumb">
-                
-                <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&d=mm&r=x" alt="Amit">
-                
-                </span>
-                <span class="author-meta">
-                <span class="post-name"><a target="_blank" href="https://www.weekendwanderings.com">Amit</a></span><br/>
-                
-                <span class="post-date">05 Mar 2023</span>
-                - 
-                <span class="post-date">1 min read</span>
-                </span>
-                <span class="post-read-more"><a href="/2023/03/Middle-fork-trail.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end post -->
-        
-
-        
-
-        
-            <!-- begin post -->
-
-
-<div class="col-lg-4 col-md-6 mb-30px card-group">
-    <div class="card h-100">
-        <div class="maxthumb">
-            <a href="/2023/01/Heather-lake-trail.html">
-                
-
-                    
-                        <img class="img-fluid" src="https://live.staticflickr.com/65535/52769097968_32e6bbee75.jpg" alt="Heather Lake Trail"> 
-                    
-
-                
-            </a>
-        </div>
-        <div class="card-body">
-            <h2 class="card-title">
-                <a class="text-dark" href="/2023/01/Heather-lake-trail.html">Heather Lake Trail</a>
-                
-            </h2>
-            <h4 class="card-text">
+<div class="image-gallery">
   
-  Heather lake trail
+  
+      <!-- overflow: hidden;
+      text-overflow: ellipsis; -->
 
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img class="flip-box-image" src="/./assets/images/2023-03-16/snowshoe-kendal-peak-lake-wa-state.jpg" alt="Kendal Peak Lake Snowshoe" >
+      </div>
+    </div>
+    <div class="flip-box-title">
+      <a href="/2023/03/snowshoe-kendal-peak-lake-wa-state.html" title="Kendal Peak Lake Snowshoe">Kendal Peak Lake Snowshoe</a>
+    </div>
+  </div>
 
+      <!-- <a href="/2023/03/snowshoe-kendal-peak-lake-wa-state.html" title="Kendal Peak Lake Snowshoe">
+        <img src="./assets/images/2023-03-16/snowshoe-kendal-peak-lake-wa-state.jpg" alt="Kendal Peak Lake Snowshoe" />
+        <span>./assets/images/2023-03-16/snowshoe-kendal-peak-lake-wa-state.jpg</span>
+      </a> -->
+  
 
   
-  Heather lake trail
+      <!-- overflow: hidden;
+      text-overflow: ellipsis; -->
 
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img class="flip-box-image" src="/./assets/images/2023-03-05/Middle-fork-trail.jpg" alt="Middle Fork Trail" >
+      </div>
+    </div>
+    <div class="flip-box-title">
+      <a href="/2023/03/Middle-fork-trail.html" title="Middle Fork Trail">Middle Fork Trail</a>
+    </div>
+  </div>
 
+      <!-- <a href="/2023/03/Middle-fork-trail.html" title="Middle Fork Trail">
+        <img src="./assets/images/2023-03-05/Middle-fork-trail.jpg" alt="Middle Fork Trail" />
+        <span>./assets/images/2023-03-05/Middle-fork-trail.jpg</span>
+      </a> -->
+  
 
   
-  Heather lake trail
+      <!-- overflow: hidden;
+      text-overflow: ellipsis; -->
 
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img class="flip-box-image" src="https://live.staticflickr.com/65535/52769097968_32e6bbee75.jpg" alt="Heather Lake Trail" >
+      </div>
+    </div>
+    <div class="flip-box-title">
+      <a href="/2023/01/Heather-lake-trail.html" title="Heather Lake Trail">Heather Lake Trail</a>
+    </div>
+  </div>
 
+      <!-- <a href="/2023/01/Heather-lake-trail.html" title="Heather Lake Trail">
+        <img src="https://live.staticflickr.com/65535/52769097968_32e6bbee75.jpg" alt="Heather Lake Trail" />
+        <span>https://live.staticflickr.com/65535/52769097968_32e6bbee75.jpg</span>
+      </a> -->
+  
 
   
-  Heather lake trail
+      <!-- overflow: hidden;
+      text-overflow: ellipsis; -->
 
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img class="flip-box-image" src="https://live.staticflickr.com/65535/52074277958_5b2a28d902.jpg" alt="Caño Negro Wildlife Refuge" >
+      </div>
+    </div>
+    <div class="flip-box-title">
+      <a href="/2022/04/costa-rica-vacation.html" title="Caño Negro Wildlife Refuge">Caño Negro Wildlife Refuge</a>
+    </div>
+  </div>
 
+      <!-- <a href="/2022/04/costa-rica-vacation.html" title="Caño Negro Wildlife Refuge">
+        <img src="https://live.staticflickr.com/65535/52074277958_5b2a28d902.jpg" alt="Caño Negro Wildlife Refuge" />
+        <span>https://live.staticflickr.com/65535/52074277958_5b2a28d902.jpg</span>
+      </a> -->
+  
 
   
-  Heather lake trail
+      <!-- overflow: hidden;
+      text-overflow: ellipsis; -->
 
-</h4>
-        </div>
-        <div class="card-footer bg-white">
-            <div class="wrapfooter">
-                
-                <span class="meta-footer-thumb">
-                
-                <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&d=mm&r=x" alt="Amit">
-                
-                </span>
-                <span class="author-meta">
-                <span class="post-name"><a target="_blank" href="https://www.weekendwanderings.com">Amit</a></span><br/>
-                
-                <span class="post-date">22 Jan 2023</span>
-                - 
-                <span class="post-date">1 min read</span>
-                </span>
-                <span class="post-read-more"><a href="/2023/01/Heather-lake-trail.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-                <div class="clearfix"></div>
-            </div>
-        </div>
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img class="flip-box-image" src="/./assets/images/costa-rica.jpeg" alt="mt arenal" >
+      </div>
     </div>
+    <div class="flip-box-title">
+      <a href="/2022/04/costa-rica-trip.html" title="Costa Rica - part deux">Costa Rica - part deux</a>
+    </div>
+  </div>
+
+      <!-- <a href="/2022/04/costa-rica-trip.html" title="Costa Rica - part deux">
+        <img src="./assets/images/costa-rica.jpeg" alt="mt arenal" />
+        <span>./assets/images/costa-rica.jpeg</span>
+      </a> -->
+  
+
+  
+
+  
+
+  
+      <!-- overflow: hidden;
+      text-overflow: ellipsis; -->
+
+  <div class="flip-box">
+    <div class="flip-box-inner">
+      <div class="flip-box-front">
+        <img class="flip-box-image" src="https://live.staticflickr.com/65535/52768914225_a9608185da.jpg" alt="Skyline Lake Snowshoe" >
+      </div>
+    </div>
+    <div class="flip-box-title">
+      <a href="/2019/03/skyline-lake-snowshoe-washington-state.html" title="Skyline Lake Snowshoe">Skyline Lake Snowshoe</a>
+    </div>
+  </div>
+
+      <!-- <a href="/2019/03/skyline-lake-snowshoe-washington-state.html" title="Skyline Lake Snowshoe">
+        <img src="https://live.staticflickr.com/65535/52768914225_a9608185da.jpg" alt="Skyline Lake Snowshoe" />
+        <span>https://live.staticflickr.com/65535/52768914225_a9608185da.jpg</span>
+      </a> -->
+  
+
+
+
 </div>
-<!-- end post -->
-        
-
-        
-
-        
-            <!-- begin post -->
-
-
-<div class="col-lg-4 col-md-6 mb-30px card-group">
-    <div class="card h-100">
-        <div class="maxthumb">
-            <a href="/2022/04/costa-rica-vacation.html">
-                
-
-                    
-                        <img class="img-fluid" src="https://live.staticflickr.com/65535/52074277958_5b2a28d902.jpg" alt="Caño Negro Wildlife Refuge"> 
-                    
-
-                
-            </a>
-        </div>
-        <div class="card-body">
-            <h2 class="card-title">
-                <a class="text-dark" href="/2022/04/costa-rica-vacation.html">Caño Negro Wildlife Refuge</a>
-                
-            </h2>
-            <h4 class="card-text">Costa Rica is an incredible destination for the avid birdwatcher and animal enthusiast. The tropical wildlife refuge is home to a wide variety of birds, including some unique and rare...</h4>
-        </div>
-        <div class="card-footer bg-white">
-            <div class="wrapfooter">
-                
-                <span class="meta-footer-thumb">
-                
-                <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&d=mm&r=x" alt="Amit">
-                
-                </span>
-                <span class="author-meta">
-                <span class="post-name"><a target="_blank" href="https://www.weekendwanderings.com">Amit</a></span><br/>
-                
-                <span class="post-date">11 Apr 2022</span>
-                - 
-                <span class="post-date">1 min read</span>
-                </span>
-                <span class="post-read-more"><a href="/2022/04/costa-rica-vacation.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end post -->
-        
-
-        
-
-        
-            <!-- begin post -->
-
-
-<div class="col-lg-4 col-md-6 mb-30px card-group">
-    <div class="card h-100">
-        <div class="maxthumb">
-            <a href="/2022/04/costa-rica-trip.html">
-                
-
-                    
-                        <img class="img-fluid" src="/assets/images/costa-rica.jpeg" alt="Costa Rica - part deux"> 
-                    
-
-                
-            </a>
-        </div>
-        <div class="card-body">
-            <h2 class="card-title">
-                <a class="text-dark" href="/2022/04/costa-rica-trip.html">Costa Rica - part deux</a>
-                
-            </h2>
-            <h4 class="card-text">I fell in love with Costa Rica the first time I went there. I was my first trip outside of the US and I was amazed by the natural beauty...</h4>
-        </div>
-        <div class="card-footer bg-white">
-            <div class="wrapfooter">
-                
-                <span class="meta-footer-thumb">
-                
-                <img class="author-thumb" src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&d=mm&r=x" alt="Amit">
-                
-                </span>
-                <span class="author-meta">
-                <span class="post-name"><a target="_blank" href="https://www.weekendwanderings.com">Amit</a></span><br/>
-                
-                <span class="post-date">10 Apr 2022</span>
-                - 
-                <span class="post-date">4 min read</span>
-                </span>
-                <span class="post-read-more"><a href="/2022/04/costa-rica-trip.html" title="Read Story"><svg class="svgIcon-use" width="25" height="25" viewbox="0 0 25 25"><path d="M19 6c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v14.66h.012c.01.103.045.204.12.285a.5.5 0 0 0 .706.03L12.5 16.85l5.662 4.126a.508.508 0 0 0 .708-.03.5.5 0 0 0 .118-.285H19V6zm-6.838 9.97L7 19.636V6c0-.55.45-1 1-1h9c.55 0 1 .45 1 1v13.637l-5.162-3.668a.49.49 0 0 0-.676 0z" fill-rule="evenodd"></path></svg></a></span>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- end post -->
-        
-
-        
-
-        
-
-        
-
-    </div>
-
 </section>
 
 <!-- Pagination
@@ -721,10 +627,6 @@ ga('send', 'pageview');
     
       <li >
           <a href="/page/2/index.html" title=" - page 2">2</a>
-      </li>
-    
-      <li >
-          <a href="/page/3/index.html" title=" - page 3">3</a>
       </li>
     
     </ul>
@@ -751,7 +653,7 @@ ga('send', 'pageview');
             
             
                 
-                    <a class="mt-1 mb-1" href="/categories#hiking">hiking (6)</a>
+                    <a class="mt-1 mb-1" href="/categories#hiking">hiking (7)</a>
                 
                     <a class="mt-1 mb-1" href="/categories#travel">travel (7)</a>
                 
