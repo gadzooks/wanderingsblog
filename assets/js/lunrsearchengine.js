@@ -76,36 +76,31 @@ var documents = [{
     "body": "2019/03/09 - Skyline lake snowshoe is an amazing snowshoe by Stevens Pass East. It has incredible views, a frozen lake (depending on time of the year) and a beautiful rock garden at the top. Make sure to get there early enough since parking can be limited at the Stevens Pass parking lot (just east of the pass). See www. wta. org/go-hiking/hikes/skyline-lake-snowshoe for more details.             "
     }, {
     "id": 15,
-    "url": "/2018/09/here-are-some-more-examples-of-valid-words-from-grand-teton-and-grandteton-grand-teton-grant-net-not-tag-tan-ten-ton-the-output-in-csv-format-would-be-grand,teton,grant,net,not,tag,tan,ten,ton.html",
-    "title": "Yellowstone 09-25 Grand Teton",
-    "body": "2018/09/25 - Visiting Grand Teton National Park is a great way to experience the grandeur and beauty of the Teton Range. With its majestic peaks, lush valleys, and abundant wildlife, it’s no surprise this picturesque destination is a popular tourist spot. Make sure to carve out time to witness the stunning vistas of the Grand Tetons from the many trails and overlooks scattered throughout the Park. There’s no shortage of adventures to be had: rafting, fishing, picnicking, horseback riding and more, all awaiting your exploration.           "
-    }, {
-    "id": 16,
     "url": "/2018/09/grand-teton.html",
     "title": "Yellowstone 09-25 Grand Teton",
     "body": "2018/09/25 - If you’re looking to escape the hustle and bustle of everyday life and embrace the beauty of nature, then you’ll want to visit Grand Teton National Park. With towering mountains and breathtaking glaciers, Grand Teton offers a great opportunity to explore and get lost in some of nature’s finest wonders. The glacial valleys, wildlife, and outstanding views are among some of the highlights of the park. For anyone looking to reconnect with the natural world, Grand Teton is an ideal destination.           "
     }, {
-    "id": 17,
+    "id": 16,
     "url": "/2018/09/national-park.html",
     "title": "Yellowstone 09-23 - Grand Prismatic Spring",
-    "body": "2018/09/23 - I recently visited Grand Prism Spring in the beautiful Yellow Stone National Park. As I drove around the landscape and looked at all the gorgeous greenery, and wildlife, I was mesmerized by the beauty of the National Park. The sight of the spectacular Grand Prism Spring was breathtaking. The clear turquoise water contrasted nicely against the warm yellow stones in the spring. Spending a few hours here was a relaxing and enjoyable experience. I highly recommend a visit here if you ever get the chance.           "
+    "body": "2018/09/23 - Hiking through Grand Prism Spring in Wyoming’sYellowstone National Park was one of the most awe inspiring experiences of my life. The vast landscape was dotted with its stained terracotta rocks that reflected the sun’s rays, making the area look like an oasis amidst the stark beauty of nature. I loved the crystal clear springs that cascaded down the mountainside like a mini waterfall, and the feeling of pure serenity that surrounded me. I’m so grateful to have experienced this part of the world and would recommend it to any nature lover to witness its beauty firsthand.           "
     }, {
-    "id": 18,
+    "id": 17,
     "url": "/2018/09/yellowstone-day-2.html",
     "title": "Yellowstone day 2",
     "body": "2018/09/22 -  We went on a nice hike called Hell Roaring and got to see some bison roaming around. We was pretty cool to see these huge wilder beasts roaming freely. We did make sure that we kept a healthy distance from them. "
     }, {
-    "id": 19,
+    "id": 18,
     "url": "/2018/09/yellowstone-day-1.html",
     "title": "Yellowstone day 1",
     "body": "2018/09/22 -  We drove from Seattle to Yellowstone and entered from the northern entrance where we saw the Mammoth Hot Springs and a lot of wild life. Some of the highlights of the day were :: Rivers of Yellowstone: This one was an unexpected and pleasant surprise for us. We had no idea about the beauty and serenity of the river system in Yellowstone. I could have spent a few days taking pictures and drawing them if I could. Something to do on a longer visit some day 😄   Im not into fishing but there is something very peaceful in watching these guys fly fishing  The rivers had this wonderful foreground to the great plains and majestic mountains in the distance. Mammoth Hot Springs:   Mammoth Hot Springs  Beautiful and colorful patterns  Beautiful and colorful patternsWild life:   wild life  Goat 🐐  Some kind of gazelle ?Bon Fire !!: This was on our way back to the AirBnb. Remind me to link the lovely place we stayed at. We were heading back when we saw these huge flames in the distance. As we drove closer we saw a huge communal bon fire which was about 2-3 storey high. There were a lot of people around it, having a great time. I wish I had had my better camera / lens, but these are the pictures I captured from a distance. It was one of those sights where you had to stop by the side of the road and take some pictures 😄   Huge flames  Huge flames"
     }, {
-    "id": 20,
+    "id": 19,
     "url": "/2017/08/1st-backpacking-with-baloo.html",
     "title": "My first solo backpacking with Baloo",
     "body": "2017/08/27 -  This was my first “solo” backpacking adventure. I decided to go on a long 4 day hike in the North Cascades and I picked a tough scenic one - North Fork Sauk Trail Some of the things that made this very challenging were :  My first solo trip It was about 30 miles, in high country and it was a hot summer week.  I had no idea that Baloo gets so hot and needs a lot of water himself.   Baloo resting after another long day of hiking in the hot sun  Mountains bathing in alipine glow!  Looking out into the valley  Beautiful sunset  Bear grass"
     }, {
-    "id": 21,
+    "id": 20,
     "url": "/2017/06/mt-dickerman-winter-route.html",
     "title": "Mt Dickerman Winter Route",
     "body": "2017/06/05 -  Mt Dickerman is one of the premier hikes in the Pacific North West. It is a beast of a climb but the rewards are amazing. I decided to climb via the winter route for a change. The winter route, mainly follows the summer route but towards the top instead of taking switch-backs you go straight up as the crow flies. This hike is not to be taken lightly, even in the best of situations and especially not in winter conditions.   Baloo saying - lets go hike already !Not too shabby along the way too   Blue bird day  My buddy Eric hiking up  Final Ascent  Beautiful but deadly cornices  Crowded at the top ?At the very top   Mountains as far as you can see  Winter makes everything extra magical  Doggie paradise  Snow capped mountains"
