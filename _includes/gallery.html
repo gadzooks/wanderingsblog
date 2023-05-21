@@ -9,6 +9,7 @@
 
 .flip-box a {
   color: #646464;
+  font-size: 0.8rem;
 }
 
   /* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
@@ -62,7 +63,7 @@
   <div class="flip-box">
     <div class="flip-box-inner">
       <div class="flip-box-front">
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title | truncate: 45 }}
           <img class="flip-box-image" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.image_alt_text }}" >
         </a>
       </div>
