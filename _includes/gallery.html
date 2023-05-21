@@ -38,7 +38,6 @@
 
 /* Style the front side (fallback if image is missing) */
 .flip-box-front {
-  background-color: #bbb;
   color: black;
 }
 
@@ -59,12 +58,14 @@
   <div class="flip-box">
     <div class="flip-box-inner">
       <div class="flip-box-front">
-        <img class="flip-box-image" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.image_alt_text }}" >
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}
+          <img class="flip-box-image" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.image_alt_text }}" >
+        </a>
       </div>
     </div>
-    <div class="flip-box-title">
+    <!-- <div class="flip-box-title">
       <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </div>
+    </div> -->
   </div>
 
       <!-- <a href="{{ post.url }}" title="{{ post.title }}">
