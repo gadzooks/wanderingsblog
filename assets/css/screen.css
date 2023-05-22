@@ -252,15 +252,24 @@ span.post-read-more a:hover {
     margin-right: 3px;
 }
 
+.site-meta {
+    display: flex;
+    align-items: center;
+}
+
 .site-meta .site-title {
     font-family: Righteous;
-    color: #c2c6c6;
+    color: #1a56ef;
+    padding-right: 10px;
 }
 
 .site-meta .site-description {
-    color: #989c9c;
+    color: black;
     font-size: 0.9rem;
-    padding-left: 40px;
+    /* padding-left: 40px; */
+    padding-right: 10px;
+    font-family: 'Apple Chancery';
+
 }
 
 .mediumnavigation .form-control {
