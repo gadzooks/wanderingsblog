@@ -67,6 +67,49 @@ META_DATA = 'description,tags,date_taken,url_m,widths,sizes,views'
 UNIQUE_FLICKR_ID_FILE_PATH = '_data/flickr/unique_photo_ids.yml'
 
 class Main
+  def diff_in_days(p1, p2)
+    diff = (p1.datetaken - p2.datetaken).abs
+    return diff / (24 * 60 * 60)
+  end
+
+  def find_photo_series(photos)
+    post_series = [] # array of arrays, one for each series
+    all_photos_in_series = Set.new
+    series_id = 0
+    in_series = false
+
+    index = 1
+    curr_p = photos[0]
+    while (photos.size > 0 && index < photos.size)
+      next_p = photos[index]
+      day_diff = (next_p.datetaken - curr_p.datetaken).round
+      if day_diff <= 1     
+        in_series = true
+        # is part of series
+        photo_set = post_series[series_id] ||= Set.new
+        photo_set << curr_p
+        photo_set << next_p
+        all_photos_in_series << curr_p
+        all_photos_in_series << next_p
+      else
+        if in_series
+          in_series = false
+          series_id += 1
+        end
+      end
+
+      curr_p = next_p
+      index += 1
+    end
+
+    post_series.each_with_index do |ps, idx|
+      ps.each do |p| puts [idx, p.id, p.datetaken].inspect end
+    end
+
+    puts photos.size
+    { post_series: post_series, all_photos_in_series: all_photos_in_series }
+  end
+
   def get_flickr_updates
 
     Flickr.cache = '/tmp/flickr-api.yml'
@@ -75,42 +118,28 @@ class Main
     # photos = flickr.people.getPublicPhotos(:user_id => '57125599@N00', :extras => 'description,tags,geo,date_taken,url_m,widths,sizes', per_page: 25)
     flickr_photos = flickr.photosets.getPhotos(user_id: USER_ID, photoset_id: PHOTOSETS_ADD_ENTRIES, extras: META_DATA, privacy_filter: PUBLIC_PHOTOS)['photo'] || []
     
+    if flickr_photos.size == 0
+      return { post_details_by_id: {}, other_photos_by_album_id: [] }
+    end
+    
     photos = []
     flickr_photos.each do |photo|
-      puts [photo.id, photo.datetaken, photo.tags].inspect
       new_photo = OpenStruct.new(photo.to_hash)
-      puts new_photo.inspect
       new_photo.datetaken = Date.parse(photo.datetaken)
-      puts new_photo.datetaken
       photos << new_photo
     end
 
+    photos.sort! do |a, b|
+      a.datetaken <=> b.datetaken
+    end
 
-=begin
----
-layout: post
-categories: hiking pnw amit baloo winter
-author: amit
-image: assets/images/06-05-17/mt-dickerman.jpg
-image_alt_text: snow capped Mt Dickerman
-featured: false
-photoset: 72157650991053255
-# optional entries
-series_key: yellowstone-road-trip-2018
-series_index: 4 # 4th out of 8 enties
-series_total: 8
----
-
-> [Mt Dickerman](https://www.wta.org/go-hiking/hikes/mount-dickerman){:target="\_blank"} is one of the premier hikes in the Pacific North West. It is a beast of a climb but the rewards are amazing.
-
-Not too shabby along the way too
-{% flickr 16432337040 "Blue bird day" style="float: right;" %}
-{% flickr 16618229831 "My buddy Eric hiking up" style="float: right;" %}
-
-=end
+    series_info = find_photo_series(photos)
+ 
+    exit 0
 
     post_details_by_id = {}
     photos_by_album_id = Hash.new {|h, k| h[k] = []} 
+
 
     # sort all photos by date taken
     # remove all photos which belong to series. 
