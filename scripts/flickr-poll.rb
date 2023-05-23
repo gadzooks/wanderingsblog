@@ -110,17 +110,21 @@ class Main
     end
 
     puts photos.size
-    { post_series: post_series.each { |aa| aa.to_a }, all_photos_in_series: all_photos_in_series }
+    {
+      post_series: post_series.each { |aa| aa.to_a },
+      all_photos_in_series: all_photos_in_series,
+    }
   end
 
-  def get_post_series_details(all_photos_in_series, post_series, photo)
+  def get_post_series_details(all_photos_in_series, post_series, photo, series_key)
     if all_photos_in_series.include? photo
       related_series = post_series.find {|ps| ps.include? photo }
       if related_series 
-        series_key = related_series.first.post_id
+        which_series = post_series.find_index {|ps| ps.include? photo } 
         series_index = related_series.find_index photo
         series_total = related_series.size
-        return PostSeriesDetails.new(series_key: series_key, series_index: series_index, series_total: series_total)
+        # TODO : generate series_key per series when the series is being found from all photos
+        return PostSeriesDetails.new(series_key: "temp-series-key-#{which_series}", series_index: series_index, series_total: series_total)
       end
     else
       nil
@@ -194,6 +198,8 @@ class Main
 
       raw_categories = photo.tags.split(' ').select {|tag| !['jsu', 'js', 'jsd', 'main'].include?(tag)}.uniq.join(' ')
       if raw_categories.strip == ""
+        # TODO : remove from all_photos_in_series and post_series too. 
+        # TODO : We should move all photo series related logic to its own class
         puts "skipping entry for photo #{photo.id} because no categories were found".colorize(:red)
         next
       end
@@ -201,12 +207,12 @@ class Main
       content = "Give me the valid words from #{raw_categories}"
       messages = ChatGptHelpers.compute_turbo_input(content)
       categories = ChatGptHelpers.chatgpt_turbo_35(messages, @options.skip_chatgpt?)
-      post_series_details = get_post_series_details(all_photos_in_series, post_series, photo)
       post_details = PostDetails.new(
         featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, categories: categories,
-        post_series_details: post_series_details,
         skip_chatgpt: @options.skip_chatgpt?, description: ""
       )
+      post_series_details = get_post_series_details(all_photos_in_series, post_series, photo, post_details.post_id)
+      post_details.post_series_details = post_series_details
       post_details.description = post_description(post_details, photo)
       post_details_by_id[context.id] = post_details
 
@@ -245,15 +251,13 @@ class Main
     return ChatGptHelpers.davinci(prompt, @options.skip_chatgpt?)
   end
 
-  FLICKR_IMAGE_TEMPLATE = '
-  flickr %{photo_id} "%{photo_title}" style="float: right;"
+  FLICKR_IMAGE_TEMPLATE = 'flickr %{photo_id} "%{photo_title}" style="float: right;"
   '
 
-  SERIES_TEMPLATE = '
-  series_key: %{series_key}
-  series_index: %{series_index}
-  series_total: %{series_total}
-  '
+  SERIES_TEMPLATE = 'series_key: %{series_key}
+series_index: %{series_index}
+series_total: %{series_total}
+'
 
   POST_TEMPLATE = '---
 layout: post
@@ -270,7 +274,7 @@ photoset: %{photoset_id}
 %{description}
 
 %{flickr_images}
-  '
+'
 
   def categorize(categories)
     if categories.match?('travel')
@@ -340,14 +344,16 @@ photoset: %{photoset_id}
     if post_details.post_series_details
       hsh = {
         series_key: post_details.post_series_details.series_key,
-        series_index: post_details.post_series_details.series_index,
+        series_index: (post_details.post_series_details.series_index + 1),
         series_total: post_details.post_series_details.series_total
       }
 
       optional_entries = SERIES_TEMPLATE % hsh
     end
 
+    puts "---------------------"
     puts optional_entries.inspect.colorize(:green)
+    puts "---------------------"
     post_hash[:optional_entries] = optional_entries
 
     post_str = POST_TEMPLATE % post_hash
