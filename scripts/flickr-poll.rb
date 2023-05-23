@@ -8,6 +8,8 @@ require "set"
 require "colorize"
 require "slop"
 require "logger"
+require 'date'
+require "ostruct"
 require_relative './lib/chat_gpt_helpers'
 
 # The credentials can be provided as parameters:
@@ -26,7 +28,7 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :categories, :descri
   end
 
   def date_taken
-    @date_taken ||= main_photo["datetaken"].split(' ').first
+    @date_taken ||= Date.parse(main_photo["datetaken"])
   end
 
   def image_dir
@@ -51,7 +53,7 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :categories, :descri
   end
 
   def post_file_name
-    file_name = main_photo["datetaken"].split(' ').first + '-' + post_id
+    file_name = main_photo["datetaken"].strftime('%Y-%m-%d') + '-' + post_id
     file_path = '_posts/' + file_name + '.markdown'
     return file_path
   end
@@ -71,8 +73,18 @@ class Main
     flickr = Flickr.new
 
     # photos = flickr.people.getPublicPhotos(:user_id => '57125599@N00', :extras => 'description,tags,geo,date_taken,url_m,widths,sizes', per_page: 25)
-    photos = flickr.photosets.getPhotos(user_id: USER_ID, photoset_id: PHOTOSETS_ADD_ENTRIES, extras: META_DATA, privacy_filter: PUBLIC_PHOTOS)['photo'] || []
-    puts photos.inspect
+    flickr_photos = flickr.photosets.getPhotos(user_id: USER_ID, photoset_id: PHOTOSETS_ADD_ENTRIES, extras: META_DATA, privacy_filter: PUBLIC_PHOTOS)['photo'] || []
+    
+    photos = []
+    flickr_photos.each do |photo|
+      puts [photo.id, photo.datetaken, photo.tags].inspect
+      new_photo = OpenStruct.new(photo.to_hash)
+      puts new_photo.inspect
+      new_photo.datetaken = Date.parse(photo.datetaken)
+      puts new_photo.datetaken
+      photos << new_photo
+    end
+
 
 =begin
 ---
@@ -83,6 +95,10 @@ image: assets/images/06-05-17/mt-dickerman.jpg
 image_alt_text: snow capped Mt Dickerman
 featured: false
 photoset: 72157650991053255
+# optional entries
+series_key: yellowstone-road-trip-2018
+series_index: 4 # 4th out of 8 enties
+series_total: 8
 ---
 
 > [Mt Dickerman](https://www.wta.org/go-hiking/hikes/mount-dickerman){:target="\_blank"} is one of the premier hikes in the Pacific North West. It is a beast of a climb but the rewards are amazing.
@@ -95,6 +111,14 @@ Not too shabby along the way too
 
     post_details_by_id = {}
     photos_by_album_id = Hash.new {|h, k| h[k] = []} 
+
+    # sort all photos by date taken
+    # remove all photos which belong to series. 
+    # create hash[series_key] = [photoId1, photoId2]
+
+    #   TODO : if existing posts are found, then use awk magic to insert / update series related info there
+
+    # process remaining photos as usual
 
     photos.each do |photo|
       if @flick_ids.include? photo.id
@@ -138,7 +162,7 @@ Not too shabby along the way too
   end
 
   def get_interesting_photos_from_context(flickr, photo, context_id)
-    date_taken = DateTime.parse(photo.datetaken).strftime('%Y-%m-%d')
+    date_taken = photo.datetaken.strftime('%Y-%m-%d')
     # puts "looking up all photos in album #{context_id}"
     photos = (flickr.photosets.getPhotos(user_id: USER_ID, photoset_id: context_id, extras: META_DATA, privacy_filter: PUBLIC_PHOTOS)['photo'] || [])
     
@@ -169,6 +193,12 @@ Not too shabby along the way too
   flickr %{photo_id} "%{photo_title}" style="float: right;"
   '
 
+  SERIES_TEMPLATE = '
+  series_key: %{series_key}
+  series_index: %{series_index}
+  series_total: %{series_total}
+  '
+
   POST_TEMPLATE = '---
 layout: post
 title: %{title}
@@ -179,6 +209,7 @@ image: %{image_path}
 image_alt_text: %{image_alt_text}
 featured: %{featured}
 photoset: %{photoset_id}
+%{optional_entries}
 ---
 %{description}
 
@@ -255,6 +286,8 @@ photoset: %{photoset_id}
       File.open(file_path, 'w') do |out_file|
         out_file.puts post_str
       end
+    else
+      puts "dry-run : skipping writing to file #{file_path}"
     end
   end
 
@@ -311,7 +344,7 @@ photoset: %{photoset_id}
 
     puts "new ids : "
     puts @new_flick_ids.inspect
-    File.open(UNIQUE_FLICKR_ID_FILE_PATH, "w+") { |file| file.write(@new_flick_ids.to_a.to_yaml) }
+    File.open(UNIQUE_FLICKR_ID_FILE_PATH, "w+") { |file| file.write(@new_flick_ids.to_a.to_yaml) } unless @options.dry_run?
   end
 
 end
