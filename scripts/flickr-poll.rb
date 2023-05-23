@@ -21,8 +21,11 @@ require_relative './lib/chat_gpt_helpers'
 # ENV['FLICKR_API_KEY']
 # ENV['FLICKR_SHARED_SECRET']
 
+# NOTE : keyword_init is required so we can pass arguments as hash to create objects
+PostSeriesDetails = Struct.new(:series_key, :series_index, :series_total, keyword_init: true)
 
-PostDetails = Struct.new(:featured, :photoset, :main_photo, :categories, :description, :skip_chatgpt, keyword_init: true) do 
+# NOTE : keyword_init is required so we can pass arguments as hash to create objects
+PostDetails = Struct.new(:featured, :photoset, :main_photo, :categories, :description, :skip_chatgpt, :post_series_details, keyword_init: true) do 
   def image_alt_text
     photoset.title
   end
@@ -107,7 +110,21 @@ class Main
     end
 
     puts photos.size
-    { post_series: post_series, all_photos_in_series: all_photos_in_series }
+    { post_series: post_series.each { |aa| aa.to_a }, all_photos_in_series: all_photos_in_series }
+  end
+
+  def get_post_series_details(all_photos_in_series, post_series, photo)
+    if all_photos_in_series.include? photo
+      related_series = post_series.find {|ps| ps.include? photo }
+      if related_series 
+        series_key = related_series.first.post_id
+        series_index = related_series.find_index photo
+        series_total = related_series.size
+        return PostSeriesDetails.new(series_key: series_key, series_index: series_index, series_total: series_total)
+      end
+    else
+      nil
+    end
   end
 
   def get_flickr_updates
@@ -134,24 +151,29 @@ class Main
     end
 
     series_info = find_photo_series(photos)
- 
-    exit 0
+    post_series = series_info[:post_series]
+    all_photos_in_series = series_info[:all_photos_in_series]
 
     post_details_by_id = {}
     photos_by_album_id = Hash.new {|h, k| h[k] = []} 
 
-
-    # sort all photos by date taken
-    # remove all photos which belong to series. 
-    # create hash[series_key] = [photoId1, photoId2]
-
-    #   TODO : if existing posts are found, then use awk magic to insert / update series related info there
-
-    # process remaining photos as usual
-
     photos.each do |photo|
+      # TODO : if existing posts are found, then use awk magic to insert / update series related info there
       if @flick_ids.include? photo.id
         puts "Photo with id #{photo.id} already exists. Skipping"
+
+        if all_photos_in_series.include? photo
+          puts "Photo #{photo.id} part of series, but deleting for now".colorize(:red)
+          all_photos_in_series.delete photo
+
+          post_series.each do |ps|
+            if ps.include? photo
+              ps.delete photo
+              puts "deleting photo #{photo.id} from series for now".colorize(:red)
+              break
+            end
+          end
+        end
         next
       else
         @flick_ids << photo.id
@@ -179,7 +201,12 @@ class Main
       content = "Give me the valid words from #{raw_categories}"
       messages = ChatGptHelpers.compute_turbo_input(content)
       categories = ChatGptHelpers.chatgpt_turbo_35(messages, @options.skip_chatgpt?)
-      post_details = PostDetails.new(featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, categories: categories, skip_chatgpt: @options.skip_chatgpt?, description: "")
+      post_series_details = get_post_series_details(all_photos_in_series, post_series, photo)
+      post_details = PostDetails.new(
+        featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, categories: categories,
+        post_series_details: post_series_details,
+        skip_chatgpt: @options.skip_chatgpt?, description: ""
+      )
       post_details.description = post_description(post_details, photo)
       post_details_by_id[context.id] = post_details
 
@@ -308,6 +335,20 @@ photoset: %{photoset_id}
     end
 
     post_hash[:flickr_images] = flickr_images
+
+    optional_entries = ""
+    if post_details.post_series_details
+      hsh = {
+        series_key: post_details.post_series_details.series_key,
+        series_index: post_details.post_series_details.series_index,
+        series_total: post_details.post_series_details.series_total
+      }
+
+      optional_entries = SERIES_TEMPLATE % hsh
+    end
+
+    puts optional_entries.inspect.colorize(:green)
+    post_hash[:optional_entries] = optional_entries
 
     post_str = POST_TEMPLATE % post_hash
     puts "writing to file : " + file_path if @options.verbose?
