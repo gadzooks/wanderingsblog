@@ -8,6 +8,7 @@ require "set"
 require "colorize"
 require "slop"
 require "logger"
+require_relative './lib/chat_gpt_helpers'
 
 # The credentials can be provided as parameters:
 
@@ -18,80 +19,8 @@ require "logger"
 # ENV['FLICKR_API_KEY']
 # ENV['FLICKR_SHARED_SECRET']
 
-module ChatGptHelpers
-  def self.compute_turbo_input(content)
-    return [
-        {
-            "role": "system",
-            "content": "You return valid words in groups as csv"
-        },
-        {
-            "role": "user",
-            "content": content
-        }
-    ]
-  end
 
-  def self.chatgpt_turbo_35(messages)
-    OpenAI.configure do |config|
-      config.access_token = ENV.fetch('OPENAI_ACCESS_TOKEN')
-    end
-
-    client = OpenAI::Client.new
-
-    response = client.chat(
-      parameters: {
-        "model" => "gpt-3.5-turbo",
-        "messages" => messages,
-        "temperature" => 0,
-      }
-    )
-
-    puts messages.inspect.colorize(:blue)
-    puts response.inspect.colorize(:blue)
-    if response["choices"]
-      return response["choices"].first["message"]["content"]
-    else 
-      STDERR.puts response.inspect
-      return ""
-    end
-
-  end
-
-  def self.davinci(prompt)
-    OpenAI.configure do |config|
-      config.access_token = ENV.fetch('OPENAI_ACCESS_TOKEN')
-    end
-
-    client = OpenAI::Client.new
-
-    response = client.completions(
-      parameters: {
-          model: "text-davinci-003",
-          prompt: prompt,
-          max_tokens: 512
-    #     # temperature: 0, # show the low risk text options
-    #     # frequency_penalty: 0,
-    #     # presence_penalty: 0,
-      })
-
-    if response["choices"]
-      # puts response["choices"].map { |c| c["text"] }
-
-      puts response.inspect.colorize(:blue)
-      return response["choices"].first["text"] 
-    else 
-      STDERR.puts response.inspect
-      return ""
-    end
-
-  end
-
-
-end
-
-
-PostDetails = Struct.new(:featured, :photoset, :main_photo, :categories, :description, keyword_init: true) do 
+PostDetails = Struct.new(:featured, :photoset, :main_photo, :categories, :description, :skip_chatgpt, keyword_init: true) do 
   def image_alt_text
     photoset.title
   end
@@ -109,7 +38,7 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :categories, :descri
                     main_photo['title'].gsub(/\s+/, ' ').gsub(' ', '-')
                     content = "pick one name of a place from #{categories}"
                     messages = ChatGptHelpers.compute_turbo_input(content)
-                    res = ChatGptHelpers.chatgpt_turbo_35(messages)
+                    res = ChatGptHelpers.chatgpt_turbo_35(messages, skip_chatgpt)
                     res.downcase.gsub(' ', '-')
                   else 
                     main_photo['title'].gsub(/\s+/, ' ').gsub(' ', '-')
@@ -196,8 +125,8 @@ Not too shabby along the way too
 
       content = "Give me the valid words from #{raw_categories}"
       messages = ChatGptHelpers.compute_turbo_input(content)
-      categories = ChatGptHelpers.chatgpt_turbo_35(messages)
-      post_details = PostDetails.new(featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, categories: categories, description: "")
+      categories = ChatGptHelpers.chatgpt_turbo_35(messages, @options.skip_chatgpt?)
+      post_details = PostDetails.new(featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, categories: categories, skip_chatgpt: @options.skip_chatgpt?, description: "")
       post_details.description = post_description(post_details, photo)
       post_details_by_id[context.id] = post_details
 
@@ -233,7 +162,7 @@ Not too shabby along the way too
     end
 
     puts "chatgpt prompt is : #{prompt}"
-    return ChatGptHelpers.davinci(prompt)
+    return ChatGptHelpers.davinci(prompt, @options.skip_chatgpt?)
   end
 
   FLICKR_IMAGE_TEMPLATE = '
@@ -298,7 +227,7 @@ photoset: %{photoset_id}
       updating_post = true
       if @options.overwrite?
         puts 'overwrite flag is set so deleting existing file'.colorize(:orange)
-        # File.delete(file_path)
+        File.delete(file_path)
       else
         puts file_path + ' already exists. NOT overriding'.colorize(:green)
         return
@@ -350,6 +279,7 @@ photoset: %{photoset_id}
     @options = Slop.parse do |o|
       o.bool '-o', '--overwrite', 'overwrite existing blog entries', default: false
       o.bool '-d', '--dry-run', 'dont create any posts'
+      o.bool '-s', '--skip-chatgpt', 'skip calling chat gpt', default: false
       o.bool '-v', '--verbose', 'enable verbose mode', default: false
       o.on '-h', 'options' do
         puts "This script pulls from various flickr albums and creates / updates posts in jekyl"
