@@ -1,13 +1,13 @@
 module ChatGptHelpers
-  def self.compute_turbo_input(content)
+  def self.compute_turbo_input(system_content, user_content)
     return [
         {
             "role": "system",
-            "content": "You return valid words in groups as csv"
+            "content": system_content
         },
         {
             "role": "user",
-            "content": content
+            "content": user_content
         }
     ]
   end
@@ -34,7 +34,8 @@ module ChatGptHelpers
     puts messages.inspect.colorize(:blue)
     puts response.inspect.colorize(:blue)
     if response["choices"]
-      return response["choices"].first["message"]["content"]
+      answer = (response["choices"].first["message"] || {})["content"] || ''
+      answer.gsub('"', '')
     else 
       STDERR.puts response.inspect
       return ""
