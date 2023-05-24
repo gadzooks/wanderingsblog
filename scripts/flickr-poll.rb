@@ -25,7 +25,7 @@ require_relative './lib/chat_gpt_helpers'
 PostSeriesDetails = Struct.new(:series_key, :series_index, :series_total, keyword_init: true)
 
 # NOTE : keyword_init is required so we can pass arguments as hash to create objects
-PostDetails = Struct.new(:featured, :photoset, :main_photo, :categories, :description, :skip_chatgpt, :post_series_details, keyword_init: true) do 
+PostDetails = Struct.new(:featured, :photoset, :main_photo, :description, :skip_chatgpt, :post_series_details, keyword_init: true) do 
   def image_alt_text
     photoset.title
   end
@@ -38,15 +38,25 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :categories, :descri
     dir_path = './assets/images/' +  main_photo["datetaken"].split(' ').first + '/'
   end
 
+  def chat_gpt_title
+    if @chat_gpt_title
+      return @chat_gpt_title
+    else 
+      system_content = "Pick a title 6 words or less from :"
+      messages = ChatGptHelpers.compute_turbo_input(system_content, main_photo.tags.join(' ,'))
+      @chat_gpt_title = ChatGptHelpers.chatgpt_turbo_35(messages, skip_chatgpt)
+    end
+  end
+
+  def post_title
+    main_photo['title'].strip.empty? ? chat_gpt_title : main_photo['title']
+  end
+
   def post_id
     @post_id ||= if main_photo['title'].strip.empty? 
-                    main_photo['title'].gsub(/\s+/, ' ').gsub(' ', '-')
-                    content = "pick one name of a place from #{categories}"
-                    messages = ChatGptHelpers.compute_turbo_input(content)
-                    res = ChatGptHelpers.chatgpt_turbo_35(messages, skip_chatgpt)
-                    res.downcase.gsub(' ', '-')
+                    chat_gpt_title.downcase.gsub(' ', '-').gsub(/[^0-9a-z-]/i, '')
                   else 
-                    main_photo['title'].gsub(/\s+/, ' ').gsub(' ', '-')
+                    main_photo['title'].gsub(/\s+/, ' ').gsub(' ', '-').gsub(/[^0-9a-z-]/i, '')
                   end
     @post_id
   end
@@ -66,7 +76,7 @@ end
 PHOTOSETS_ADD_ENTRIES = '72177720307946395'
 USER_ID = '57125599@N00'
 PUBLIC_PHOTOS = 1
-META_DATA = 'description,tags,date_taken,url_m,widths,sizes,views'
+META_DATA = 'description,date_taken,url_m,widths,sizes,views'
 UNIQUE_FLICKR_ID_FILE_PATH = '_data/flickr/unique_photo_ids.yml'
 
 class Main
@@ -90,10 +100,10 @@ class Main
         in_series = true
         # is part of series
         photo_set = post_series[series_id] ||= Set.new
-        photo_set << curr_p
-        photo_set << next_p
-        all_photos_in_series << curr_p
-        all_photos_in_series << next_p
+        photo_set << curr_p.id
+        photo_set << next_p.id
+        all_photos_in_series << curr_p.id
+        all_photos_in_series << next_p.id
       else
         if in_series
           in_series = false
@@ -105,11 +115,16 @@ class Main
       index += 1
     end
 
+    puts "Total photos to be processed : #{photos.size}".colorize(:light_black)
+    puts "No series found ".colorize(:orange) if post_series.size == 0
     post_series.each_with_index do |ps, idx|
-      ps.each do |p| puts [idx, p.id, p.datetaken].inspect end
+      puts "Series : #{idx + 1}".colorize(:light_black)
+      puts ps.inspect.colorize(:light_black)
+      # ps.each do |photo|
+      #   puts [photo.id, photo.datetaken].inspect.colorize(:light_black)
+      # end
     end
 
-    puts photos.size
     {
       post_series: post_series.each { |aa| aa.to_a },
       all_photos_in_series: all_photos_in_series,
@@ -117,18 +132,41 @@ class Main
   end
 
   def get_post_series_details(all_photos_in_series, post_series, photo, series_key)
-    if all_photos_in_series.include? photo
-      related_series = post_series.find {|ps| ps.include? photo }
+    puts '-------------------------------------'
+    puts photo.inspect
+    puts all_photos_in_series.inspect
+    puts '-------------------------------------'
+    if all_photos_in_series.include? photo.id
+      related_series = post_series.find {|ps| ps.include? photo.id }
       if related_series 
-        which_series = post_series.find_index {|ps| ps.include? photo } 
-        series_index = related_series.find_index photo
+        which_series = post_series.find_index {|ps| ps.include? photo.id } 
+        series_index = related_series.find_index photo.id
         series_total = related_series.size
         # TODO : generate series_key per series when the series is being found from all photos
         return PostSeriesDetails.new(series_key: "temp-series-key-#{which_series}", series_index: series_index, series_total: series_total)
+      else
+        puts "Internal error : photo #{photo.id} couldn not be placed in any series.".colorize(:red)
       end
     else
+      puts "photo #{photo.id} is not in any series" if @options.verbose?
       nil
     end
+  end
+
+  # "tags": {
+  #   "tag": [
+  #       {
+  #           "id": "3509168-52339055782-27647377",
+  #           "author": "57125599@N00",
+  #           "authorname": "Am-it",
+  #           "raw": "grand canyon of yellowstone national park",
+  #           "_content": "grandcanyonofyellowstonenationalpark",
+  #           "machine_tag": false
+  #       },
+  def parse_tags_from_get_info(photo_details)
+    ((photo_details['tags'] || {})['tag'] || []).map do |tag_details|
+      tag_details['raw'] || ''
+    end.uniq
   end
 
   def get_flickr_updates
@@ -162,6 +200,7 @@ class Main
     photos_by_album_id = Hash.new {|h, k| h[k] = []} 
 
     photos.each do |photo|
+      puts "\n\nprocessing photo : #{photo.id}"
       # TODO : if existing posts are found, then use awk magic to insert / update series related info there
       if @flick_ids.include? photo.id
         puts "Photo with id #{photo.id} already exists. Skipping"
@@ -182,36 +221,37 @@ class Main
       else
         @flick_ids << photo.id
         @new_flick_ids << photo.id
+
+        # get raw tags for these photos 
+        photo_details = flickr.photos.getInfo(user_id: USER_ID, photo_id: photo.id)
+        photo.tags = parse_tags_from_get_info(photo_details)
+
+        if photo.tags.empty?
+          # TODO : remove from all_photos_in_series and post_series too. 
+          # TODO : We should move all photo series related logic to its own class
+          puts "skipping entry for photo #{photo.id} because no tags were found".colorize(:red)
+          next
+        end
       end
 
       contexts = flickr.photos.getAllContexts(photo_id: photo.id)['set']
       next unless contexts && !contexts.empty?
-      if @options.verbose?
-        puts "--------------- contexts are ---------------- "
-        puts contexts.inspect
-      end
+      # if @options.verbose?
+      #   puts "--------------- contexts are ---------------- "
+      #   puts contexts.inspect
+      # end
       context = contexts.find {|c| c.id != PHOTOSETS_ADD_ENTRIES}
       unless context
         puts "for photo #{photo.id} could not find any other albums so skipping entry".colorize(:red)
         next
       end
 
-      raw_categories = photo.tags.split(' ').select {|tag| !['jsu', 'js', 'jsd', 'main'].include?(tag)}.uniq.join(' ')
-      if raw_categories.strip == ""
-        # TODO : remove from all_photos_in_series and post_series too. 
-        # TODO : We should move all photo series related logic to its own class
-        puts "skipping entry for photo #{photo.id} because no categories were found".colorize(:red)
-        next
-      end
-
-      content = "Give me the valid words from #{raw_categories}"
-      messages = ChatGptHelpers.compute_turbo_input(content)
-      categories = ChatGptHelpers.chatgpt_turbo_35(messages, @options.skip_chatgpt?)
       post_details = PostDetails.new(
-        featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, categories: categories,
+        featured: photo.tags.include?('feature'), photoset: context, main_photo: photo,
         skip_chatgpt: @options.skip_chatgpt?, description: ""
       )
       post_series_details = get_post_series_details(all_photos_in_series, post_series, photo, post_details.post_id)
+      puts "Series details for #{photo.id} are : #{post_series_details.inspect}"
       post_details.post_series_details = post_series_details
       post_details.description = post_description(post_details, photo)
       post_details_by_id[context.id] = post_details
@@ -242,7 +282,7 @@ class Main
     end
 
     # return ""
-    prompt = "write a short paragraph for a travel blog with keywords #{post_details.categories}"
+    prompt = "write a short paragraph for a travel blog with keywords #{photo.tags.join(', ')}"
     if rand() * 10 >= 5
       prompt += " in first person point of view."
     end
@@ -261,12 +301,12 @@ series_total: %{series_total}
 
   POST_TEMPLATE = '---
 layout: post
-title: %{title}
+title: "%{title}"
 date: %{date}
 categories: [%{categories}]
 author: amit
 image: %{image_path}
-image_alt_text: %{image_alt_text}
+image_alt_text: "%{image_alt_text}"
 featured: %{featured}
 photoset: %{photoset_id}
 %{optional_entries}
@@ -289,7 +329,7 @@ photoset: %{photoset_id}
   def create_post(post_details, other_photos_by_album)
     post_hash = {
       post_file_name: post_details.post_file_name,
-      title: post_details.photoset['title'],
+      title: post_details.post_title,
       date: post_details.main_photo['datetaken'],
       categories: categorize(post_details.description),
       image_path: post_details.main_photo['url_m'],
@@ -313,9 +353,7 @@ photoset: %{photoset_id}
     end
     file_path = post_details.post_file_name
 
-    updating_post = false
     if File.exists? file_path
-      updating_post = true
       if @options.overwrite?
         puts 'overwrite flag is set so deleting existing file'.colorize(:orange)
         File.delete(file_path)
@@ -328,7 +366,7 @@ photoset: %{photoset_id}
     flickr_images = ''
     other_photos = other_photos_by_album[post_details.photoset['id']]
     other_photos.each_with_index do |photo, i|
-      puts photo.inspect.colorize(:light_black)
+      # puts photo.inspect.colorize(:light_black)
       hsh = {
         photo_id: photo['id'],
         photo_title: (photo['title'] || ''),
@@ -351,9 +389,8 @@ photoset: %{photoset_id}
       optional_entries = SERIES_TEMPLATE % hsh
     end
 
-    puts "---------------------"
+    puts "Optional entries "
     puts optional_entries.inspect.colorize(:green)
-    puts "---------------------"
     post_hash[:optional_entries] = optional_entries
 
     post_str = POST_TEMPLATE % post_hash
@@ -400,7 +437,6 @@ photoset: %{photoset_id}
     data = get_flickr_updates
 
     data[:post_details_by_id].each do |photoset_id, post_details|
-      raw_categories = post_details.main_photo.tags.split(' ').select {|tag| !['jsu', 'js', 'jsd', 'main'].include?(tag)}.uniq.join(' ')
       create_post(post_details, data[:other_photos_by_album_id])
     end
 
