@@ -12,15 +12,6 @@ require 'date'
 require "ostruct"
 require_relative './lib/chat_gpt_helpers'
 
-# The credentials can be provided as parameters:
-
-# flickr = Flickr.new "YOUR API KEY", "YOUR SHARED SECRET"
-
-# Alternatively, if the API key and Shared Secret are not provided, Flickr will attempt to read them
-# from environment variables:
-# ENV['FLICKR_API_KEY']
-# ENV['FLICKR_SHARED_SECRET']
-
 # NOTE : keyword_init is required so we can pass arguments as hash to create objects
 PostSeriesDetails = Struct.new(:series_key, :series_index, :series_total, keyword_init: true)
 
@@ -49,15 +40,12 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :description, :skip_
   end
 
   def post_title
-    main_photo['title'].strip.empty? ? chat_gpt_title : main_photo['title']
+    # main_photo['title'].strip.empty? ? chat_gpt_title : main_photo['title']
+    chat_gpt_title
   end
 
   def post_id
-    @post_id ||= if main_photo['title'].strip.empty? 
-                    chat_gpt_title.downcase.gsub(' ', '-').gsub(/[^0-9a-z-]/i, '')
-                  else 
-                    main_photo['title'].gsub(/\s+/, ' ').gsub(' ', '-').gsub(/[^0-9a-z-]/i, '')
-                  end
+    @post_id ||= chat_gpt_title.downcase.gsub(' ', '-').gsub(/[^0-9a-z-]/i, '')
     @post_id
   end
 
