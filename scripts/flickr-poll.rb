@@ -128,6 +128,7 @@ class Main
       related_series = post_series.find {|ps| ps.include? photo.id }
       if related_series 
         which_series = post_series.find_index {|ps| ps.include? photo.id } 
+        # TODO series_index does not seem to work correctly
         series_index = related_series.find_index photo.id
         series_total = related_series.size
         # TODO : generate series_key per series when the series is being found from all photos

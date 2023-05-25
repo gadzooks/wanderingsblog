@@ -7,12 +7,12 @@ series_index: 1 -->
 
 {% if include.page.series_key %}
   {% assign all_posts_in_series = site.posts | where: 'series_key', page.series_key | sort: 'series_index' %}
-  {% assign num_posts = all_posts_in_series | size %}
   {% assign series_total = all_posts_in_series[0].series_total %}
+  {% assign current_index = 0 %}
   <div class="seriesNote">
     <p>This article is <strong>Part {{ include.page.series_index }}</strong> in a <strong>{{ series_total | at_least: num_posts }}-Part</strong> Series.</p>
     <ul>
-      {% for series_post in all_posts_in_series %}
+      <!-- {% for series_post in all_posts_in_series %}
         <li>Part {{ series_post.series_index }} -
           {% if series_post.url == include.page.url %}
           This Article
@@ -20,9 +20,19 @@ series_index: 1 -->
           <a href="{{series_post.url}}">{{series_post.title}}</a>
           {% endif %}
         </li>
-      {% endfor %}
-      {% for i in (num_posts..series_total) -%}
-        {% if i != num_posts %}
+      {% endfor %} -->
+      {% for i in (1..series_total) %}
+        {% if all_posts_in_series[current_index].series_index == i %}
+          {% assign series_post = all_posts_in_series[current_index] %}
+          {% assign current_index = current_index | plus: 1 %}
+          <li>Part {{ series_post.series_index }} -
+            {% if series_post.url == include.page.url %}
+            This Article
+            {% else %}
+            <a href="{{series_post.url}}">{{series_post.title}}</a>
+            {% endif %}
+          </li>
+        {% else %}
           <li>Part {{ i }} -
           Coming soon !
         {% endif %}
