@@ -32,6 +32,9 @@ group :jekyll_plugins do
     gem 'jekyll-compose'
 end
 
+gem 'rspec'
+gem 'rake'
+
 gem 'jekyll-flickr', git: 'https://github.com/gadzooks/jekyll-flickr.git'
 gem 'flickr'
 
