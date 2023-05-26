@@ -153,22 +153,37 @@ var documents = [{
     "id": 30,
     "url": "/2017/01/winter-hike-with-baloo-and-phil.html",
     "title": "Winter Hike with Baloo and Phil",
-    "body": "2017/01/02 - My weekend winter hike to Lake Serene in 2017 was one I will never forget! My friend Phil and our pup Baloo joined me for the hike, and we enjoyed the breathtaking views of the snow-blanketed mountains. To add a bit of a challenge, Phil suggested an extended trail- but we had no issues with the quaint, evergreen-laden path! We eventually made our way to Lake Serene, and the beauty of the lake surrounded by mountains was the perfect way to end our adventure.   _DSC5799  _DSC5859  _DSC5852  _DSC5851  _DSC5843"
+    "body": "2017/01/02 - My 2017 winter hike to Lake Serene was definitely one of the most memorable hikes I have ever done! The snow was deep and pristine, the mountains majestic, and my hiking buddies were Baloo (my trusty pup) and my friend Phil. It felt great to be out in the fresh winter air and take in the stunning scenery and do something adventurous. Every inch of that trail was beautiful and I can’t wait to go back soon!   _DSC5799  _DSC5859  _DSC5852  _DSC5851  _DSC5843"
     }, {
     "id": 31,
     "url": "/2013/10/journey-to-everests-base-camp.html",
     "title": "Journey to Everest's Base Camp",
-    "body": "2013/10/24 - From the moment I arrived at Everest Base Camp, I knew I was in for a special experience. Everywhere I looked, were breathtaking snow-capped mountains. I was surrounded by an amazing mountain village that was full of interesting and friendly people. From here I had the opportunity to explore the majestic landscape and continue a traditional trek across this unforgettable region. Experiencing Everest Base Camp and the stunning landscape around it will stay with me forever.   Mt Thielsen sunset, on Explore!  Dark Angel (Arches National Park)  _MG_2472_3_4  colorful parrot  columbia river highway-274"
+    "body": "2013/10/24 - Exploring the majestic, snow-capped mountains around Everest Base Camp in Nepal was one of the most unforgettable experiences of my life. The mountain village of Gorak Shep, tucked away between two mountain peaks, was especially astonishing. The locals were incredibly hospitable and the views were breathtaking. I would highly recommend anyone heading to Nepal to make the extra effort and take the trek to Everest Base Camp - it is an experience you will never forget!   Untitled_Panorama4  _MG_2426_7_8  _MG_2417_8_9  _MG_2342_3_4  _MG_2411_2_3"
     }, {
     "id": 32,
-    "url": "/2013/10/hiking-to-tengboche-nepals-everest-base.html",
-    "title": "Hiking to Tengboche: Nepal's Everest Base.",
-    "body": "2013/10/20 - My recent hike to Everest Base Camp in Tengboche, Nepal was the adventure of a lifetime. The scenery was absolutely breathtaking as I hiked through the Sherpa villages and the glacial valleys, passing monasteries and loved soaking in the culture. I felt so small compared to the magnitude of Mt. Everest in the background, but also so grateful to be able to experience such a majestic destination. Regardless of how challenging the hike was, it was without a doubt one of the most rewarding experiences I’ve ever had.   _MG_2472_3_4  EBC Tengboche 10-20-401_2_3  _MG_6400_1_2-2  _MG_2158  Untitled_Panorama2a"
+    "url": "/2013/10/high-altitude-adventure-everest-base-camp.html",
+    "title": "High Altitude Adventure: Everest Base Camp",
+    "body": "2013/10/22 - Trekkers from all over the world flock to Everest Base Camp - the iconic trail to the world’s highest mountain. Trekkers are rewarded with a once in a lifetime experience; breathtaking Panoramic Views of snow-covered Mountains surrounding them. This mesmerizing, fluffy blanket of snow stretches across the horizon in every direction, changing in intensity depending on the time of day. Trekkers can feel on top of the world in this mesmerizing landscape of snowy mountains!   Untitled_Panorama2a  Untitled_Panorama1  _MG_2243  _MG_2287_8_9  _MG_2269_70_71"
     }, {
     "id": 33,
+    "url": "/2013/10/yak-trekking-to-everest-base-camp.html",
+    "title": "Yak Trekking to Everest Base Camp",
+    "body": "2013/10/21 - Nothing can beat the feeling of reaching the towering peak of Everest Base Camp as the sun slowly rises in the horizon. It was the perfect time to snap a photograph of the snow covered mountains with our yak carrying the heavy hiking gear. With each step, we felt the elevation change and quickly reached 13,800 feet above sea level. It marked the highest we had ever climbed and it was a magnificently rewarding experience.   _MG_2158  _MG_2077_8_9  _MG_2113_4_5  _MG_2155_6_7  _MG_2086_7_8"
+    }, {
+    "id": 34,
+    "url": "/2013/10/hiking-to-tengboche-in-nepal.html",
+    "title": "Hiking to Tengboche in Nepal.",
+    "body": "2013/10/20 - My experience hiking to Everest Base Camp was one of the most amazing experiences of my life. From starting my journey in Nepal to the breathtaking views of Tengboche, every moment was breathtaking. The hike was never ending and challenging, but the feeling of arriving at my destination made it all worth it in the end. Although it was a tough adventure to take on, I would do it again in a heartbeat!   EBC Tengboche 10-20-401_2_3  EBC Tengboche 10-20-487  EBC Tengboche 10-20-234  EBC Tengboche 10-20-98  EBC Tengboche 10-20-453"
+    }, {
+    "id": 35,
+    "url": "/2013/10/journey-to-nepals-majestic-mountains.html",
+    "title": "Journey to Nepal's Majestic Mountains",
+    "body": "2013/10/19 - Hiking to Everest Base Camp in Nepal was an adventure unlike any other. Every day presented a new vista of beautiful mountains like Amadablam, and it felt like being in a world where beautiful mountains were everywhere you looked. The journey to reach Everest Base Camp was challenging, but the breathtaking views of nature more than made up for it.   Everest Base Camp - Day 2 -690  Everest Base Camp - Day 2 -1  Everest Base Camp - Day 2 -34  Everest Base Camp - Day 2 -38  Everest Base Camp - Day 2 -30"
+    }, {
+    "id": 36,
     "url": "/2013/10/hiking-to-everest-base-camp-nepal.html",
     "title": "Hiking to Everest Base Camp, Nepal.",
-    "body": "2013/10/18 - Embarking on a journey to Everest Base Camp is an invigorating experience! The start of our hike begins at Lukla Airport, located in the Khumbu region of Nepal. From here we will begin to make our climb up the mountain, passing through valleys and villages while gaining altitude until we reach the world-renowned Everest Base Camp. It is an exciting experience for adventurers of all kinds!   Everest Base Camp - Day 1 -39  Everest Base Camp - Day 1 -48  Everest Base Camp - Day 1 -40  Everest Base Camp - Day 1 -51  Everest Base Camp - Day 1 -88"
+    "body": "2013/10/18 - No trip to Nepal is complete without experiencing the journey to Everest Base Camp! The adventure began as soon as I walked through the entrance of Lukla Airport, the start of the hike. The views were breathtaking and the adrenaline was kicking in; I was ready to make my way to the base camp! The trek was long but the views along the way made it worth it. As I reached the final destination, I was in complete awe of the view in front of me. It was unlike any other place I have ever been before.   Everest Base Camp - Day 1 -39  Everest Base Camp - Day 1 -48  Everest Base Camp - Day 1 -40  Everest Base Camp - Day 1 -51  Everest Base Camp - Day 1 -88"
     }];
 
 var idx = lunr(function () {
