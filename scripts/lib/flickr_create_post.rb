@@ -23,6 +23,7 @@ class FlickrCreatePost
       image_path: post_details.main_photo['url_m'],
       image_alt_text: post_details.photoset['title'],
       featured: post_details.featured,
+      photo_id: post_details.main_photo.id,
       photoset_id: post_details.photoset['id'],
       description: post_details.description
     }
@@ -110,6 +111,7 @@ image: %{image_path}
 image_alt_text: "%{image_alt_text}"
 featured: %{featured}
 photoset: %{photoset_id}
+photo_id: %{photo_id} # this id is the unique id for the post
 %{optional_entries}
 ---
 %{description}
