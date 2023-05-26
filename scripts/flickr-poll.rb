@@ -23,7 +23,6 @@ PHOTOSETS_ADD_ENTRIES = '72177720307946395'
 USER_ID = '57125599@N00'
 PUBLIC_PHOTOS = 1
 META_DATA = 'description,date_taken,url_m,widths,sizes,views'
-UNIQUE_FLICKR_ID_FILE_PATH = '_data/flickr/unique_photo_ids.yml'
 
 class Main
   def get_flickr_updates
@@ -151,7 +150,6 @@ class Main
     @log = Logger.new(STDOUT)
     @log.debug("Running script...")
 
-    # dump_unique_flick_ids
     @flick_ids = Set.new load_unique_flickr_ids
     @new_flick_ids = Set.new
 
@@ -183,23 +181,15 @@ class Main
       FlickrCreatePost.new(@options).create_post(post_details, data[:other_photos_by_album_id])
     end
 
-    dump_unique_flick_ids
   end
 
   def load_unique_flickr_ids
-    flick_ids = YAML.load(File.read(UNIQUE_FLICKR_ID_FILE_PATH))
-    puts flick_ids.inspect
+    cmd = 'grep -Eoh "^photo_id: \d+ " ./_posts/* | cut -d " "  -f 2'
+    value = `#{cmd}`
 
-    return flick_ids
-  end
+    value ||= ""
 
-  def dump_unique_flick_ids
-    puts "existing ids : "
-    puts @flick_ids.inspect
-
-    puts "new ids : "
-    puts @new_flick_ids.inspect
-    File.open(UNIQUE_FLICKR_ID_FILE_PATH, "w+") { |file| file.write(@new_flick_ids.to_a.to_yaml) } unless @options.dry_run?
+    return value.split(/\s/)
   end
 
 end
