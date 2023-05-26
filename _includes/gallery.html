@@ -45,6 +45,10 @@
   color: black;
 }
 
+img.part-of-series {
+  box-shadow: 5px 5px #bcb8b8;
+}
+
 .flip-box-image {
   width: 100%;
   height: 100%;
@@ -56,26 +60,22 @@
 <div class="image-gallery">
   {% for post in paginator.posts %}
   {% if post.featured != true && post.image != "" %}
-      <!-- overflow: hidden;
-      text-overflow: ellipsis; -->
+    {% assign custom_classes = 'flip-box-image' %}
+    {% if post.series_key && post.series_index == 1 %}
+      {% assign custom_classes = custom_classes | append: ' part-of-series ' %}
+    {% endif %}
 
-  <div class="flip-box">
-    <div class="flip-box-inner">
-      <div class="flip-box-front">
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title | truncate: 33 }}
-          <img class="flip-box-image" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.image_alt_text }}" >
-        </a>
+    <div class="flip-box">
+      <div class="flip-box-inner">
+        <div class="flip-box-front">
+          <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title | truncate: 33 }}
+            <img class="{{ custom_classes }}" 
+              src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.image_alt_text }}" >
+          </a>
+        </div>
       </div>
     </div>
-    <!-- <div class="flip-box-title">
-      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
-    </div> -->
-  </div>
 
-      <!-- <a href="{{ post.url }}" title="{{ post.title }}">
-        <img src="{{ post.image }}" alt="{{ post.image_alt_text }}" />
-        <span>{{ post.image }}</span>
-      </a> -->
   {% endif %}
 {% endfor %}
 
