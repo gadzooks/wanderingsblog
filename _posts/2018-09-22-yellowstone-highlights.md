@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Yellowstone day 1
+title: Yellowstone Highlights
 # date: 2018-09-22 00:00 +0000
 description:
 image: ./assets/images/09-21-18/yellowstone-day-1.jpg
@@ -9,9 +9,6 @@ author: amit
 featured: true
 sitemap: false
 photoset: 72177720301903481
-series_key: yellowstone-road-trip-2018
-series_index: 1
-series_total: 8
 ---
 
 > We drove from Seattle to Yellowstone and entered from the northern entrance where we saw the Mammoth Hot Springs and a lot of wild life.
