@@ -2,17 +2,14 @@ require "colorize"
 
 class PhotoSeries
 
-  # attr_reader: photos
+  attr_reader :photos, :post_series, :all_photos_in_series
 
-  # def initialize(photos)
-  #   @photos = photos
-  # end
+  def initialize(photos, options)
+    @photos = photos
+    @options = options
+  end
 
-  def self.get_post_series_details(all_photos_in_series, post_series, photo, series_key)
-    puts '-------------------------------------'
-    puts photo.inspect
-    puts all_photos_in_series.inspect
-    puts '-------------------------------------'
+  def get_post_series_details(photo, series_key)
     if all_photos_in_series.include? photo.id
       related_series = post_series.find {|ps| ps.include? photo.id }
       if related_series 
@@ -26,12 +23,12 @@ class PhotoSeries
         puts "Internal error : photo #{photo.id} couldn not be placed in any series.".colorize(:red)
       end
     else
-      puts "photo #{photo.id} is not in any series" # if @options.verbose?
+      puts "photo #{photo.id} is not in any series" if @options.verbose?
       nil
     end
   end
 
-  def self.find_photo_series(photos)
+  def identify_all_series
     post_series = [] # array of arrays, one for each series
     all_photos_in_series = Set.new
     series_id = 0
@@ -71,10 +68,15 @@ class PhotoSeries
       # end
     end
 
-    {
-      post_series: post_series.each { |aa| aa.to_a },
-      all_photos_in_series: all_photos_in_series,
-    }
+    @post_series = post_series
+    @all_photos_in_series = all_photos_in_series
+
+    # {
+    #   post_series: post_series.each { |aa| aa.to_a },
+    #   all_photos_in_series: all_photos_in_series,
+    # }
+
+    self
   end
 
 
