@@ -8,131 +8,21 @@ require "set"
 require "colorize"
 require "slop"
 require "logger"
+require 'date'
+require "ostruct"
+require_relative './lib/chat_gpt_helpers'
+require_relative './lib/post_details'
+require_relative './lib/photo_series'
+require_relative './lib/flickr_create_post'
+require_relative './lib/flickr_utils'
 
-# The credentials can be provided as parameters:
-
-# flickr = Flickr.new "YOUR API KEY", "YOUR SHARED SECRET"
-
-# Alternatively, if the API key and Shared Secret are not provided, Flickr will attempt to read them
-# from environment variables:
-# ENV['FLICKR_API_KEY']
-# ENV['FLICKR_SHARED_SECRET']
-
-module ChatGptHelpers
-  def self.compute_turbo_input(content)
-    return [
-        {
-            "role": "system",
-            "content": "You return valid words in groups as csv"
-        },
-        {
-            "role": "user",
-            "content": content
-        }
-    ]
-  end
-
-  def self.chatgpt_turbo_35(messages)
-    OpenAI.configure do |config|
-      config.access_token = ENV.fetch('OPENAI_ACCESS_TOKEN')
-    end
-
-    client = OpenAI::Client.new
-
-    response = client.chat(
-      parameters: {
-        "model" => "gpt-3.5-turbo",
-        "messages" => messages,
-        "temperature" => 0,
-      }
-    )
-
-    puts messages.inspect.colorize(:blue)
-    puts response.inspect.colorize(:blue)
-    if response["choices"]
-      return response["choices"].first["message"]["content"]
-    else 
-      STDERR.puts response.inspect
-      return ""
-    end
-
-  end
-
-  def self.davinci(prompt)
-    OpenAI.configure do |config|
-      config.access_token = ENV.fetch('OPENAI_ACCESS_TOKEN')
-    end
-
-    client = OpenAI::Client.new
-
-    response = client.completions(
-      parameters: {
-          model: "text-davinci-003",
-          prompt: prompt,
-          max_tokens: 512
-    #     # temperature: 0, # show the low risk text options
-    #     # frequency_penalty: 0,
-    #     # presence_penalty: 0,
-      })
-
-    if response["choices"]
-      # puts response["choices"].map { |c| c["text"] }
-
-      puts response.inspect.colorize(:blue)
-      return response["choices"].first["text"] 
-    else 
-      STDERR.puts response.inspect
-      return ""
-    end
-
-  end
-
-
-end
-
-
-PostDetails = Struct.new(:featured, :photoset, :main_photo, :categories, :description, keyword_init: true) do 
-  def image_alt_text
-    photoset.title
-  end
-
-  def date_taken
-    @date_taken ||= main_photo["datetaken"].split(' ').first
-  end
-
-  def image_dir
-    dir_path = './assets/images/' +  main_photo["datetaken"].split(' ').first + '/'
-  end
-
-  def post_id
-    @post_id ||= if main_photo['title'].strip.empty? 
-                    main_photo['title'].gsub(/\s+/, ' ').gsub(' ', '-')
-                    content = "pick one name of a place from #{categories}"
-                    messages = ChatGptHelpers.compute_turbo_input(content)
-                    res = ChatGptHelpers.chatgpt_turbo_35(messages)
-                    res.downcase.gsub(' ', '-')
-                  else 
-                    main_photo['title'].gsub(/\s+/, ' ').gsub(' ', '-')
-                  end
-    @post_id
-  end
-
-  def image_file_name
-     post_id + '.jpg'
-  end
-
-  def post_file_name
-    file_name = main_photo["datetaken"].split(' ').first + '-' + post_id
-    file_path = '_posts/' + file_name + '.markdown'
-    return file_path
-  end
-
-end
+# NOTE : keyword_init is required so we can pass arguments as hash to create objects
+PostSeriesDetails = Struct.new(:series_key, :series_index, :series_total, keyword_init: true)
 
 PHOTOSETS_ADD_ENTRIES = '72177720307946395'
 USER_ID = '57125599@N00'
 PUBLIC_PHOTOS = 1
-META_DATA = 'description,tags,date_taken,url_m,widths,sizes,views'
+META_DATA = 'description,date_taken,url_m,widths,sizes,views'
 UNIQUE_FLICKR_ID_FILE_PATH = '_data/flickr/unique_photo_ids.yml'
 
 class Main
@@ -142,82 +32,90 @@ class Main
     flickr = Flickr.new
 
     # photos = flickr.people.getPublicPhotos(:user_id => '57125599@N00', :extras => 'description,tags,geo,date_taken,url_m,widths,sizes', per_page: 25)
-    photos = flickr.photosets.getPhotos(user_id: USER_ID, photoset_id: PHOTOSETS_ADD_ENTRIES, extras: META_DATA, privacy_filter: PUBLIC_PHOTOS)['photo'] || []
-    puts photos.inspect
+    flickr_photos = flickr.photosets.getPhotos(user_id: USER_ID, photoset_id: PHOTOSETS_ADD_ENTRIES, extras: META_DATA, privacy_filter: PUBLIC_PHOTOS)['photo'] || []
+    
+    if flickr_photos.size == 0
+      return { post_details_by_id: {}, other_photos_by_album_id: [] }
+    end
+    
+    photos = []
+    flickr_photos.each do |photo|
+      new_photo = OpenStruct.new(photo.to_hash)
+      new_photo.datetaken = Date.parse(photo.datetaken)
+      photos << new_photo
+    end
 
-=begin
----
-layout: post
-categories: hiking pnw amit baloo winter
-author: amit
-image: assets/images/06-05-17/mt-dickerman.jpg
-image_alt_text: snow capped Mt Dickerman
-featured: false
-photoset: 72157650991053255
----
+    photos.sort! do |a, b|
+      a.datetaken <=> b.datetaken
+    end
 
-> [Mt Dickerman](https://www.wta.org/go-hiking/hikes/mount-dickerman){:target="\_blank"} is one of the premier hikes in the Pacific North West. It is a beast of a climb but the rewards are amazing.
-
-Not too shabby along the way too
-{% flickr 16432337040 "Blue bird day" style="float: right;" %}
-{% flickr 16618229831 "My buddy Eric hiking up" style="float: right;" %}
-
-=end
+    photo_series = PhotoSeries.new(photos, @options).identify_all_series
 
     post_details_by_id = {}
     photos_by_album_id = Hash.new {|h, k| h[k] = []} 
 
     photos.each do |photo|
+      puts "\n\nprocessing photo : #{photo.id}"
+      # TODO : if existing posts are found, then use awk magic to insert / update series related info there
       if @flick_ids.include? photo.id
         puts "Photo with id #{photo.id} already exists. Skipping"
+
+        if photo_series.all_photos_in_series.include? photo
+          puts "Photo #{photo.id} part of series, but deleting for now".colorize(:red)
+          photo_series.all_photos_in_series.delete photo
+
+          post_series.each do |ps|
+            if ps.include? photo
+              ps.delete photo
+              puts "deleting photo #{photo.id} from series for now".colorize(:red)
+              break
+            end
+          end
+        end
         next
       else
         @flick_ids << photo.id
         @new_flick_ids << photo.id
+
+        # get raw tags for these photos 
+        photo_details = flickr.photos.getInfo(user_id: USER_ID, photo_id: photo.id)
+        photo.tags = FlickrUtils.parse_tags_from_get_info(photo_details)
+
+        if photo.tags.empty?
+          # TODO : remove from photo_series.all_photos_in_series and post_series too. 
+          # TODO : We should move all photo series related logic to its own class
+          puts "skipping entry for photo #{photo.id} because no tags were found".colorize(:red)
+          next
+        end
       end
 
       contexts = flickr.photos.getAllContexts(photo_id: photo.id)['set']
       next unless contexts && !contexts.empty?
-      if @options.verbose?
-        puts "--------------- contexts are ---------------- "
-        puts contexts.inspect
-      end
+      # if @options.verbose?
+      #   puts "--------------- contexts are ---------------- "
+      #   puts contexts.inspect
+      # end
       context = contexts.find {|c| c.id != PHOTOSETS_ADD_ENTRIES}
       unless context
         puts "for photo #{photo.id} could not find any other albums so skipping entry".colorize(:red)
         next
       end
 
-      raw_categories = photo.tags.split(' ').select {|tag| !['jsu', 'js', 'jsd', 'main'].include?(tag)}.uniq.join(' ')
-      if raw_categories.strip == ""
-        puts "skipping entry for photo #{photo.id} because no categories were found".colorize(:red)
-        next
-      end
-
-      content = "Give me the valid words from #{raw_categories}"
-      messages = ChatGptHelpers.compute_turbo_input(content)
-      categories = ChatGptHelpers.chatgpt_turbo_35(messages)
-      post_details = PostDetails.new(featured: photo.tags.include?('feature'), photoset: context, main_photo: photo, categories: categories, description: "")
+      post_details = PostDetails.new(
+        featured: photo.tags.include?('feature'), photoset: context, main_photo: photo,
+        skip_chatgpt: @options.skip_chatgpt?, description: ""
+      )
+      post_series_details = photo_series.get_post_series_details(photo, post_details.post_id)
+      puts "Series details for #{photo.id} are : #{post_series_details.inspect}"
+      post_details.post_series_details = post_series_details
       post_details.description = post_description(post_details, photo)
       post_details_by_id[context.id] = post_details
 
       # get 5 interesting pictures from that context (photoset) and add it to that post
-      photos_by_album_id[context.id] = get_interesting_photos_from_context(flickr, photo, context.id)
+      photos_by_album_id[context.id] = FlickrUtils.get_interesting_photos_from_context(flickr, photo, context.id)
     end
 
     { post_details_by_id: post_details_by_id, other_photos_by_album_id: photos_by_album_id }
-  end
-
-  def get_interesting_photos_from_context(flickr, photo, context_id)
-    date_taken = DateTime.parse(photo.datetaken).strftime('%Y-%m-%d')
-    # puts "looking up all photos in album #{context_id}"
-    photos = (flickr.photosets.getPhotos(user_id: USER_ID, photoset_id: context_id, extras: META_DATA, privacy_filter: PUBLIC_PHOTOS)['photo'] || [])
-    
-    photos.sort! do |a, b|
-      b.views.to_i <=> a.views.to_i
-    end
-    
-    return photos[0..4]
   end
 
   def post_description(post_details, photo)
@@ -227,106 +125,13 @@ Not too shabby along the way too
     end
 
     # return ""
-    prompt = "write a short paragraph for a travel blog with keywords #{post_details.categories}"
+    prompt = "write a short paragraph for a travel blog with keywords #{photo.tags.join(', ')}"
     if rand() * 10 >= 5
       prompt += " in first person point of view."
     end
 
     puts "chatgpt prompt is : #{prompt}"
-    return ChatGptHelpers.davinci(prompt)
-  end
-
-  FLICKR_IMAGE_TEMPLATE = '
-  flickr %{photo_id} "%{photo_title}" style="float: right;"
-  '
-
-  POST_TEMPLATE = '---
-layout: post
-title: %{title}
-date: %{date}
-categories: [%{categories}]
-author: amit
-image: %{image_path}
-image_alt_text: %{image_alt_text}
-featured: %{featured}
-photoset: %{photoset_id}
----
-%{description}
-
-%{flickr_images}
-  '
-
-  def categorize(categories)
-    if categories.match?('travel')
-      'travel'
-    elsif categories.match?('hike|hiking|trail|mountain|climb')
-      'hiking'
-    else
-      'all'
-    end
-  end
-
-  def create_post(post_details, other_photos_by_album)
-    post_hash = {
-      post_file_name: post_details.post_file_name,
-      title: post_details.photoset['title'],
-      date: post_details.main_photo['datetaken'],
-      categories: categorize(post_details.description),
-      image_path: post_details.main_photo['url_m'],
-      image_alt_text: post_details.photoset['title'],
-      featured: post_details.featured,
-      photoset_id: post_details.photoset['id'],
-      description: post_details.description
-    }
-
-    required_fields = %w{ post_file_name title date image_path photoset_id }
-    required_fields.each do |required_field|
-      key = required_field.to_sym
-      if post_hash[key] == '' || post_hash[key] == nil
-        puts "skipping entry for photo due to missing required field #{required_field}. Photo details : #{post_details.inspect}".colorize(:red)
-        return
-      end
-    end
-
-    if post_details.post_id == ""
-      puts "cannot create post_id so skipping for post : #{post_details}".colorize(:red)
-    end
-    file_path = post_details.post_file_name
-
-    updating_post = false
-    if File.exists? file_path
-      updating_post = true
-      if @options.overwrite?
-        puts 'overwrite flag is set so deleting existing file'.colorize(:orange)
-        # File.delete(file_path)
-      else
-        puts file_path + ' already exists. NOT overriding'.colorize(:green)
-        return
-      end
-    end
-
-    flickr_images = ''
-    other_photos = other_photos_by_album[post_details.photoset['id']]
-    other_photos.each_with_index do |photo, i|
-      puts photo.inspect.colorize(:light_black)
-      hsh = {
-        photo_id: photo['id'],
-        photo_title: (photo['title'] || ''),
-      }
-      str = FLICKR_IMAGE_TEMPLATE % hsh
-      flickr_images += "{% #{str} %}\n"
-      break if i == 5
-    end
-
-    post_hash[:flickr_images] = flickr_images
-
-    post_str = POST_TEMPLATE % post_hash
-    puts "writing to file : " + file_path if @options.verbose?
-    unless @options.dry_run?
-      File.open(file_path, 'w') do |out_file|
-        out_file.puts post_str
-      end
-    end
+    return ChatGptHelpers.davinci(prompt, @options.skip_chatgpt?)
   end
 
   def initialize
@@ -350,6 +155,7 @@ photoset: %{photoset_id}
     @options = Slop.parse do |o|
       o.bool '-o', '--overwrite', 'overwrite existing blog entries', default: false
       o.bool '-d', '--dry-run', 'dont create any posts'
+      o.bool '-s', '--skip-chatgpt', 'skip calling chat gpt', default: false
       o.bool '-v', '--verbose', 'enable verbose mode', default: false
       o.on '-h', 'options' do
         puts "This script pulls from various flickr albums and creates / updates posts in jekyl"
@@ -361,8 +167,7 @@ photoset: %{photoset_id}
     data = get_flickr_updates
 
     data[:post_details_by_id].each do |photoset_id, post_details|
-      raw_categories = post_details.main_photo.tags.split(' ').select {|tag| !['jsu', 'js', 'jsd', 'main'].include?(tag)}.uniq.join(' ')
-      create_post(post_details, data[:other_photos_by_album_id])
+      FlickrCreatePost.new(@options).create_post(post_details, data[:other_photos_by_album_id])
     end
 
     dump_unique_flick_ids
@@ -381,7 +186,7 @@ photoset: %{photoset_id}
 
     puts "new ids : "
     puts @new_flick_ids.inspect
-    File.open(UNIQUE_FLICKR_ID_FILE_PATH, "w+") { |file| file.write(@new_flick_ids.to_a.to_yaml) }
+    File.open(UNIQUE_FLICKR_ID_FILE_PATH, "w+") { |file| file.write(@new_flick_ids.to_a.to_yaml) } unless @options.dry_run?
   end
 
 end
