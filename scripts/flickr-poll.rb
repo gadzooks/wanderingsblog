@@ -49,9 +49,7 @@ class Main
       a.datetaken <=> b.datetaken
     end
 
-    series_info = PhotoSeries.find_photo_series(photos)
-    post_series = series_info[:post_series]
-    all_photos_in_series = series_info[:all_photos_in_series]
+    photo_series = PhotoSeries.new(photos, @options).identify_all_series
 
     post_details_by_id = {}
     photos_by_album_id = Hash.new {|h, k| h[k] = []} 
@@ -62,9 +60,9 @@ class Main
       if @flick_ids.include? photo.id
         puts "Photo with id #{photo.id} already exists. Skipping"
 
-        if all_photos_in_series.include? photo
+        if photo_series.all_photos_in_series.include? photo
           puts "Photo #{photo.id} part of series, but deleting for now".colorize(:red)
-          all_photos_in_series.delete photo
+          photo_series.all_photos_in_series.delete photo
 
           post_series.each do |ps|
             if ps.include? photo
@@ -84,7 +82,7 @@ class Main
         photo.tags = FlickrUtils.parse_tags_from_get_info(photo_details)
 
         if photo.tags.empty?
-          # TODO : remove from all_photos_in_series and post_series too. 
+          # TODO : remove from photo_series.all_photos_in_series and post_series too. 
           # TODO : We should move all photo series related logic to its own class
           puts "skipping entry for photo #{photo.id} because no tags were found".colorize(:red)
           next
@@ -107,7 +105,7 @@ class Main
         featured: photo.tags.include?('feature'), photoset: context, main_photo: photo,
         skip_chatgpt: @options.skip_chatgpt?, description: ""
       )
-      post_series_details = PhotoSeries.get_post_series_details(all_photos_in_series, post_series, photo, post_details.post_id)
+      post_series_details = photo_series.get_post_series_details(photo, post_details.post_id)
       puts "Series details for #{photo.id} are : #{post_series_details.inspect}"
       post_details.post_series_details = post_series_details
       post_details.description = post_description(post_details, photo)
