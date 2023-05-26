@@ -89,18 +89,7 @@ class Main
         end
       end
 
-      contexts = flickr.photos.getAllContexts(photo_id: photo.id)['set']
-      next unless contexts && !contexts.empty?
-      # if @options.verbose?
-      #   puts "--------------- contexts are ---------------- "
-      #   puts contexts.inspect
-      # end
-      context = contexts.find {|c| c.id != PHOTOSETS_ADD_ENTRIES}
-      unless context
-        puts "for photo #{photo.id} could not find any other albums so skipping entry".colorize(:red)
-        next
-      end
-
+      context = pick_right_album(flickr, photo.id)
       post_details = PostDetails.new(
         featured: photo.tags.include?('feature'), photoset: context, main_photo: photo,
         skip_chatgpt: @options.skip_chatgpt?, description: ""
@@ -116,6 +105,30 @@ class Main
     end
 
     { post_details_by_id: post_details_by_id, other_photos_by_album_id: photos_by_album_id }
+  end
+
+  ALBUMS_TO_EXCLUDE = Set.new(['72157625959432202', '72157626158864809', '72157632530995971', '72157627450386271', '72157627406881246',
+    '72157631893755538', '72157632619044349', '72157634432152201', '72157636078849264', '72157608913112539', '72157644421565063', '72177720307946395'])
+  FLICKR_ALBUM_LINK = 'https://www.flickr.com/photos/amityville/albums/'
+
+  def pick_right_album(flickr, photo_id)
+    contexts = flickr.photos.getAllContexts(photo_id: photo_id)['set']
+    # if @options.verbose?
+    #   puts "--------------- contexts are ---------------- "
+    #   puts contexts.inspect
+    # end
+
+    candidates = contexts.filter {|c| !ALBUMS_TO_EXCLUDE.include?(c.id) }
+    if candidates.empty?
+      puts "for photo #{photo.id} could not find any other albums so skipping entry".colorize(:red)
+    elsif candidates.size > 1
+      puts "for photo #{photo.id}, found multiple albums, not sure which to pick. Skipping".colorize(:red)
+      candidates.each do |album_id|
+        puts (FLICKR_ALBUM_LINK + album_id.to_s).colorize(:red)
+      end
+    end
+
+    candidates.first
   end
 
   def post_description(post_details, photo)
