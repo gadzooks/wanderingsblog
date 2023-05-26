@@ -62,7 +62,7 @@
   <div class="flip-box">
     <div class="flip-box-inner">
       <div class="flip-box-front">
-        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title | truncate: 35 }}
+        <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title | truncate: 33 }}
           <img class="flip-box-image" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.image_alt_text }}" >
         </a>
       </div>
