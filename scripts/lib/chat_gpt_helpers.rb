@@ -1,3 +1,5 @@
+require 'retries'
+require 'faker'
 require 'securerandom'
 
 module ChatGptHelpers
@@ -17,7 +19,7 @@ module ChatGptHelpers
   def self.chatgpt_turbo_35(messages, fake_call = false)
     if fake_call
       puts "dry-run returning fake data".colorize(:orange)
-      return "loren ipsum " + SecureRandom.uuid.to_s
+      return Faker::Book.title
     end
     OpenAI.configure do |config|
       config.access_token = ENV.fetch('OPENAI_ACCESS_TOKEN')
@@ -48,7 +50,7 @@ module ChatGptHelpers
   def self.davinci(prompt, fake_call = false)
     if fake_call
       puts "dry-run returning fake data".colorize(:orange)
-      return "loren ipsum " + SecureRandom.uuid.to_s
+      return Faker::Lorem.paragraphs(number: 1).first
     end
     OpenAI.configure do |config|
       config.access_token = ENV.fetch('OPENAI_ACCESS_TOKEN')

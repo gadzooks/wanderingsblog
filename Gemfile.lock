@@ -1,4 +1,12 @@
 GIT
+  remote: https://github.com/faker-ruby/faker.git
+  revision: 2338550d1e95a0e8b2f9cc0369450d5bfd50e7f4
+  branch: main
+  specs:
+    faker (3.2.0)
+      i18n (>= 1.8.11, < 2)
+
+GIT
   remote: https://github.com/gadzooks/jekyll-flickr.git
   revision: 520d9d0699576fdf209523f7bb784122b2649ff9
   specs:
@@ -132,6 +140,7 @@ GEM
     rb-fsevent (0.11.2)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    retries (0.0.5)
     rexml (3.2.5)
     rouge (3.30.0)
     rspec (3.12.0)
@@ -190,6 +199,7 @@ PLATFORMS
 DEPENDENCIES
   colorize
   down
+  faker!
   flickr
   html-proofer
   http_parser.rb (~> 0.6.0)
@@ -205,6 +215,7 @@ DEPENDENCIES
   kramdown
   minima (~> 2.5)
   rake
+  retries (~> 0.0.5)
   rouge
   rspec
   ruby-openai

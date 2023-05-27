@@ -32,8 +32,10 @@ group :jekyll_plugins do
     gem 'jekyll-compose'
 end
 
+gem 'retries', '~> 0.0.5'
 gem 'rspec'
 gem 'rake'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 
 gem 'jekyll-flickr', git: 'https://github.com/gadzooks/jekyll-flickr.git'
 gem 'flickr'
