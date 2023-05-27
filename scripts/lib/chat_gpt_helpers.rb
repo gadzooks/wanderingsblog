@@ -30,7 +30,6 @@ module ChatGptHelpers
   def self.chat(messages)
     client = OpenAI::Client.new
 
-    return "called chat"
     response = client.chat(
       parameters: {
         "model" => "gpt-3.5-turbo",
@@ -67,7 +66,6 @@ module ChatGptHelpers
 
   def self.completions(prompt)
     client = OpenAI::Client.new
-    return "called completions"
 
     response = client.completions(
       parameters: {
