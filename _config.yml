@@ -83,7 +83,7 @@ jekyll-archives:
 #   - jekyll-paginate-v2
 pagination:
   enabled: true
-  per_page: 8
+  per_page: 15
   permalink: '/page/:num/'
   title: ' - page :num'
   limit: 0 # Limit how many content objects to paginate (default: 0, means all)

@@ -1,6 +1,34 @@
+require 'mongo'
+
 class FlickrCreatePost
   
-  def initialize(options)
+  def self.mongo_connect
+    mongo_user = ENV['MONGO_USER']
+    mongo_pwd = ENV['MONGO_PWD']
+    uri = "mongodb+srv://#{mongo_user}:#{mongo_pwd}@weekend-wanderings-blog.ixbry4h.mongodb.net/?retryWrites=true&w=majority"
+    puts uri
+
+    # Set the server_api field of the options object to Stable API version 1
+    options = { server_api: {version: "1"} }
+
+    # Create a new client and connect to the server
+    client = Mongo::Client.new(uri, options)
+
+    # Send a ping to confirm a successful connection
+    begin
+      admin_client = client.use('admin')
+      result = admin_client.database.command(ping: 1)
+      puts "Pinged your deployment. You successfully connected to MongoDB!"
+    rescue Mongo::Error::OperationFailure => ex
+      puts ex
+    ensure
+      client.close
+    end
+
+end
+  
+  def initialize(flickr, options)
+    @flickr_client = flickr
     @options = options
   end
   
@@ -12,6 +40,16 @@ class FlickrCreatePost
     else
       'all'
     end
+  end
+
+  def add_to_processed_photo_flick_album(photo_id)
+    return if @options.dry_run?
+
+    response = @flickr_client.photosets.addPhoto(user_id: FlickrUtils::USER_ID,
+      photoset_id: FlickrUtils::PHOTOSETS_ENTRIES_ALREADY_PUBLISHED,
+      photo_id: photo_id)
+    
+    puts "AddPhoto response is : #{response.inspect}"
   end
 
   def create_post(post_details, other_photos_by_album)
@@ -47,6 +85,7 @@ class FlickrCreatePost
         puts 'overwrite flag is set so deleting existing file'.colorize(:orange)
         File.delete(file_path)
       else
+        add_to_processed_photo_flick_album(post_details.main_photo.id)
         puts file_path + ' already exists. NOT overriding'.colorize(:green)
         return
       end
@@ -88,6 +127,7 @@ class FlickrCreatePost
       File.open(file_path, 'w') do |out_file|
         out_file.puts post_str
       end
+      add_to_processed_photo_flick_album(post_details.main_photo.id)
     else
       puts "dry-run : skipping writing to file #{file_path}"
     end

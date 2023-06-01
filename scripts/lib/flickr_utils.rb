@@ -1,4 +1,9 @@
 module FlickrUtils
+  PHOTOSETS_ADD_ENTRIES = '72177720307946395'
+  PHOTOSETS_ENTRIES_ALREADY_PUBLISHED = '72177720308606044'
+  USER_ID = '57125599@N00'
+  PUBLIC_PHOTOS = 1
+  META_DATA = 'description,date_taken,url_m,widths,sizes,views'
 
   def self.get_interesting_photos_from_context(flickr, photo, context_id)
     date_taken = photo.datetaken.strftime('%Y-%m-%d')
