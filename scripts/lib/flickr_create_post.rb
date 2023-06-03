@@ -1,37 +1,67 @@
 require 'mongo'
+require 'date'
+require 'colorize'
 
 class FlickrCreatePost
-  
-  def self.mongo_connect
-    mongo_user = ENV['MONGO_USER']
-    mongo_pwd = ENV['MONGO_PWD']
-    uri = "mongodb+srv://#{mongo_user}:#{mongo_pwd}@weekend-wanderings-blog.ixbry4h.mongodb.net/?retryWrites=true&w=majority"
-    puts uri
 
-    # Set the server_api field of the options object to Stable API version 1
-    options = { server_api: {version: "1"} }
-
-    # Create a new client and connect to the server
-    client = Mongo::Client.new(uri, options)
-
-    # Send a ping to confirm a successful connection
-    begin
-      admin_client = client.use('admin')
-      result = admin_client.database.command(ping: 1)
-      puts "Pinged your deployment. You successfully connected to MongoDB!"
-    rescue Mongo::Error::OperationFailure => ex
-      puts ex
-    ensure
-      client.close
-    end
-
-end
-  
   def initialize(flickr, options)
     @flickr_client = flickr
     @options = options
   end
+
+  def create_posts(data)
+    @mongo_client = mongo_db_connect
+    begin
+      data[:post_details_by_id].each do |photoset_id, post_details|
+        create_post(post_details, data[:other_photos_by_album_id])
+      end
+    rescue Mongo::Error::OperationFailure => ex
+      puts ex
+      exit -1
+    ensure
+      @mongo_client.close
+    end
+  end
+
+  #######
+  private
+  #######
   
+  def photos_processed_collection
+      collection = @mongo_client[:photos_processed]
+  end
+  
+  def photo_found?(photo_id)
+    photos_processed_collection.find(photo_id: photo_id)
+  end
+  
+  def add_to_processed_photo_flick_album(photo_id)
+      db = @mongo_client.database
+      collection = photos_processed_collection
+      collection.indexes.create_one({ photo_id: 1 }, unique: true)
+      doc = {
+        photo_id: photo_id,
+        created_at: Date.today,
+      }
+      result = collection.insert_one(doc)
+      puts "added 1 entry to #{mongo_db}".green
+  end
+
+  def mongo_db_connect
+    mongo_user = ENV['MONGO_USER']
+    mongo_pwd = ENV['MONGO_PWD']
+    mongo_db = ENV['MONGO_DB']
+    uri = "mongodb+srv://#{mongo_user}:#{mongo_pwd}@#{mongo_db}.ixbry4h.mongodb.net/?retryWrites=true&w=majority"
+
+    # Set the server_api field of the options object to Stable API version 1
+    options = { 
+      server_api: {version: "1"},
+      database: mongo_db
+    }
+
+    Mongo::Client.new(uri, options)
+  end
+
   def categorize(categories)
     if categories.match?('travel')
       'travel'
@@ -42,17 +72,12 @@ end
     end
   end
 
-  def add_to_processed_photo_flick_album(photo_id)
-    return if @options.dry_run?
-
-    response = @flickr_client.photosets.addPhoto(user_id: FlickrUtils::USER_ID,
-      photoset_id: FlickrUtils::PHOTOSETS_ENTRIES_ALREADY_PUBLISHED,
-      photo_id: photo_id)
-    
-    puts "AddPhoto response is : #{response.inspect}"
-  end
-
   def create_post(post_details, other_photos_by_album)
+    if photo_found? post_details.main_photo.id
+      puts "Entry already exists for #{post_details.main_photo.id} skipping".colorize(:orange)
+      return
+    end
+
     post_hash = {
       post_file_name: post_details.post_file_name,
       title: post_details.post_title,

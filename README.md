@@ -33,10 +33,18 @@ export FLICKR_SHARED_SECRET=asdfasdf
 export FLICKRAW_API_KEY=asdfasdf
 export FLICKR_API_KEY=dfasdfk
 export FLICKR_API_SECRET=asdfkas
+export MONGO_USER=weekend-wandering-admin
+export MONGO_PWD=password
+export MONGO_DB=weekend-wanderings-blog
 bundle exec jekyll serve --livereload --trace
 # window 2
 npm run watch:scripts
 ```
+
+# Jekyll docs
+- https://devhints.io/jekyll
+- liquid : https://shopify.github.io/liquid/filters/truncate/
+- 
 
 ## running flick script locally
 ```bash
@@ -47,6 +55,10 @@ npm run watch:scripts
 ## flickr ruby API docs
 - http://hanklords.github.io/flickraw/FlickRaw/ResponseList.html
 - https://www.flickr.com/services/api/flickr.people.getPublicPhotos.htm
+
+## mongo ruby docs : 
+- https://www.rubydoc.info/gems/mongo/1.8.2/Mongo%2FCollection:find
+- https://www.mongodb.com/docs/ruby-driver/master/tutorials/quick-start/#complete-sample-app
 
 ## Debugging jekyl performance : 
 ```bash

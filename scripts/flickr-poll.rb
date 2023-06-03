@@ -32,16 +32,8 @@ class Main
       return { post_details_by_id: {}, other_photos_by_album_id: [] }
     end
 
-    already_published_images = Set.new(@flickr.photosets.getPhotos(user_id: FlickrUtils::USER_ID,
-      photoset_id: FlickrUtils::PHOTOSETS_ENTRIES_ALREADY_PUBLISHED, extras: FlickrUtils::META_DATA,
-      privacy_filter: FlickrUtils::PUBLIC_PHOTOS)['photo'] || [])
-    
     photos = []
     flickr_photos.each do |photo|
-      if already_published_images.include? photo
-        @log.info "Skipping photo #{photo.id} since it was already published".colorize(:light_black)
-        next
-      end
       new_photo = OpenStruct.new(photo.to_hash)
       new_photo.datetaken = Date.parse(photo.datetaken)
       photos << new_photo
@@ -172,9 +164,6 @@ class Main
       end
     end
 
-    FlickrCreatePost.mongo_connect
-    exit
-
     @options.verbose? ? @log.level = Logger::Severity::DEBUG : @log.level = Logger::Severity::INFO
     @log.info "Skipping chatgpt calls".green if @options.skip_chatgpt?
     @log.warn "dry run" if @options.dry_run?
@@ -185,9 +174,12 @@ class Main
 
     data = get_flickr_updates
 
-    data[:post_details_by_id].each do |photoset_id, post_details|
-      FlickrCreatePost.new(@flickr, @options).create_post(post_details, data[:other_photos_by_album_id])
-    end
+    flickr_post = FlickrCreatePost.new(@flickr, @options)
+    flickr_post.create_posts(data)
+
+    # data[:post_details_by_id].each do |photoset_id, post_details|
+    #   FlickrCreatePost.new(@flickr, @options).create_post(post_details, data[:other_photos_by_album_id])
+    # end
 
   end
 
