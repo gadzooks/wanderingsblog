@@ -15,6 +15,7 @@ require_relative './lib/post_details'
 require_relative './lib/photo_series'
 require_relative './lib/flickr_create_post'
 require_relative './lib/flickr_utils'
+require_relative './lib/mongo_utils'
 
 # NOTE : keyword_init is required so we can pass arguments as hash to create objects
 PostSeriesDetails = Struct.new(:series_key, :series_index, :series_total, keyword_init: true)
@@ -33,7 +34,7 @@ class Main
     end
 
     photos = []
-    mongo_entries = FlickrCreatePost.find_existing_entries(flickr_photos.map {|p| p.id})
+    mongo_entries = MongoUtils.find_existing_entries(flickr_photos.map {|p| p.id})
     already_published_images = Set.new(mongo_entries.map {|m| m[:photo_id]} )
     # puts already_published_images.inspect
 

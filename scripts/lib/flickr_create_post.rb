@@ -1,6 +1,6 @@
-require 'mongo'
 require 'date'
 require 'colorize'
+require_relative './mongo_utils'
 
 class FlickrCreatePost
 
@@ -10,7 +10,7 @@ class FlickrCreatePost
   end
 
   def create_posts(data)
-    @mongo_client = self.class.mongo_db_connect
+    @mongo_client = MongoUtils.mongo_db_connect
     begin
       data[:post_details_by_id].each do |photoset_id, post_details|
         create_post(post_details, data[:other_photos_by_album_id])
@@ -23,51 +23,25 @@ class FlickrCreatePost
     end
   end
 
-  def self.find_existing_entries(photo_ids)
-    mongo_client = mongo_db_connect
-    photos_processed_collection(mongo_client).find( { "photo_id" => {"$in" => photo_ids} })
-  end
-
-  PHOTOS_PROCESSED_DB_NAME = 'photos_processed'
-
   #######
   private
   #######
   
-  def self.photos_processed_collection(mongo_client)
-      collection = mongo_client[PHOTOS_PROCESSED_DB_NAME]
-  end
-  
   def photo_found?(photo_id)
-    count = self.class.photos_processed_collection(@mongo_client).find(photo_id: photo_id).count()
+    count = MongoUtils.photos_processed_collection(@mongo_client).find(photo_id: photo_id).count()
     count == 1
   end
   
   def add_to_processed_photo_flick_album(photo_id)
       db = @mongo_client.database
-      collection = self.class.photos_processed_collection(@mongo_client)
+      collection = MongoUtils.photos_processed_collection(@mongo_client)
       collection.indexes.create_one({ photo_id: 1 }, unique: true)
       doc = {
         photo_id: photo_id,
         created_at: Date.today,
       }
       result = collection.insert_one(doc)
-      puts "added 1 entry to #{PHOTOS_PROCESSED_DB_NAME}".green
-  end
-
-  def self.mongo_db_connect
-    mongo_user = ENV['MONGO_USER']
-    mongo_pwd = ENV['MONGO_PWD']
-    mongo_db = ENV['MONGO_DB']
-    uri = "mongodb+srv://#{mongo_user}:#{mongo_pwd}@#{mongo_db}.ixbry4h.mongodb.net/?retryWrites=true&w=majority"
-
-    # Set the server_api field of the options object to Stable API version 1
-    options = { 
-      server_api: {version: "1"},
-      database: mongo_db
-    }
-
-    Mongo::Client.new(uri, options)
+      puts "added 1 entry to #{MongoUtils::PHOTOS_PROCESSED_DB_NAME}".green
   end
 
   def categorize(categories)
