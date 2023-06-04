@@ -24,6 +24,7 @@ GEM
       console (~> 1.10)
       io-event (~> 1.1)
       timers (~> 4.1)
+    bson (4.15.0)
     colorator (1.1.0)
     colorize (0.8.1)
     concurrent-ruby (1.2.2)
@@ -118,6 +119,8 @@ GEM
       jekyll (>= 3.5, < 5.0)
       jekyll-feed (~> 0.9)
       jekyll-seo-tag (~> 2.1)
+    mongo (2.18.2)
+      bson (>= 4.14.1, < 5.0.0)
     multi_json (1.15.0)
     multipart-post (2.3.0)
     nokogiri (1.14.4-x86_64-darwin)
@@ -214,6 +217,7 @@ DEPENDENCIES
   jekyll-sitemap
   kramdown
   minima (~> 2.5)
+  mongo (~> 2)
   rake
   retries (~> 0.0.5)
   rouge
