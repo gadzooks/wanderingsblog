@@ -65,6 +65,9 @@ jobs:
           FLICKR_API_SECRET: ${{ secrets.FLICKR_API_SECRET }}
           FLICKR_SHARED_SECRET: ${{ secrets.FLICKR_SHARED_SECRET }}
           OPENAI_ACCESS_TOKEN: ${{ secrets.OPENAI_ACCESS_TOKEN }}
+          MONGO_USER: ${{ secrets.MONGO_USER }}
+          MONGO_PWD: ${{ secrets.MONGO_PWD }}
+          MONGO_DB: ${{ secrets.MONGO_DB }}
 
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
