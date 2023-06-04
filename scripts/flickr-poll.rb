@@ -33,7 +33,15 @@ class Main
     end
 
     photos = []
+    mongo_entries = FlickrCreatePost.find_existing_entries(flickr_photos.map {|p| p.id})
+    already_published_images = Set.new(mongo_entries.map {|m| m[:photo_id]} )
+    # puts already_published_images.inspect
+
     flickr_photos.each do |photo|
+      if already_published_images.include? photo.id
+        @log.info "Skipping photo #{photo.id} since it was already published".colorize(:light_black)
+        next
+      end
       new_photo = OpenStruct.new(photo.to_hash)
       new_photo.datetaken = Date.parse(photo.datetaken)
       photos << new_photo
