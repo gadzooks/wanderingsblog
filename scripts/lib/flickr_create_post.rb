@@ -32,16 +32,14 @@ class FlickrCreatePost
     count == 1
   end
   
-  def add_to_processed_photo_flick_album(photo_id)
-      db = @mongo_client.database
-      collection = MongoUtils.photos_processed_collection(@mongo_client)
-      collection.indexes.create_one({ photo_id: 1 }, unique: true)
-      doc = {
-        photo_id: photo_id,
-        created_at: Date.today,
-      }
-      result = collection.insert_one(doc)
-      puts "added 1 entry to #{MongoUtils::PHOTOS_PROCESSED_DB_NAME}".green
+  def add_to_processed_photo_flick_album(post_details)
+    db = @mongo_client.database
+    collection = MongoUtils.photos_processed_collection(@mongo_client)
+    collection.indexes.create_one({ photo_id: 1 }, unique: true)
+    doc = compute_post_hash(post_details)
+    doc[:created_at] = Date.today
+    result = collection.insert_one(doc)
+    puts "added 1 entry to #{MongoUtils::PHOTOS_PROCESSED_DB_NAME}".green
   end
 
   def categorize(categories)
@@ -54,13 +52,8 @@ class FlickrCreatePost
     end
   end
 
-  def create_post(post_details, other_photos_by_album)
-    if photo_found? post_details.main_photo.id
-      puts "Entry already exists for #{post_details.main_photo.id} skipping".colorize(:orange)
-      return
-    end
-
-    post_hash = {
+  def compute_post_hash(post_details)
+    {
       post_file_name: post_details.post_file_name,
       title: post_details.post_title,
       date: post_details.main_photo['datetaken'],
@@ -72,6 +65,15 @@ class FlickrCreatePost
       photoset_id: post_details.photoset['id'],
       description: post_details.description
     }
+  end
+
+  def create_post(post_details, other_photos_by_album)
+    if photo_found? post_details.main_photo.id
+      puts "Entry already exists for #{post_details.main_photo.id} skipping".colorize(:orange)
+      return
+    end
+
+    post_hash = compute_post_hash(post_details)
 
     required_fields = %w{ post_file_name title date image_path photoset_id }
     required_fields.each do |required_field|
@@ -92,7 +94,7 @@ class FlickrCreatePost
         puts 'overwrite flag is set so deleting existing file'.colorize(:orange)
         File.delete(file_path)
       else
-        add_to_processed_photo_flick_album(post_details.main_photo.id)
+        add_to_processed_photo_flick_album(post_details)
         puts file_path + ' already exists. NOT overriding'.colorize(:green)
         return
       end
@@ -134,7 +136,7 @@ class FlickrCreatePost
       File.open(file_path, 'w') do |out_file|
         out_file.puts post_str
       end
-      add_to_processed_photo_flick_album(post_details.main_photo.id)
+      add_to_processed_photo_flick_album(post_details)
     else
       puts "dry-run : skipping writing to file #{file_path}"
     end
