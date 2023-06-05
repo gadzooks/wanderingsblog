@@ -21,8 +21,8 @@ require_relative './lib/mongo_utils'
 PostSeriesDetails = Struct.new(:series_key, :series_index, :series_total, keyword_init: true)
 
 class Main
-  def get_flickr_updates
 
+  def get_flickr_updates
     # photos = flickr.people.getPublicPhotos(:user_id => '57125599@N00', :extras => 'description,tags,geo,date_taken,url_m,widths,sizes', per_page: 25)
     flickr_photos = @flickr.photosets.getPhotos(user_id: FlickrUtils::USER_ID,
       photoset_id: FlickrUtils::PHOTOSETS_ADD_ENTRIES,
@@ -34,17 +34,23 @@ class Main
     end
 
     photos = []
-    mongo_entries = MongoUtils.find_existing_entries(flickr_photos.map {|p| p.id})
-    already_published_images = Set.new(mongo_entries.map {|m| m[:photo_id]} )
-    # puts already_published_images.inspect
+    already_published_images = MongoUtils.find_existing_entries(flickr_photos.map {|p| p.id})
+    puts already_published_images.inspect
 
     flickr_photos.each do |photo|
-      if already_published_images.include? photo.id
-        @log.info "Skipping photo #{photo.id} since it was already published".colorize(:light_black)
-        next
-      end
       new_photo = OpenStruct.new(photo.to_hash)
       new_photo.datetaken = Date.parse(photo.datetaken)
+      if already_published_images.include? photo.id
+        if @options.overwrite?
+          @log.info "Found existing post for #{photo.id} but overwrite flag passed".colorize(:light_black)
+          new_photo.mongo_document = already_published_images[photo.id]
+        else
+          @log.info "Skipping photo #{photo.id} since it was already published".colorize(:light_black)
+          next
+        end
+      end
+
+      @log.info "adding photo #{photo.id} for processing".colorize(:light_black)
       photos << new_photo
     end
 
@@ -149,7 +155,6 @@ class Main
 
   def initialize
     @log = Logger.new(STDOUT)
-    @log.debug("Running script...")
 
     # @log.formatter = proc do |severity, datetime, progname, msg|
     #   "#{severity}: [ #{datetime.strftime("%I:%M%p")} ] -- #{msg}\n"
@@ -176,7 +181,7 @@ class Main
     @options.verbose? ? @log.level = Logger::Severity::DEBUG : @log.level = Logger::Severity::INFO
     @log.info "Skipping chatgpt calls".green if @options.skip_chatgpt?
     @log.warn "dry run" if @options.dry_run?
-    @log.warn "overwriting existing posts" if @options.overwrite?
+    @log.warn "overwriting existing posts".red if @options.overwrite?
 
     Flickr.cache = '/tmp/flickr-api.yml'
     @flickr = Flickr.new
@@ -190,15 +195,6 @@ class Main
     #   FlickrCreatePost.new(@flickr, @options).create_post(post_details, data[:other_photos_by_album_id])
     # end
 
-  end
-
-  def load_unique_flickr_ids
-    cmd = 'grep -Eoh "^photo_id: \d+ " ./_posts/* | cut -d " "  -f 2'
-    value = `#{cmd}`
-
-    value ||= ""
-
-    return value.split(/\s/)
   end
 
 end

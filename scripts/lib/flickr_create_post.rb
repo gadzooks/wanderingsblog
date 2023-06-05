@@ -36,9 +36,19 @@ class FlickrCreatePost
     db = @mongo_client.database
     collection = MongoUtils.photos_processed_collection(@mongo_client)
     collection.indexes.create_one({ photo_id: 1 }, unique: true)
-    doc = compute_post_hash(post_details)
-    doc[:created_at] = Date.today
-    result = collection.insert_one(doc)
+    # update = compute_post_hash(post_details)
+    update = {
+      "$set" => compute_post_hash(post_details),
+      "$setOnInsert" => { createdAt: Time.now().utc }
+    }
+    filter = { photo_id: post_details.main_photo.id }
+    # https://www.mongodb.com/docs/manual/reference/method/db.collection.updateOne/
+    update_options = { upsert: true }
+    result = collection.update_one(
+      filter,
+      update,
+      update_options
+    )
     puts "added 1 entry to #{MongoUtils::PHOTOS_PROCESSED_DB_NAME}".green
   end
 
@@ -68,10 +78,14 @@ class FlickrCreatePost
   end
 
   def create_post(post_details, other_photos_by_album)
-    if photo_found? post_details.main_photo.id
-      puts "Entry already exists for #{post_details.main_photo.id} skipping".colorize(:orange)
-      return
-    end
+    # if photo_found? post_details.main_photo.id
+    #   if @options.overwrite?
+    #     puts "Entry already exists for #{post_details.main_photo.id} but Overwrite found".colorize(:orange)
+    #   else
+    #     puts "Entry already exists for #{post_details.main_photo.id} skipping".colorize(:orange)
+    #   end
+    #   return
+    # end
 
     post_hash = compute_post_hash(post_details)
 
@@ -86,6 +100,7 @@ class FlickrCreatePost
 
     if post_details.post_id == ""
       puts "cannot create post_id so skipping for post : #{post_details}".colorize(:red)
+      return
     end
     file_path = post_details.post_file_name
 

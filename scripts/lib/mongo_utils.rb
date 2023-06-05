@@ -4,8 +4,20 @@ module MongoUtils
   PHOTOS_PROCESSED_DB_NAME = 'photos_processed'
 
   def self.find_existing_entries(photo_ids)
+    # puts photo_ids.inspect
+    # args = { "photo_id" => {"$in" => photo_ids} }
+    # puts args.inspect
+    # docs = MongoUtils.photos_processed_collection(mongo_client).find( { "photo_id" => {"$in" => photo_ids} })
+    # docs.each { |d| puts d.inspect}
+    # docs
     mongo_client = MongoUtils.mongo_db_connect
-    MongoUtils.photos_processed_collection(mongo_client).find( { "photo_id" => {"$in" => photo_ids} })
+    already_published_images = {}
+    MongoUtils.photos_processed_collection(mongo_client).find( { "photo_id" => {"$in" => photo_ids} }).each do |doc|
+      already_published_images[doc['photo_id']] = doc
+    end
+    # docs.each { |d| already_published_images[d['photo_id'] = d ] }
+    # docs.map { |d| d}
+    already_published_images
   end
 
   def self.photos_processed_collection(mongo_client)

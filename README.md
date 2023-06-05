@@ -24,8 +24,13 @@ https://michaelcurrin.github.io/code-cookbook/recipes/ci-cd/github-actions/workf
 - https://platform.openai.com/docs/guides/chat/introduction
 
 
+## on github : 
+- https://github.com/gadzooks/wanderingsblog/settings/secrets/actions
+- in the workflow file : .github/workflows/workflow.yml 
+
 ## running locally : 
 ```bash
+# set these ENV variables
 #Debug gh-pages locally with
 act -s GITHUB_TOKEN=<GH_TOKEN> -s FLICKR_API_KEY=edc405009fa021ce9816f5a75dfe5801 -s FLICKR_API_SECRET=<secret> -s FLICKR_SHARED_SECRET=<secret> -s OPENAI_ACCESS_TOKEN=<chatgpt-token> --reuse
 # window 1
@@ -34,8 +39,9 @@ export FLICKRAW_API_KEY=asdfasdf
 export FLICKR_API_KEY=dfasdfk
 export FLICKR_API_SECRET=asdfkas
 export MONGO_USER=weekend-wandering-admin
-export MONGO_PWD=password
+export MONGO_PWD=secret
 export MONGO_DB=weekend-wanderings-blog
+
 bundle exec jekyll serve --livereload --trace
 # window 2
 npm run watch:scripts
