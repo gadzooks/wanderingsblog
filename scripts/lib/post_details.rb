@@ -6,6 +6,10 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :description, :skip_
     photoset.title
   end
 
+  def mongo_document
+    main_photo.mongo_document
+  end
+
   def date_taken
     @date_taken ||= Date.parse(main_photo["datetaken"])
   end
@@ -38,10 +42,31 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :description, :skip_
      post_id + '.jpg'
   end
 
+  def find_post_file_name_from_filesystem
+    cmd = "grep -l #{main_photo.id} _posts/*.markdown"
+    output = system cmd
+    # puts "grep command result : #{output}"
+    # output
+  end
+
+
   def post_file_name
-    file_name = main_photo["datetaken"].strftime('%Y-%m-%d') + '-' + post_id
-    file_path = '_posts/' + file_name + '.markdown'
-    return file_path
+    puts "in post_file_name #{main_photo.id} "
+    puts mongo_document.inspect
+    @post_file_name ||= if mongo_document
+                          if mongo_document['post_file_name']
+                            puts "returning from mongo_document " + mongo_document['post_file_name']
+                            mongo_document['post_file_name']
+                          else
+                            find_post_file_name_from_filesystem
+                          end
+                        else
+                          puts "computing from title"
+                          file_name = main_photo["datetaken"].strftime('%Y-%m-%d') + '-' + post_id
+                          file_path = '_posts/' + file_name + '.markdown'
+                        end
+    puts "postflike name : #{@post_file_name}"
+    return @post_file_name
   end
 
 end
