@@ -4,12 +4,12 @@ module FlickrUtils
   PUBLIC_PHOTOS = 1
   META_DATA = 'description,date_taken,url_m,widths,sizes,views'
 
-  def self.get_interesting_photos_from_context(flickr, photo, context_id)
-    date_taken = photo.datetaken.strftime('%Y-%m-%d')
+  def self.get_interesting_photos_from_context(flickr, main_photo, context_id)
     # puts "looking up all photos in album #{context_id}"
     photos = (flickr.photosets.getPhotos(user_id: USER_ID, photoset_id: context_id, extras: META_DATA, privacy_filter: PUBLIC_PHOTOS)['photo'] || [])
-    
-    photos.sort! do |a, b|
+
+    photos.delete_if {|p| p.id == main_photo.id }
+    photos.uniq.sort! do |a, b|
       b.views.to_i <=> a.views.to_i
     end
     

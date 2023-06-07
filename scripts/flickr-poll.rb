@@ -143,10 +143,17 @@ class Main
       return photo['description']
     end
 
-    # return ""
-    prompt = "write a short paragraph for a travel blog with keywords #{photo.tags.join(', ')}"
+    category = FlickrCreatePost.categorize(post_details.description)
+    prompt = ""
+    if category == 'hiking'
+      prompt = "I live in Washington state. Write 2 paragraphs about a hike I did. Todays date is #{Date.today}. The hike was done on #{post_details.datetaken}. " + 
+      " The description should be based on these keywords and based on facts related to the hike : "
+    else
+      prompt = "Write two short paragraphs for a travel blog. The blog is based on these keywords : "
+    end
+    prompt += "#{photo.tags.join(', ')} . Do not use superlatives."
     if rand() * 10 >= 5
-      prompt += " in first person point of view."
+      prompt += "Write the blog entry in first person."
     end
 
     puts "chatgpt prompt is : #{prompt}"

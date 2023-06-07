@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Trails of Washington: A Hiker's Guide"
+title: "Sunset Hiking Bandera with Friends"
 date: 2023-06-05
 categories: [hiking]
 author: amit
@@ -13,16 +13,18 @@ photo_id: 52955482347 # this id is the unique id for the post
 ---
 
 
-I recently went on an amazing hike in Washington State. The amount of beauty that can be seen in one day was jaw-dropping. Everywhere you look, there are mountains and evergreen trees. We hiked up a few slopes to get some amazing views, along the way, we encountered various wildlife which was very exciting. In total, we hiked about 5 miles and it was definitely the highlight of my trip to Washington State. I highly recommend planning a hiking trip if you ever find yourself visiting this part of the country!
+I recently spent an adventurous day hiking with my friend Phil and our beloved pet Baloo in Bandera Mountain, Washington State. The entire trail was lined with old-growth trees, wildflowers and in the backdrop, the gorgeous Cascades mountain range. We chose to embark on our journey in the evening as we wanted to watch the sunset while we hiked.
 
-{% flickr 52955482497 "Bandera mountain sunset hike with Phil" style="float: right;"
- %}
-{% flickr 52956082216 "Bandera mountain sunset hike with Phil" style="float: right;"
- %}
-{% flickr 52956462165 "Bandera mountain sunset hike with Phil" style="float: right;"
- %}
-{% flickr 52955482347 "Bandera mountain sunset hike with Phil" style="float: right;"
- %}
+The entire hike was filled with adventure. Baloo, my canine companion did not show signs of fatigue and loved the entire journey. Though the climb was rocky, the result was worth it. The sun was painting the sky with a canvas of oranges and golds as we reached the top. The view we were able to witness was pure bliss.
+
 {% flickr 52956461930 "Bandera mountain sunset hike with Phil" style="float: right;"
+ %}
+{% flickr 52956531268 "Bandera mountain sunset hike with Phil" style="float: right;"
+ %}
+{% flickr 52956082016 "Bandera mountain sunset hike with Phil" style="float: right;"
+ %}
+{% flickr 52956081821 "Bandera mountain sunset hike with Phil" style="float: right;"
+ %}
+{% flickr 52955482297 "Bandera mountain sunset hike with Phil" style="float: right;"
  %}
 
