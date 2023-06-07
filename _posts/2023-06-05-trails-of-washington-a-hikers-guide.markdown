@@ -2,6 +2,7 @@
 layout: post
 title: "Sunset Hiking Bandera with Phil"
 date: 2023-06-05
+date_posted: 2023-06-06 23:30:16 -0700
 categories: [hiking]
 author: amit
 image: https://live.staticflickr.com/65535/52955482347_8ded4c615f.jpg
@@ -13,9 +14,9 @@ photo_id: 52955482347 # this id is the unique id for the post
 ---
 
 
-I recently hiked up Bandera Mountain in Washington State with my friend Phil. The views up top were spectacular, with a 360 degree panoramic of the surrounding landscape, and it was an enjoyable and fairly easy trail. It was especially enjoyable around sunset as we soaked in the vibrant oranges and pinks of the sky.
+Yesterday, I had the incredible opportunity to hike up Bandera Mountain in Washington State. It had been something that I had wanted to do for a while now and I'm so glad I got to share this experience with my friend Phil.
 
-We opted for the longer but less steep hiking path and took our time admiring the wildlife while snacking on some local trail mix. We also kept a leisurely pace so we could share conversation and laugh about old times. The evening ended on a high point, with soothing melodies of nature and an extraordinary painted sky – which made for a wonderful hiking experience with my friend Phil.
+The sunset hike was breathtaking--literally. We made it up just in time to see the sun sink below the tree line. As we admired the incredible view from the top of the mountain, I couldn't help but feel a sense of satisfaction for having made it to the summit. It was definitely an experience I will never forget.
 
 {% flickr 52956461930 "Bandera mountain sunset hike with Phil" style="float: right;"
  %}
