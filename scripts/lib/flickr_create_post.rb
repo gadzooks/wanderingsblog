@@ -23,6 +23,16 @@ class FlickrCreatePost
     end
   end
 
+  def self.categorize(categories)
+    if categories.match?('travel')
+      'travel'
+    elsif categories.match?('hike|hiking|trail|mountain|climb')
+      'hiking'
+    else
+      'all'
+    end
+  end
+
   #######
   private
   #######
@@ -52,22 +62,12 @@ class FlickrCreatePost
     puts "added 1 entry to #{MongoUtils::PHOTOS_PROCESSED_DB_NAME}".green
   end
 
-  def categorize(categories)
-    if categories.match?('travel')
-      'travel'
-    elsif categories.match?('hike|hiking|trail|mountain|climb')
-      'hiking'
-    else
-      'all'
-    end
-  end
-
   def compute_post_hash(post_details)
     {
       post_file_name: post_details.post_file_name,
       title: post_details.post_title,
       date: post_details.main_photo['datetaken'],
-      categories: categorize(post_details.description),
+      categories: self.class.categorize(post_details.description),
       image_path: post_details.main_photo['url_m'],
       image_alt_text: post_details.photoset['title'],
       featured: post_details.featured,
