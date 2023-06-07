@@ -146,10 +146,12 @@ class Main
     category = FlickrCreatePost.categorize(post_details.description)
     prompt = ""
     if category == 'hiking'
-      prompt = "I live in Washington state. Write 2 paragraphs about a hike I did. Todays date is #{Date.today}. The hike was done on #{post_details.datetaken}. " + 
+      prompt = "I live in Washington state. Write 2 paragraphs about a hike I did. Todays date is #{Date.today}. " + 
+      "The hike was done on #{post_details.date_taken} date. " + 
       " The description should be based on these keywords and based on facts related to the hike : "
     else
-      prompt = "Write two short paragraphs for a travel blog. The blog is based on these keywords : "
+      prompt = "Write two short paragraphs for a travel blog. Todays date is #{Date.today}. " + 
+      "The blog entry is for #{post_details.date_taken} date. The blog is based on these keywords : "
     end
     prompt += "#{photo.tags.join(', ')} . Do not use superlatives."
     if rand() * 10 >= 5
