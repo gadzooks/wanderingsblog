@@ -13,9 +13,9 @@ photo_id: 52938548986 # this id is the unique id for the post
 ---
 
 
-I recently had the opportunity to spend a three-day memorial weekend in beautiful Lake Chelan. I decided to get out and explore the great outdoors along the lakeshore trail. The trek started out with a very pleasant hike and went along the beautiful lake, making my journey full of oceanic views.
+Memorial Day weekend is fast approaching and I'm excited to take advantage of it by exploring the Lakeshore Trail near Lake Chelan. For 3 days and 2 nights I'll be hiking the trail to take in the beauty of the area's rolling hills, shady trees, and the magnificent lake! This part of Washington State is a great place to take a holiday with its abundance of outdoor activities. I'm looking forward to the fresh air while being surrounded by nature. 
 
-The path was easy to follow and the terrain was mostly flat and with very few changes. The peak of my journey was reaching a viewpoint which provided a stunning view of Lake Chelan and I had the perfect spot to rest and enjoy the sunset. I was able to complete the hiking trail in two nights and I'm very grateful to have had such an incredible experience.
+During this hiking trip I'm sure I will come across some breathtaking views. There's nothing like getting off the beaten path and discovering the beauty that comes from something as simple as a hike in the woods. I'm sure that my Memorial Day weekend will be filled with plenty of adventure and beautiful scenery.
 
 {% flickr 52938999473 "LakeShore trail 2023" style="float: right;"
  %}
