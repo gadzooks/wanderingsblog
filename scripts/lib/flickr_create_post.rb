@@ -67,6 +67,7 @@ class FlickrCreatePost
       post_file_name: post_details.post_file_name,
       title: post_details.post_title,
       date: post_details.main_photo['datetaken'],
+      date_posted: Date.today,
       categories: self.class.categorize(post_details.description),
       image_path: post_details.main_photo['url_m'],
       image_alt_text: post_details.photoset['title'],
@@ -169,6 +170,7 @@ series_total: %{series_total}
 layout: post
 title: "%{title}"
 date: %{date}
+date_posted: %{date_posted}
 categories: [%{categories}]
 author: amit
 image: %{image_path}
