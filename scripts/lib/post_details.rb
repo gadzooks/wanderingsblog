@@ -11,7 +11,7 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :description, :skip_
   end
 
   def date_taken
-    @date_taken ||= Date.parse(main_photo["datetaken"])
+    @date_taken ||= Date.parse(main_photo["datetaken"].to_s)
   end
 
   def image_dir
