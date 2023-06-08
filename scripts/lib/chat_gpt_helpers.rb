@@ -19,9 +19,8 @@ module ChatGptHelpers
 
     category = FlickrCreatePost.categorize(post_details.description)
     prompt = "Write a blog post based on the following information. \n" + 
-      "Title: #{post_details.chat_gpt_title}\n " + 
-      "Keywords: #{photo.tags.join(', ')} \n " + 
-      "Tone of article: Positive but don’t use too many superlatives. \n " + 
+      "Blog should be based on the following words #{photo.tags.join(', ')} \n " + 
+      "Tone of article should be positive but don’t use too many superlatives. \n " + 
       "Write article in first person as someone who lives in Washington state. \n Write two paragraphs."
 
     # if rand() * 10 >= 5
