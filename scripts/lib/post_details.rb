@@ -43,29 +43,26 @@ PostDetails = Struct.new(:featured, :photoset, :main_photo, :description, :skip_
   end
 
   def find_post_file_name_from_filesystem
-    cmd = "grep -l #{main_photo.id} _posts/*.markdown"
-    output = system cmd
-    # puts "grep command result : #{output}"
-    # output
+    `grep -l #{main_photo.id} _posts/\*.markdown`.gsub(/["\n]/, '')
   end
 
+  def compute_post_file_name
+    if mongo_document && mongo_document['post_file_name']
+      puts "returning from mongo_document " + mongo_document['post_file_name']
+      return mongo_document['post_file_name']
+    end
+
+    file_name = find_post_file_name_from_filesystem
+    puts "file_name based on grep command : #{file_name}"
+    return file_name if file_name != ''
+
+    puts "No files found, computing from title"
+    file_name = main_photo["datetaken"].strftime('%Y-%m-%d') + '-' + post_id
+    file_path = '_posts/' + file_name + '.markdown'
+  end
 
   def post_file_name
-    puts "in post_file_name #{main_photo.id} "
-    puts mongo_document.inspect
-    @post_file_name ||= if mongo_document
-                          if mongo_document['post_file_name']
-                            puts "returning from mongo_document " + mongo_document['post_file_name']
-                            mongo_document['post_file_name']
-                          else
-                            find_post_file_name_from_filesystem
-                          end
-                        else
-                          puts "computing from title"
-                          file_name = main_photo["datetaken"].strftime('%Y-%m-%d') + '-' + post_id
-                          file_path = '_posts/' + file_name + '.markdown'
-                        end
-    puts "postflike name : #{@post_file_name}"
+    @post_file_name ||= compute_post_file_name
     return @post_file_name
   end
 

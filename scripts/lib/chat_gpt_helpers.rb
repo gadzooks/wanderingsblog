@@ -11,6 +11,26 @@ module ChatGptHelpers
     puts "Handler saw a #{exception.class}; retry attempt #{attempt_number}; #{total_delay} seconds have passed."
   end
 
+  def self.chat_gpt_blog_prompt(post_details, photo)
+    if (photo['description'] || '').length > 10
+      puts "skipping chatgpt call since description found in main photo".colorize(:orange)
+      return photo['description']
+    end
+
+    category = FlickrCreatePost.categorize(post_details.description)
+    prompt = "Write a blog post based on the following information. \n" + 
+      "Title: #{post_details.chat_gpt_title}\n " + 
+      "Keywords: #{photo.tags.join(', ')} \n " + 
+      "Tone of article: Positive but don’t use too many superlatives. \n " + 
+      "Write article in first person as someone who lives in Washington state. \n Write two paragraphs."
+
+    # if rand() * 10 >= 5
+    #   prompt += "Write the blog entry in first person."
+    # end
+
+    puts "chatgpt prompt is : #{prompt}"
+  end
+
   def self.compute_turbo_input(system_content, user_content)
     return [
         {
