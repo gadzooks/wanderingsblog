@@ -19,8 +19,6 @@
 <script src="{{ site.baseurl }}/assets/js/jquery.min.js"></script>
 <script src="{{ site.baseurl }}/assets/js/generated/my-test.js"></script>
 
-</head>
-
 {% if jekyll.environment == 'production' %}
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MFH33D7347"></script>
@@ -32,6 +30,8 @@
     gtag('config', 'G-MFH33D7347');
     </script>
 {% endif %}
+
+</head>
 
 {% capture layout %}{% if page.layout %}layout-{{ page.layout }}{% endif %}{% endcapture %}
 <body class="{{layout}}">
