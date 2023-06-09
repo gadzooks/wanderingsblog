@@ -102,8 +102,8 @@ var documents = [{
     }, {
     "id": 20,
     "url": "/2019/03/skyline-lake-snowshoe-washington-state.html",
-    "title": "Skyline Lake Snowshoe",
-    "body": "2019/03/09 - Skyline lake snowshoe is an amazing snowshoe by Stevens Pass East. It has incredible views, a frozen lake (depending on time of the year) and a beautiful rock garden at the top. Make sure to get there early enough since parking can be limited at the Stevens Pass parking lot (just east of the pass). See www. wta. org/go-hiking/hikes/skyline-lake-snowshoe for more details.             "
+    "title": "Snowshoe Hiking in Skyline Lake",
+    "body": "2019/03/09 - Skyline lake snowshoe is an amazing snowshoe by Stevens Pass East. It has incredible views, a frozen lake (depending on time of the year) and a beautiful rock garden at the top. Make sure to get there early enough since parking can be limited at the Stevens Pass parking lot (just east of the pass). See www. wta. org/go-hiking/hikes/skyline-lake-snowshoe for more details. Note: Remember to check the weather conditions and carry essential hiking gear,     including water, snacks, and appropriate clothing, before setting off on any hiking adventure.    Skyline lake snowshoe  Skyline lake snowshoe  Skyline lake snowshoe  Skyline lake snowshoe  Skyline lake snowshoe"
     }, {
     "id": 21,
     "url": "/2018/09/jenny-lake-morning-hike-mountain-bliss.html",
@@ -141,61 +141,71 @@ var documents = [{
     "body": "2018/09/22 - Hellroaring Hike in the Yellowstone National Park is one of the most popular trails for adventurous hikers. The five-mile trail crosses through a variety of landscapes, which include a large meadow and a waterfall. It’s also a popular location for spotting the park’s wild bison. The trail is relatively easy so it’s suitable for hikers of all fitness levels. If you’re looking for an exciting, outdoor experience, a Hellroaring Hike should be at the top of your list.           "
     }, {
     "id": 28,
+    "url": "/2018/09/baloo-and-i-conquer-summit-lake.html",
+    "title": "Baloo and I Conquer Summit Lake",
+    "body": "2018/09/18 - PLATFORM PSP BATTLE SYSTEM ATB INTERACTION By-the-numbers VICTORY CONDITION Defeat all enemies or leave via escape FUNCTIONALITY Fine COMPLETENESS Average ENEMY VARIETY Average DIFFICULTY Very Hard LENGTH Example: Extensive OVERALL 7. 0 Trails in the Sky is a PSP Role-Playing game released by XSEED in 2011. It is the first game in the long-running Trails series of RPGs, and was followed by Trails in the Sky Second Chapter. It follows the story of two friends, Estelle and Joshua, as they unravel the mysteries of their country of Liberl. The game features a turn-based battle system with an ATB (Active Time Battle) system, where time is slowed down while the player makes decisions, but keeps moving if they take too long. The game also features a variety of sidequests and activities that the player can take part in. The game does have an extensive and detailed story, but the pacing can be quite slow at times, and the dungeons can be overly long and can feel like a chore to complete. The game is also very difficult at times, especially considering the limited summons and healing items that can be found. Despite this, the game is still enjoyable, and the characters and setting are unique and enjoyable. The game is worth checking out if you are a fan of traditional Japanese RPGs.   Spectacle Lake Backpacking  Spectacle Lake Backpacking  Spectacle Lake Backpacking  Spectacle Lake Backpacking  Spectacle Lake Backpacking"
+    }, {
+    "id": 29,
+    "url": "/2018/09/washington-wilderness-summit-lake-adventure.html",
+    "title": "Washington Wilderness: Summit Lake Adventure",
+    "body": "2018/09/01 - Carstin China is one of the largest and most well known porcelain manufacturers in the United States. The company was established in 1971 and they specialize in producing and distributing a wide variety of dinnerware, bakeware, giftware and more. Carstin produces everything from fine porcelain dishes to everyday everyday dinnerware, making them a popular producer. Carstin offers a full line of elegant yet affordable dinnerware sets for an affordable price. Carstin’s dinnerware is dishwasher and microwave safe, making it convenient and easy to use. Carstin has a large selection of dinnerware that comes in a variety of styles to fit any type of home decor. Whether you are looking for something modern, classic, contemporary, traditional or whimsical, Carstin has something to fit your taste and budget. Carstin also offers a variety of accessories, including charger plates, lids, platters and serving ware. Carstin also has a selection of stemware and glassware, including red and white wine glasses, champagne flutes and beer mugs. They also carry glassware for entertaining, such as shot glasses, tumblers and mugs. Carstin also offers a selection of decorative items to complete a dining room look, such a lampshades, statues, vases and more. Carstin is known for their classic, timeless designs, many of which are produced using the highest quality porcelain available. They offer a variety of dinnerware sets, many of which are made with fine bone china or other fine porcelain materials. Carstin also produces dinnerware sets suited for modern, contemporary and rustic home decor. Many of Carstin’s dinnerware sets are popular gifts for weddings, anniversaries and other special occasions, and they are often used as dining room centerpieces or table decorations. With Carstin’s wide selection of dinnerware, you are sure to find something that is just right for your home.   Summit lake backpacking  Summit lake backpacking  Summit lake backpacking  Summit lake backpacking  Summit lake backpacking"
+    }, {
+    "id": 30,
     "url": "/2017/10/fall-hike-to-artist-point.html",
     "title": "Fall Hike to Artist Point",
     "body": "2017/10/08 - Hiking up to Artist Point is a must-do on any visit to the Pacific Northwest. The Chain Lake Trail is one of the best in the area, with breathtaking views of the snow-capped mountain ridges. Fall is especially beautiful, as the trees are bursting with colorful hues of red, orange, and yellow. Along the trail, keep your eyes peeled for ptarmigan, who make their home among the rocky ridgelines. A hike to Artist Point is definitely a highlight of any experience in Washington!   _MG_3690  _MG_3939  _MG_3942  _MG_3934  IMG_3870"
     }, {
-    "id": 29,
+    "id": 31,
     "url": "/2017/08/1st-backpacking-with-baloo.html",
     "title": "My first solo backpacking with Baloo",
     "body": "2017/08/27 -  This was my first “solo” backpacking adventure. I decided to go on a long 4 day hike in the North Cascades and I picked a tough scenic one - North Fork Sauk Trail Some of the things that made this very challenging were :  My first solo trip It was about 30 miles, in high country and it was a hot summer week.  I had no idea that Baloo gets so hot and needs a lot of water himself.   Baloo resting after another long day of hiking in the hot sun  Mountains bathing in alipine glow!  Looking out into the valley  Beautiful sunset  Bear grass"
     }, {
-    "id": 30,
+    "id": 32,
     "url": "/2017/06/mt-dickerman-winter-route.html",
     "title": "Mt Dickerman Winter Route",
     "body": "2017/06/05 -  Mt Dickerman is one of the premier hikes in the Pacific North West. It is a beast of a climb but the rewards are amazing. I decided to climb via the winter route for a change. The winter route, mainly follows the summer route but towards the top instead of taking switch-backs you go straight up as the crow flies. This hike is not to be taken lightly, even in the best of situations and especially not in winter conditions.   Baloo saying - lets go hike already !Not too shabby along the way too   Blue bird day  My buddy Eric hiking up  Final Ascent  Beautiful but deadly cornices  Crowded at the top ?At the very top   Mountains as far as you can see  Winter makes everything extra magical  Doggie paradise  Snow capped mountains"
     }, {
-    "id": 31,
+    "id": 33,
     "url": "/2017/05/snowy-hike-to-miller-peak.html",
     "title": "Snowy Hike to Miller Peak",
     "body": "2017/05/27 - I recently hiked Miller Peak in the Teanaway area and it was an amazing experience! My trusty pup Baloo and I hiked the peak which was carpeted with snow at the top. Although the climb and descent was a bit rough, I was rewarded with some breathtaking and beautiful views. It was the perfect way to start the new year - I would definitely recommend it to anyone looking to explore the area!   _DSC6956  _DSC6991  _DSC7029  _DSC7034  _DSC7040"
     }, {
-    "id": 32,
+    "id": 34,
     "url": "/2017/01/winter-hike-with-baloo-and-phil.html",
     "title": "Winter Hike with Baloo and Phil",
     "body": "2017/01/02 - My 2017 winter hike to Lake Serene was definitely one of the most memorable hikes I have ever done! The snow was deep and pristine, the mountains majestic, and my hiking buddies were Baloo (my trusty pup) and my friend Phil. It felt great to be out in the fresh winter air and take in the stunning scenery and do something adventurous. Every inch of that trail was beautiful and I can’t wait to go back soon!   _DSC5799  _DSC5859  _DSC5852  _DSC5851  _DSC5843"
     }, {
-    "id": 33,
+    "id": 35,
     "url": "/2014/12/snowshoeing-adventure-at-mt-rainier.html",
     "title": "Snowshoeing Adventure at Mt. Rainier",
     "body": "2014/12/14 - On December 14th, 2014, I decided to make a special trip to Mt Rainier. I wanted to experience all of its unique winter offerings, so I set up a morning at the base and hopped on a gondola with my snowshoes for higher altitude. After disembarking, I grabbed a map and started exploring the trails. I trekked through the fresh snow and explored nearby ridge lines while snowshoeing and hiking in the breathtaking scenery of the mountain. It was simply magical. The sound of the snow crunching beneath my feet as I forged a path through the dense brush and wind-swept trails was truly unforgettable. I can’t wait to make the trek again and explore Mt Rainier in the years to come.   _MG_6835  _MG_6846  _MG_6852  _MG_6854  _MG_6858"
     }, {
-    "id": 34,
+    "id": 36,
     "url": "/2013/10/journey-to-everests-base-camp.html",
     "title": "Journey to Everest's Base Camp",
     "body": "2013/10/24 - Exploring the majestic, snow-capped mountains around Everest Base Camp in Nepal was one of the most unforgettable experiences of my life. The mountain village of Gorak Shep, tucked away between two mountain peaks, was especially astonishing. The locals were incredibly hospitable and the views were breathtaking. I would highly recommend anyone heading to Nepal to make the extra effort and take the trek to Everest Base Camp - it is an experience you will never forget!   Untitled_Panorama4  _MG_2426_7_8  _MG_2417_8_9  _MG_2342_3_4  _MG_2411_2_3"
     }, {
-    "id": 35,
+    "id": 37,
     "url": "/2013/10/high-altitude-adventure-everest-base-camp.html",
     "title": "High Altitude Adventure: Everest Base Camp",
     "body": "2013/10/22 - Trekkers from all over the world flock to Everest Base Camp - the iconic trail to the world’s highest mountain. Trekkers are rewarded with a once in a lifetime experience; breathtaking Panoramic Views of snow-covered Mountains surrounding them. This mesmerizing, fluffy blanket of snow stretches across the horizon in every direction, changing in intensity depending on the time of day. Trekkers can feel on top of the world in this mesmerizing landscape of snowy mountains!   Untitled_Panorama2a  Untitled_Panorama1  _MG_2243  _MG_2287_8_9  _MG_2269_70_71"
     }, {
-    "id": 36,
+    "id": 38,
     "url": "/2013/10/yak-trekking-to-everest-base-camp.html",
     "title": "Yak Trekking to Everest Base Camp",
     "body": "2013/10/21 - Nothing can beat the feeling of reaching the towering peak of Everest Base Camp as the sun slowly rises in the horizon. It was the perfect time to snap a photograph of the snow covered mountains with our yak carrying the heavy hiking gear. With each step, we felt the elevation change and quickly reached 13,800 feet above sea level. It marked the highest we had ever climbed and it was a magnificently rewarding experience.   _MG_2158  _MG_2077_8_9  _MG_2113_4_5  _MG_2155_6_7  _MG_2086_7_8"
     }, {
-    "id": 37,
+    "id": 39,
     "url": "/2013/10/hiking-to-tengboche-in-nepal.html",
     "title": "Hiking to Tengboche in Nepal.",
     "body": "2013/10/20 - My experience hiking to Everest Base Camp was one of the most amazing experiences of my life. From starting my journey in Nepal to the breathtaking views of Tengboche, every moment was breathtaking. The hike was never ending and challenging, but the feeling of arriving at my destination made it all worth it in the end. Although it was a tough adventure to take on, I would do it again in a heartbeat!   EBC Tengboche 10-20-401_2_3  EBC Tengboche 10-20-487  EBC Tengboche 10-20-234  EBC Tengboche 10-20-98  EBC Tengboche 10-20-453"
     }, {
-    "id": 38,
+    "id": 40,
     "url": "/2013/10/journey-to-nepals-majestic-mountains.html",
     "title": "Journey to Nepal's Majestic Mountains",
     "body": "2013/10/19 - Hiking to Everest Base Camp in Nepal was an adventure unlike any other. Every day presented a new vista of beautiful mountains like Amadablam, and it felt like being in a world where beautiful mountains were everywhere you looked. The journey to reach Everest Base Camp was challenging, but the breathtaking views of nature more than made up for it.   Everest Base Camp - Day 2 -690  Everest Base Camp - Day 2 -1  Everest Base Camp - Day 2 -34  Everest Base Camp - Day 2 -38  Everest Base Camp - Day 2 -30"
     }, {
-    "id": 39,
+    "id": 41,
     "url": "/2013/10/hiking-to-everest-base-camp-nepal.html",
     "title": "Hiking to Everest Base Camp, Nepal.",
     "body": "2013/10/18 - No trip to Nepal is complete without experiencing the journey to Everest Base Camp! The adventure began as soon as I walked through the entrance of Lukla Airport, the start of the hike. The views were breathtaking and the adrenaline was kicking in; I was ready to make my way to the base camp! The trek was long but the views along the way made it worth it. As I reached the final destination, I was in complete awe of the view in front of me. It was unlike any other place I have ever been before.   Everest Base Camp - Day 1 -39  Everest Base Camp - Day 1 -48  Everest Base Camp - Day 1 -40  Everest Base Camp - Day 1 -51  Everest Base Camp - Day 1 -88"

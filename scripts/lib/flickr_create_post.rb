@@ -62,19 +62,30 @@ class FlickrCreatePost
     puts "added 1 entry to #{MongoUtils::PHOTOS_PROCESSED_DB_NAME}".green
   end
 
+  def self.caution_note(categories)
+    if categories == 'hiking'
+      "<p class='caution_note'>Note: Remember to check the weather conditions and carry essential hiking gear, 
+        including water, snacks, and appropriate clothing, before setting off on any hiking adventure. </p>"
+    else
+      ""
+    end
+  end
+
   def compute_post_hash(post_details)
+    categories = self.class.categorize(post_details.description)
     {
       post_file_name: post_details.post_file_name,
       title: post_details.post_title,
       date: post_details.main_photo['datetaken'],
       date_posted: Time.now,
-      categories: self.class.categorize(post_details.description),
+      categories: categories,
       image_path: post_details.main_photo['url_m'],
       image_alt_text: post_details.photoset['title'],
       featured: post_details.featured,
       photo_id: post_details.main_photo.id,
       photoset_id: post_details.photoset['id'],
-      description: post_details.description
+      description: post_details.description,
+      caution_note: self.class.caution_note(categories),
     }
   end
 
@@ -142,8 +153,8 @@ class FlickrCreatePost
       optional_entries = SERIES_TEMPLATE % hsh
     end
 
-    puts "Optional entries "
-    puts optional_entries.inspect.colorize(:green)
+    # puts "Optional entries "
+    # puts optional_entries.inspect.colorize(:green)
     post_hash[:optional_entries] = optional_entries
 
     post_str = POST_TEMPLATE % post_hash
@@ -181,8 +192,10 @@ photo_id: %{photo_id} # this id is the unique id for the post
 %{optional_entries}
 ---
 %{description}
+%{caution_note}
 
 %{flickr_images}
+
 '
 
 end
