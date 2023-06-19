@@ -12,22 +12,21 @@ module ChatGptHelpers
   end
 
   def self.chat_gpt_blog_prompt(post_details, photo)
-    if (photo['description'] || '').length > 10
-      puts "skipping chatgpt call since description found in main photo".colorize(:orange)
-      return photo['description']
-    end
-
-    category = FlickrCreatePost.categorize(post_details.description)
-    prompt = "Write a blog post based on the following information. \n" + 
-      "Blog should be based on the following words #{photo.tags.join(', ')} \n " + 
-      "Tone of article should be positive but don’t use too many superlatives. \n " + 
-      "Write article in first person as someone who lives in Washington state. \n Write two paragraphs."
+    # category = FlickrCreatePost.categorize(post_details.description)
+    prompt = "Write a blog post based on the following keywords : #{photo.tags.join(', ')}.\n"
+    tone = "fun"
+    blogPostTopic = "#{post_details.post_title}"
+    prompt = "Write a blog post on #{blogPostTopic}. Write it in a #{tone} tone. Use transition words. Write less than 100 words. " +
+      "The blog post should be written as a personal story.Include the following keywords: #{photo.tags.join(', ')}. "
+      # "Tone of article should be positive but don’t use too many superlatives. \n " + 
+      # "Write article in first person as someone who lives in Washington state."
 
     # if rand() * 10 >= 5
     #   prompt += "Write the blog entry in first person."
     # end
 
     puts "chatgpt prompt is : #{prompt}"
+    return prompt
   end
 
   def self.compute_turbo_input(system_content, user_content)
@@ -83,20 +82,20 @@ module ChatGptHelpers
     end
   end
 
-  def self.completions(prompt)
+  def self.blog_completions(prompt)
     client = OpenAI::Client.new
 
     response = client.completions(
       parameters: {
           model: "text-davinci-003",
           prompt: prompt,
-          max_tokens: 512
-    #     # temperature: 0, # show the low risk text options
+          max_tokens: 512,
+          temperature: 0, # show the low risk text options
     #     # frequency_penalty: 0,
     #     # presence_penalty: 0,
       })
 
-    puts prompt.inspect.colorize(:blue)
+    puts prompt.inspect.colorize(:red)
     puts response.inspect.colorize(:blue)
     if response["error"]
       puts response["error"].inspect.colorize(:red)
@@ -120,7 +119,7 @@ module ChatGptHelpers
     end
 
     with_retries(max_tries: 5, :base_sleep_seconds => 5, :max_sleep_seconds => 10.0, :handler => HANDLER, :rescue => [RuntimeError, ZeroDivisionError]) do
-      completions(prompt)
+      blog_completions(prompt)
     end
   end
 
