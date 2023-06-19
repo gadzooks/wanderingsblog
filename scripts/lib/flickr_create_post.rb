@@ -24,9 +24,10 @@ class FlickrCreatePost
   end
 
   def self.categorize(categories)
+    categories = categories.downcase
     if categories.match?('travel')
       'travel'
-    elsif categories.match?('hike|hiking|trail|mountain|climb')
+    elsif categories.match?('hike|hiking|trail|mountain|climb|backpack')
       'hiking'
     else
       'all'

@@ -158,7 +158,6 @@ class Main
     #   prompt += "Write the blog entry in first person."
     # end
 
-    # puts "chatgpt prompt is : #{prompt}"
     return ChatGptHelpers.davinci(prompt, @options.skip_chatgpt?)
   end
 
