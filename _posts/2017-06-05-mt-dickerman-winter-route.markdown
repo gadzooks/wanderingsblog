@@ -1,8 +1,8 @@
 ---
 layout: post
-categories: hiking pnw amit baloo winter
+categories: [hiking]
 author: amit
-image: assets/images/06-05-17/mt-dickerman.jpg
+image: ./assets/images/06-05-17/mt-dickerman.jpg
 image_alt_text: snow capped Mt Dickerman
 featured: false
 photoset: 72157650991053255

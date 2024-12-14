@@ -1,0 +1,46 @@
+---
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Summit lake backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52960987078_1fc058f50e_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960987078_1fc058f50e_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Summit lake backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52959937482_44028f4dc5_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52959937482_44028f4dc5_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Summit lake backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52959937497_6dcc9f4161_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52959937497_6dcc9f4161_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Summit lake backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52959937517_81b01fa407_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52959937517_81b01fa407_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Summit lake backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52959937522_650d0c5d43_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52959937522_650d0c5d43_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Summit lake backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52960679749_f4c3c9907a_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960679749_f4c3c9907a_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Summit lake backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52960679759_c72a68a596_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960679759_c72a68a596_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Summit lake backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52959937537_889280f8e1_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52959937537_889280f8e1_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Summit lake backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52960532811_ca80e699d1_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960532811_ca80e699d1_s.jpg
+  thumbType: square

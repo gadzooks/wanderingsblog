@@ -21,8 +21,13 @@
 	font-size: 0.6rem;
 }
 
+figure.flickr img.flickr {
+  padding-bottom: 10px;
+}
+
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
 	"syntax",
-    "starsnonscss"
+  "starsnonscss",
+  "pagination"
 ;

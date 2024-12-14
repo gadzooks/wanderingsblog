@@ -1,14 +1,36 @@
 name: Build and deploy jekyll site
 
 on:
+  issue_comment:
+  issues:
+    types:
+      - opened
+      - reopened
+      - closed
   push:
     branches:
+      # - create-series
       - master
       # - source
       # It is highly recommended that you only run this action on push to a
       # specific branch, eg. master or source (if on *.github.io repo)
+  schedule:
+    - cron: '* 10-23 * * *'
 
 jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: my-step
+        run: echo "Hello World!"
+      # - uses: jmatsu/detect-issue-comment-to-pr-action@1.0
+      #   id: filter
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - run: echo "I'm a pull request (${{ steps.filter.outputs.pull_number }})"
+      #   if: steps.filter.outputs.is_pull_request == 'true'
+      # - run: echo "I'm not a pull request"
+      #   if: steps.filter.outputs.is_pull_request != 'true'
   jekyll:
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +39,7 @@ jobs:
 
       - name: Use Node.js
         uses: actions/setup-node@v1
-        with: { node-version: '12.x' }
+        with: { node-version: '18.x' }
 
       - name: Set up dependencies
         run: npm install
@@ -33,7 +55,19 @@ jobs:
       - name: 💎 setup ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 3.1 # can change this to 2.7 or whatever version you prefer
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+
+      - name:  💪🏻 generate posts based on flickr metadata
+        run: |
+          ./scripts/run-flickr-poll
+        env:
+          FLICKR_API_KEY: ${{ secrets.FLICKR_API_KEY }}
+          FLICKR_API_SECRET: ${{ secrets.FLICKR_API_SECRET }}
+          FLICKR_SHARED_SECRET: ${{ secrets.FLICKR_SHARED_SECRET }}
+          OPENAI_ACCESS_TOKEN: ${{ secrets.OPENAI_ACCESS_TOKEN }}
+          MONGO_USER: ${{ secrets.MONGO_USER }}
+          MONGO_PWD: ${{ secrets.MONGO_PWD }}
+          MONGO_DB: ${{ secrets.MONGO_DB }}
 
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
@@ -89,3 +123,8 @@ jobs:
           # if the repo you are deploying to is <username>.github.io, uncomment the line below.
           # if you are including the line below, make sure your source files are NOT in the master branch:
           # publish_branch: master
+      - name: copy files back to master branch
+        uses: mikeal/publish-to-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH_NAME: '' #optional defaults to master

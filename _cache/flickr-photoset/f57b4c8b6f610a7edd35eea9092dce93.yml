@@ -1,0 +1,366 @@
+---
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-3
+  urlFullSize: https://live.staticflickr.com/7450/12246788716_9bc16e38f5_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7450/12246788716_9bc16e38f5_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-7
+  urlFullSize: https://live.staticflickr.com/2816/12246216315_fed9628163_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2816/12246216315_fed9628163_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-8
+  urlFullSize: https://live.staticflickr.com/2871/12246218285_0f1174e6f4_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2871/12246218285_0f1174e6f4_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-40
+  urlFullSize: https://live.staticflickr.com/2894/12246391883_675d9d18d4_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2894/12246391883_675d9d18d4_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-46
+  urlFullSize: https://live.staticflickr.com/2869/12246793806_04a3c29866_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2869/12246793806_04a3c29866_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-65
+  urlFullSize: https://live.staticflickr.com/3810/12246650714_9900f1436a_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3810/12246650714_0033a7803f_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-98
+  urlFullSize: https://live.staticflickr.com/3794/12246396803_d5da59ed5f_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3794/12246396803_01455538a4_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-102
+  urlFullSize: https://live.staticflickr.com/2861/12246398083_bbbc746d31_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2861/12246398083_bbbc746d31_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-110
+  urlFullSize: https://live.staticflickr.com/7438/12246799716_dcd10c2e45_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7438/12246799716_dcd10c2e45_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-126
+  urlFullSize: https://live.staticflickr.com/3821/12246801226_c34726917c_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3821/12246801226_c34726917c_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-129
+  urlFullSize: https://live.staticflickr.com/7303/12246656904_d892525438_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7303/12246656904_d892525438_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-135
+  urlFullSize: https://live.staticflickr.com/3686/12246230085_4a8e123c5d_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3686/12246230085_4a8e123c5d_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-139
+  urlFullSize: https://live.staticflickr.com/7307/12246805096_4ecfe1c487_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7307/12246805096_4ecfe1c487_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-147
+  urlFullSize: https://live.staticflickr.com/3778/12246806416_d058af0b7c_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3778/12246806416_d058af0b7c_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-152
+  urlFullSize: https://live.staticflickr.com/7416/12246661784_c64018d861_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7416/12246661784_c64018d861_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-174
+  urlFullSize: https://live.staticflickr.com/3813/12246662744_70ca298a19_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3813/12246662744_70ca298a19_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-183
+  urlFullSize: https://live.staticflickr.com/3669/12246410233_e65c6e1aff_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3669/12246410233_b6493fd4f5_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-191
+  urlFullSize: https://live.staticflickr.com/3819/12246411733_cf6cb35c91_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3819/12246411733_5a83ca9695_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-196
+  urlFullSize: https://live.staticflickr.com/5502/12246238845_58d4691a12_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5502/12246238845_58d4691a12_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-202
+  urlFullSize: https://live.staticflickr.com/5479/12246413993_d28513a7cc_h.jpg
+  urlThumbnail: https://live.staticflickr.com/5479/12246413993_50c351096c_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-208
+  urlFullSize: https://live.staticflickr.com/7358/12246242365_92b64f03ac_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7358/12246242365_92b64f03ac_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-212
+  urlFullSize: https://live.staticflickr.com/3689/12246671094_fa5906ca15_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3689/12246671094_fa5906ca15_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-216
+  urlFullSize: https://live.staticflickr.com/3779/12246245475_dba8d586a3_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3779/12246245475_dba8d586a3_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-220
+  urlFullSize: https://live.staticflickr.com/7351/12246419793_880e2a2173_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7351/12246419793_880e2a2173_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-224
+  urlFullSize: https://live.staticflickr.com/7311/12246421303_797a7cc5fc_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7311/12246421303_797a7cc5fc_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Untitled_Panorama1
+  urlFullSize: https://live.staticflickr.com/2839/12246422553_c266273890_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2839/12246422553_c266273890_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-231
+  urlFullSize: https://live.staticflickr.com/3779/12246824586_7d2e1faf11_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3779/12246824586_7d2e1faf11_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-234
+  urlFullSize: https://live.staticflickr.com/3708/12246253115_08784093a1_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3708/12246253115_abda79b02a_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-238
+  urlFullSize: https://live.staticflickr.com/2845/12246427483_ff0ba45192_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2845/12246427483_ff0ba45192_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-254
+  urlFullSize: https://live.staticflickr.com/3785/12246829036_329fce4d07_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3785/12246829036_4657590b21_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-262
+  urlFullSize: https://live.staticflickr.com/5512/12246430823_2f19a25018_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5512/12246430823_2f19a25018_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-267
+  urlFullSize: https://live.staticflickr.com/2844/12246259725_f523a76e18_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2844/12246259725_f523a76e18_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-275
+  urlFullSize: https://live.staticflickr.com/7342/12246833846_c4ab24cf4f_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7342/12246833846_c4ab24cf4f_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-280
+  urlFullSize: https://live.staticflickr.com/7291/12246262505_1abb430630_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7291/12246262505_1abb430630_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-284
+  urlFullSize: https://live.staticflickr.com/5515/12246836826_1e424d1373_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5515/12246836826_1e424d1373_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-288
+  urlFullSize: https://live.staticflickr.com/7298/12246438033_01e9ffa202_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7298/12246438033_01e9ffa202_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-292
+  urlFullSize: https://live.staticflickr.com/7300/12246266795_2147f387eb_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7300/12246266795_2147f387eb_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-296
+  urlFullSize: https://live.staticflickr.com/7420/12246441253_0a6da94c72_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7420/12246441253_0a6da94c72_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Untitled_Panorama2
+  urlFullSize: https://live.staticflickr.com/7411/12246441703_d7a87139d0_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7411/12246441703_d7a87139d0_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-301
+  urlFullSize: https://live.staticflickr.com/5540/12246442563_7c40789ed0_h.jpg
+  urlThumbnail: https://live.staticflickr.com/5540/12246442563_3fcd549bb4_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-305
+  urlFullSize: https://live.staticflickr.com/5475/12246270845_e960f587c0_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5475/12246270845_e960f587c0_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-312
+  urlFullSize: https://live.staticflickr.com/7343/12246698994_f1241a0693_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7343/12246698994_f1241a0693_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-315
+  urlFullSize: https://live.staticflickr.com/7405/12246273405_2352478776_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7405/12246273405_2352478776_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-321
+  urlFullSize: https://live.staticflickr.com/3798/12246274535_2b7e31a7ba_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3798/12246274535_9ba1bdc3a1_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-326
+  urlFullSize: https://live.staticflickr.com/5488/12246448733_d839126254_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5488/12246448733_d839126254_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-334
+  urlFullSize: https://live.staticflickr.com/3748/12246276775_bb76f27f30_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3748/12246276775_b3b2ccf21b_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-343
+  urlFullSize: https://live.staticflickr.com/7321/12246277805_1bfa578c0a_h.jpg
+  urlThumbnail: https://live.staticflickr.com/7321/12246277805_2cbff54faa_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-345
+  urlFullSize: https://live.staticflickr.com/2879/12246707524_fcfff612bd_h.jpg
+  urlThumbnail: https://live.staticflickr.com/2879/12246707524_7d68a14abe_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-357
+  urlFullSize: https://live.staticflickr.com/5493/12246454203_9e343c42cb_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5493/12246454203_9e343c42cb_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-359
+  urlFullSize: https://live.staticflickr.com/5509/12246282725_6185947a7b_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5509/12246282725_6185947a7b_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-368
+  urlFullSize: https://live.staticflickr.com/7401/12246856846_cd0b5434e6_h.jpg
+  urlThumbnail: https://live.staticflickr.com/7401/12246856846_4d0a3c49e5_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-371
+  urlFullSize: https://live.staticflickr.com/5522/12246713304_4b1f97a1af_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5522/12246713304_4b1f97a1af_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-374
+  urlFullSize: https://live.staticflickr.com/3758/12246460463_5cfbd2df65_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3758/12246460463_5cfbd2df65_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-378
+  urlFullSize: https://live.staticflickr.com/2826/12246462393_ccc6b5e4e9_h.jpg
+  urlThumbnail: https://live.staticflickr.com/2826/12246462393_a61a03c3be_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-389
+  urlFullSize: https://live.staticflickr.com/3827/12246463603_8c5751a925_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3827/12246463603_e05a08ee09_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-394
+  urlFullSize: https://live.staticflickr.com/3750/12246465373_7b3c9b8f3c_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3750/12246465373_9292ab147f_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-401_2_3
+  urlFullSize: https://live.staticflickr.com/7352/12246466723_3d07a3ea98_h.jpg
+  urlThumbnail: https://live.staticflickr.com/7352/12246466723_ba954c0661_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-407
+  urlFullSize: https://live.staticflickr.com/5482/12246294955_374fa27a3f_h.jpg
+  urlThumbnail: https://live.staticflickr.com/5482/12246294955_e9d5291c3c_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-417
+  urlFullSize: https://live.staticflickr.com/7333/12246724204_4d16bc074b_h.jpg
+  urlThumbnail: https://live.staticflickr.com/7333/12246724204_c52d104fd1_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-425
+  urlFullSize: https://live.staticflickr.com/7367/12246298245_9aa8765ba8_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7367/12246298245_9aa8765ba8_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_1975_6_7
+  urlFullSize: https://live.staticflickr.com/7391/12246309635_94fe53c674_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7391/12246309635_94fe53c674_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-429
+  urlFullSize: https://live.staticflickr.com/3796/12246311495_dd43e9b246_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3796/12246311495_dd43e9b246_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-434
+  urlFullSize: https://live.staticflickr.com/7389/12246486043_61a469b310_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7389/12246486043_61a469b310_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-441
+  urlFullSize: https://live.staticflickr.com/5516/12246740894_43437e6a89_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5516/12246740894_43437e6a89_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-445
+  urlFullSize: https://live.staticflickr.com/3805/12246742634_176936f7f2_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3805/12246742634_176936f7f2_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-453
+  urlFullSize: https://live.staticflickr.com/7361/12246890806_58bfb2cdf4_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7361/12246890806_58bfb2cdf4_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-457
+  urlFullSize: https://live.staticflickr.com/7437/12246491583_7195f5aaec_h.jpg
+  urlThumbnail: https://live.staticflickr.com/7437/12246491583_8c411db0c3_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-479
+  urlFullSize: https://live.staticflickr.com/3822/12246746524_3fdfe5c54d_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3822/12246746524_4fa38af863_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-487
+  urlFullSize: https://live.staticflickr.com/2889/12246747764_764eed00c2_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2889/12246747764_764eed00c2_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-492
+  urlFullSize: https://live.staticflickr.com/5502/12246323285_5bc213a106_h.jpg
+  urlThumbnail: https://live.staticflickr.com/5502/12246323285_fa1c72b18f_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-497
+  urlFullSize: https://live.staticflickr.com/2842/12246750984_e97a1e0bbd_h.jpg
+  urlThumbnail: https://live.staticflickr.com/2842/12246750984_d0f0a73558_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-500
+  urlFullSize: https://live.staticflickr.com/7376/12246499583_680309846c_h.jpg
+  urlThumbnail: https://live.staticflickr.com/7376/12246499583_c64860a650_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: EBC Tengboche 10-20-507
+  urlFullSize: https://live.staticflickr.com/5540/12246901266_cd2b8878b1_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5540/12246901266_cd2b8878b1_s.jpg
+  thumbType: square

@@ -1,0 +1,31 @@
+---
+---
+div#pagination-section { 
+  ul.pagination {
+  display: inline-block;
+    padding: 0;
+    margin: 0;
+  }
+
+}
+div#pagination-section { 
+  ul.pagination li a:hover {
+    background-color: #f9e197;
+  }
+  ul.pagination li.selected a {
+    background-color: #ffc107;
+  }
+}
+
+div#pagination-section ul.pagination li {display: inline;}
+
+div#pagination-section ul.pagination li a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+div#pagination-section ul.pagination li a {
+  border: 1px solid #ddd; /* Gray */
+}

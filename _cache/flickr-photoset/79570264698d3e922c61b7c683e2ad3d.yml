@@ -1,0 +1,46 @@
+---
+- !ruby/object:Jekyll::FlickrPhoto
+  title: LakeShore trail 2023
+  urlFullSize: https://live.staticflickr.com/65535/52938548986_b891748312_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52938548986_b891748312_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: LakeShore trail 2023
+  urlFullSize: https://live.staticflickr.com/65535/52938999473_b5ef9f6df3_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52938999473_b5ef9f6df3_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52938562651_7f30eab49c_h.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52938562651_e127a76e9b_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: LakeShore trail 2023
+  urlFullSize: https://live.staticflickr.com/65535/52938698984_168f148670_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52938698984_168f148670_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: LakeShore trail 2023
+  urlFullSize: https://live.staticflickr.com/65535/52938938365_ce57ae55c6_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52938938365_ce57ae55c6_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: LakeShore trail 2023
+  urlFullSize: https://live.staticflickr.com/65535/52937950232_aab4e34b80_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52937950232_aab4e34b80_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: LakeShore trail 2023
+  urlFullSize: https://live.staticflickr.com/65535/52938697574_037be7e2ea_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52938697574_037be7e2ea_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52938710659_1935f96967_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52938710659_1935f96967_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52939013613_b32b0fce96_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52939013613_b32b0fce96_s.jpg
+  thumbType: square

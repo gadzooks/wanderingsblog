@@ -1,0 +1,356 @@
+---
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -1
+  urlFullSize: https://live.staticflickr.com/3714/11611750526_3a0257134a_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3714/11611750526_825f71786f_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -2
+  urlFullSize: https://live.staticflickr.com/5472/11611004325_ab4ce5270e_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5472/11611004325_ab4ce5270e_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -3
+  urlFullSize: https://live.staticflickr.com/7296/11611760326_f508071472_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7296/11611760326_f508071472_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 3 -7
+  urlFullSize: https://live.staticflickr.com/7396/11611765646_c9c77793fd_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7396/11611765646_c9c77793fd_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -8
+  urlFullSize: https://live.staticflickr.com/3725/11611228813_5c04d18737_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3725/11611228813_5c04d18737_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -10
+  urlFullSize: https://live.staticflickr.com/7454/11611775026_30610203bc_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7454/11611775026_30610203bc_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 3 -13
+  urlFullSize: https://live.staticflickr.com/7434/11611785246_597980f527_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7434/11611785246_597980f527_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -14
+  urlFullSize: https://live.staticflickr.com/3708/11611038695_938577c577_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3708/11611038695_938577c577_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -15
+  urlFullSize: https://live.staticflickr.com/3817/11611796466_19761f61d8_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3817/11611796466_19761f61d8_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -20
+  urlFullSize: https://live.staticflickr.com/2834/11611390734_5c48c1904d_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2834/11611390734_5c48c1904d_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -30
+  urlFullSize: https://live.staticflickr.com/7458/11611401064_3388e56be4_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7458/11611401064_3388e56be4_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -34
+  urlFullSize: https://live.staticflickr.com/7370/11611284313_bb87d402f9_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7370/11611284313_bb87d402f9_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -38
+  urlFullSize: https://live.staticflickr.com/5485/11611293773_acf78b605b_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5485/11611293773_acf78b605b_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -242
+  urlFullSize: https://live.staticflickr.com/7357/12246004454_0d401cae77_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7357/12246004454_0d401cae77_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -274
+  urlFullSize: https://live.staticflickr.com/7427/12246154496_2e569561fa_h.jpg
+  urlThumbnail: https://live.staticflickr.com/7427/12246154496_8cff34da76_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -280
+  urlFullSize: https://live.staticflickr.com/5548/12246007084_d6f460692f_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5548/12246007084_d6f460692f_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -326
+  urlFullSize: https://live.staticflickr.com/3757/12246157186_3cf86d5a63_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3757/12246157186_3cf86d5a63_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -338
+  urlFullSize: https://live.staticflickr.com/2832/12246010184_cd1d4a2c3a_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2832/12246010184_cd1d4a2c3a_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -362
+  urlFullSize: https://live.staticflickr.com/3682/12245761873_04d59f59fe_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3682/12245761873_04d59f59fe_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -366
+  urlFullSize: https://live.staticflickr.com/5481/12246161586_45b0f05e5c_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5481/12246161586_45b0f05e5c_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -378
+  urlFullSize: https://live.staticflickr.com/5513/12246014974_5733c7f33e_h.jpg
+  urlThumbnail: https://live.staticflickr.com/5513/12246014974_78401687b0_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -399
+  urlFullSize: https://live.staticflickr.com/3687/12245767813_5b03788154_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3687/12245767813_5b03788154_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -414
+  urlFullSize: https://live.staticflickr.com/2887/12245593805_6a4561d6e1_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2887/12245593805_6a4561d6e1_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -447
+  urlFullSize: https://live.staticflickr.com/5489/12245596055_3c582da642_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5489/12245596055_3c582da642_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -479
+  urlFullSize: https://live.staticflickr.com/3767/12245600515_e514a76f53_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3767/12245600515_e514a76f53_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -488
+  urlFullSize: https://live.staticflickr.com/3803/12246027724_1d38ac5600_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3803/12246027724_1d38ac5600_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -497
+  urlFullSize: https://live.staticflickr.com/2846/12245778823_0cefb049af_h.jpg
+  urlThumbnail: https://live.staticflickr.com/2846/12245778823_f720932ccc_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -507
+  urlFullSize: https://live.staticflickr.com/7382/12246179696_364058a806_h.jpg
+  urlThumbnail: https://live.staticflickr.com/7382/12246179696_1b59b99910_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -518
+  urlFullSize: https://live.staticflickr.com/5540/12245783313_3f38111bac_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5540/12245783313_3f38111bac_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -530
+  urlFullSize: https://live.staticflickr.com/2875/12245784993_7f43721deb_h.jpg
+  urlThumbnail: https://live.staticflickr.com/2875/12245784993_ddcc2fdbd5_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -597
+  urlFullSize: https://live.staticflickr.com/3767/12245792053_108c962cf3_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3767/12245792053_108c962cf3_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -648
+  urlFullSize: https://live.staticflickr.com/7314/12246192486_d5a3674d39_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7314/12246192486_d5a3674d39_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -660
+  urlFullSize: https://live.staticflickr.com/7371/12245794863_474f5f6074_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7371/12245794863_474f5f6074_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -673
+  urlFullSize: https://live.staticflickr.com/5485/12245620905_f3ca8d3d37_h.jpg
+  urlThumbnail: https://live.staticflickr.com/5485/12245620905_4b417d6880_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -687
+  urlFullSize: https://live.staticflickr.com/5487/12245797103_33cd597ea3_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5487/12245797103_33cd597ea3_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -690
+  urlFullSize: https://live.staticflickr.com/3768/12245798673_c815f33e9c_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3768/12245798673_753962a6a5_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -702
+  urlFullSize: https://live.staticflickr.com/7365/12246199316_def46a3f08_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7365/12246199316_def46a3f08_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -709
+  urlFullSize: https://live.staticflickr.com/7399/12246052344_40093ece90_h.jpg
+  urlThumbnail: https://live.staticflickr.com/7399/12246052344_69f96cc954_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -715
+  urlFullSize: https://live.staticflickr.com/3703/12246054054_0e4f72b32c_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3703/12246054054_a9c976d2e7_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -728
+  urlFullSize: https://live.staticflickr.com/7408/12245629535_909837d8db_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7408/12245629535_909837d8db_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -732
+  urlFullSize: https://live.staticflickr.com/7360/12246056964_807abe656c_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7360/12246056964_807abe656c_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -736
+  urlFullSize: https://live.staticflickr.com/3769/12246058424_202494ddb8_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3769/12246058424_202494ddb8_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -747
+  urlFullSize: https://live.staticflickr.com/5522/12245808023_0ccd2d1697_h.jpg
+  urlThumbnail: https://live.staticflickr.com/5522/12245808023_0fdc05584c_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -750
+  urlFullSize: https://live.staticflickr.com/7315/12245634495_6e80ea7875_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7315/12245634495_6e80ea7875_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -752
+  urlFullSize: https://live.staticflickr.com/7323/12245635695_6c272e3dcc_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7323/12245635695_6c272e3dcc_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -754
+  urlFullSize: https://live.staticflickr.com/5512/12246063384_a328138e6a_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5512/12246063384_a328138e6a_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -756
+  urlFullSize: https://live.staticflickr.com/3795/12245813393_7c43cda782_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3795/12245813393_7c43cda782_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -758
+  urlFullSize: https://live.staticflickr.com/2855/12245639735_6a3399e200_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2855/12245639735_6a3399e200_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -770
+  urlFullSize: https://live.staticflickr.com/7351/12245641305_4ab4d0bc3b_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7351/12245641305_4ab4d0bc3b_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -773
+  urlFullSize: https://live.staticflickr.com/3714/12246216416_87dcb8ab11_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3714/12246216416_87dcb8ab11_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -776
+  urlFullSize: https://live.staticflickr.com/3775/12246217546_e116a5bea8_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3775/12246217546_e116a5bea8_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Untitled_Panorama1
+  urlFullSize: https://live.staticflickr.com/3685/12245823283_e73470fa75_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3685/12245823283_e73470fa75_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -790
+  urlFullSize: https://live.staticflickr.com/3665/12245650465_d399e4b2a1_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3665/12245650465_d399e4b2a1_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -797
+  urlFullSize: https://live.staticflickr.com/3798/12246078214_648d48da99_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3798/12246078214_648d48da99_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -812
+  urlFullSize: https://live.staticflickr.com/7395/12245828313_d8e00a7ee2_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7395/12245828313_d8e00a7ee2_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -813
+  urlFullSize: https://live.staticflickr.com/2880/12245654885_5099a076c4_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2880/12245654885_5099a076c4_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -818
+  urlFullSize: https://live.staticflickr.com/2841/12246082474_3c80730fca_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2841/12246082474_3c80730fca_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -820
+  urlFullSize: https://live.staticflickr.com/5487/12246083554_bf64c20cb7_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5487/12246083554_bf64c20cb7_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -824
+  urlFullSize: https://live.staticflickr.com/2852/12246084684_5a57ecb074_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2852/12246084684_5a57ecb074_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -826
+  urlFullSize: https://live.staticflickr.com/3735/12246233796_741076df88_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3735/12246233796_741076df88_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -828
+  urlFullSize: https://live.staticflickr.com/3732/12245661965_7137090429_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3732/12245661965_7137090429_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -830
+  urlFullSize: https://live.staticflickr.com/3740/12246088794_65b6a438d0_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3740/12246088794_65b6a438d0_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -831
+  urlFullSize: https://live.staticflickr.com/7306/12246238056_e4540ccc71_h.jpg
+  urlThumbnail: https://live.staticflickr.com/7306/12246238056_f4997f6698_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -833
+  urlFullSize: https://live.staticflickr.com/3733/12245841073_56559d7db2_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3733/12245841073_56559d7db2_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -834
+  urlFullSize: https://live.staticflickr.com/2827/12246241596_1730f6f16d_h.jpg
+  urlThumbnail: https://live.staticflickr.com/2827/12246241596_d58e315955_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -836
+  urlFullSize: https://live.staticflickr.com/7449/12246242876_7346a271e2_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7449/12246242876_7346a271e2_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -838
+  urlFullSize: https://live.staticflickr.com/3804/12245845603_f2e4806ec8_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3804/12245845603_f2e4806ec8_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -845
+  urlFullSize: https://live.staticflickr.com/2832/12245847373_1c183a9e39_h.jpg
+  urlThumbnail: https://live.staticflickr.com/2832/12245847373_bbf66274d0_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -848
+  urlFullSize: https://live.staticflickr.com/5535/12246247346_cd097fc5ab_h.jpg
+  urlThumbnail: https://live.staticflickr.com/5535/12246247346_6ea00447a0_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -855
+  urlFullSize: https://live.staticflickr.com/7300/12246249126_528b55cb7c_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7300/12246249126_528b55cb7c_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Everest Base Camp - Day 2 -857
+  urlFullSize: https://live.staticflickr.com/3693/12246103924_6120e52962_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3693/12246103924_b2b19677ec_s.jpg
+  thumbType: square

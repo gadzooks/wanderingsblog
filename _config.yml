@@ -1,16 +1,18 @@
 # Site
 name: "Weekend Wanderings"
 title: "Weekend Wanderings"
-description: "My personal blog on travel / random musings"
+description: "My personal blog on travel / random musings !"
 # logo: 'assets/images/logo.png'
 logo: 'assets/images/favicon.png'
 favicon: 'assets/images/favicon.png'
-baseurl: 
+# website: 'https://www.weekendwanderings.com/'
+baseurl: ""
 # google_analytics: 'UA-46278016-1'
 # disqus: 'demowebsite'
 # mailchimp-list: 'https://wowthemes.us11.list-manage.com/subscribe/post?u=8aeb20a530e124561927d3bd8&amp;id=8c3d2d214b'
 include: ["_pages"]
-permalink: /:title/
+# Produces a cleaner folder structure when using categories
+permalink: /:year/:month/:title.html
 
 # Authors
 authors:
@@ -57,7 +59,7 @@ jekyll_compose:
 
 # Plugins
 plugins:
-  - jekyll-paginate
+  - jekyll-paginate-v2
   - jekyll-sitemap
   - jekyll-feed
   - jekyll-seo-tag
@@ -92,8 +94,19 @@ jekyll-archives:
     category: '/category/:name/'
     
 # Pagination 
-paginate: 6
-paginate_path: /page:num/
+# gems:
+#   - jekyll-paginate-v2
+pagination:
+  enabled: true
+  per_page: 15
+  permalink: '/page/:num/'
+  title: ' - page :num'
+  limit: 0 # Limit how many content objects to paginate (default: 0, means all)
+  sort_field: 'date_posted'
+  sort_reverse: true
+  trail: 
+    before: 3 # The number of links before the current page
+    after: 3  # The number of links after the current page
     
 flickr:
   widths: [320, 640, 800, 1024, 1600]

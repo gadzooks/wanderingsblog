@@ -1,0 +1,91 @@
+---
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Skyline lake snowshoe
+  urlFullSize: https://live.staticflickr.com/65535/52767952937_7b6f89f8c9_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52767952937_7b6f89f8c9_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Skyline lake snowshoe
+  urlFullSize: https://live.staticflickr.com/65535/52768490871_9ebc3cf2bd_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768490871_9ebc3cf2bd_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Skyline lake snowshoe
+  urlFullSize: https://live.staticflickr.com/65535/52768490876_c913efeacb_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768490876_c913efeacb_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Skyline lake snowshoe
+  urlFullSize: https://live.staticflickr.com/65535/52768906030_8ebb13a753_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768906030_8ebb13a753_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Skyline lake snowshoe
+  urlFullSize: https://live.staticflickr.com/65535/52768979633_cb517076ba_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768979633_cb517076ba_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52767960762_c678761dd5_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52767960762_c678761dd5_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52768914225_a9608185da_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768914225_a9608185da_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52768753789_76b6e2c4ba_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768753789_76b6e2c4ba_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52768914235_d5abeafae5_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768914235_d5abeafae5_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52768753809_5b9b7c310f_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768753809_5b9b7c310f_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52768914260_a804899696_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768914260_a804899696_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52768498671_9330e87237_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768498671_9330e87237_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52768988328_08ce7e35ec_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768988328_08ce7e35ec_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52768498686_067a8c91c8_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768498686_067a8c91c8_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52767960952_f0076b871a_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52767960952_f0076b871a_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52768988428_263ea9825c_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768988428_263ea9825c_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52768914395_bd9de99518_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768914395_bd9de99518_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52768988463_0c0673d9e8_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52768988463_0c0673d9e8_s.jpg
+  thumbType: square

@@ -1,0 +1,86 @@
+---
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Spectacle Lake Backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52960544101_aed5620984_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960544101_aed5620984_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Spectacle Lake Backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52960999493_01d40c7a70_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960999493_01d40c7a70_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Spectacle Lake Backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52960544171_38f6c0af60_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960544171_38f6c0af60_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Spectacle Lake Backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52959950287_836bbba338_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52959950287_836bbba338_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Spectacle Lake Backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52960999518_0e5a813550_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960999518_0e5a813550_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Spectacle Lake Backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52960692349_18a2b47eae_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960692349_18a2b47eae_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Spectacle Lake Backpacking
+  urlFullSize: https://live.staticflickr.com/65535/52960929820_266388b6d6_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960929820_266388b6d6_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52960727659_b0e1a09707_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960727659_b0e1a09707_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52960579926_bda233d99b_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960579926_bda233d99b_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52960727724_f373a0628f_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960727724_f373a0628f_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52960580076_fa8b81e5d6_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960580076_fa8b81e5d6_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52960580291_8e2674ca42_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960580291_8e2674ca42_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52960580761_88b5ef835b_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960580761_88b5ef835b_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52960966310_254fbcd968_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960966310_254fbcd968_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52961036098_2c2f656400_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52961036098_2c2f656400_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52960581311_4be43096fb_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960581311_4be43096fb_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: ''
+  urlFullSize: https://live.staticflickr.com/65535/52960967780_39c13afc68_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52960967780_39c13afc68_s.jpg
+  thumbType: square

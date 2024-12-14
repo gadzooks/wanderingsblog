@@ -1,0 +1,96 @@
+---
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2342_3_4
+  urlFullSize: https://live.staticflickr.com/7295/12340176125_291240863b_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7295/12340176125_291240863b_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2348_49_50
+  urlFullSize: https://live.staticflickr.com/7451/12340178965_2c8369b286_h.jpg
+  urlThumbnail: https://live.staticflickr.com/7451/12340178965_4daaaa62b5_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2351_2_3
+  urlFullSize: https://live.staticflickr.com/2876/12340331533_cba07ef183_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2876/12340331533_cba07ef183_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2357_8_9
+  urlFullSize: https://live.staticflickr.com/2874/12340184655_9e492869f4_h.jpg
+  urlThumbnail: https://live.staticflickr.com/2874/12340184655_13cf4f03b7_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2360_1_2
+  urlFullSize: https://live.staticflickr.com/7337/12340336463_2aff342a4a_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7337/12340336463_2aff342a4a_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2369_70_71
+  urlFullSize: https://live.staticflickr.com/7308/12340338773_b10dedc1bd_h.jpg
+  urlThumbnail: https://live.staticflickr.com/7308/12340338773_e166fd8b05_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2372_3_4
+  urlFullSize: https://live.staticflickr.com/7408/12340191645_90602dae9e_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7408/12340191645_90602dae9e_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Untitled_Panorama4
+  urlFullSize: https://live.staticflickr.com/2851/12340194735_f93b363669_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2851/12340194735_f93b363669_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2375_6_7
+  urlFullSize: https://live.staticflickr.com/5524/12340346083_489b32ee6f_b.jpg
+  urlThumbnail: https://live.staticflickr.com/5524/12340346083_489b32ee6f_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2381_2_3
+  urlFullSize: https://live.staticflickr.com/3727/12340199115_241a0b3ba3_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3727/12340199115_241a0b3ba3_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2390_1_2
+  urlFullSize: https://live.staticflickr.com/3817/12340201515_8d9fcf579f_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3817/12340201515_8d9fcf579f_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2393_4_5
+  urlFullSize: https://live.staticflickr.com/2821/12340203425_bc7e3d903e_b.jpg
+  urlThumbnail: https://live.staticflickr.com/2821/12340203425_bc7e3d903e_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2396_7_8
+  urlFullSize: https://live.staticflickr.com/3828/12340355123_b332ffa301_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3828/12340355123_b332ffa301_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2408_09_10
+  urlFullSize: https://live.staticflickr.com/7374/12340208965_050ebc7ce3_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7374/12340208965_050ebc7ce3_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2411_2_3
+  urlFullSize: https://live.staticflickr.com/2868/12340360053_3536b6ef98_h.jpg
+  urlThumbnail: https://live.staticflickr.com/2868/12340360053_4acc77732e_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2417_8_9
+  urlFullSize: https://live.staticflickr.com/3811/12340655574_28c7a647ca_h.jpg
+  urlThumbnail: https://live.staticflickr.com/3811/12340655574_deabdc1891_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2426_7_8
+  urlFullSize: https://live.staticflickr.com/3680/12340216485_be1520dfec_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3680/12340216485_be1520dfec_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2429_30_31
+  urlFullSize: https://live.staticflickr.com/7441/12340218645_67a0d31bdd_b.jpg
+  urlThumbnail: https://live.staticflickr.com/7441/12340218645_67a0d31bdd_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: _MG_2432_3_4
+  urlFullSize: https://live.staticflickr.com/3672/12340221355_06a5dfa01f_b.jpg
+  urlThumbnail: https://live.staticflickr.com/3672/12340221355_06a5dfa01f_s.jpg
+  thumbType: square

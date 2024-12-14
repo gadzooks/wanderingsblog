@@ -1,0 +1,46 @@
+---
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Bandera mountain sunset hike with Phil
+  urlFullSize: https://live.staticflickr.com/65535/52956461930_0b8b7ec997_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52956461930_0b8b7ec997_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Bandera mountain sunset hike with Phil
+  urlFullSize: https://live.staticflickr.com/65535/52956531268_2eccf40b7d_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52956531268_2eccf40b7d_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Bandera mountain sunset hike with Phil
+  urlFullSize: https://live.staticflickr.com/65535/52956082016_5de9a32e45_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52956082016_5de9a32e45_m.jpg
+  thumbType: thumbnail
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Bandera mountain sunset hike with Phil
+  urlFullSize: https://live.staticflickr.com/65535/52956081821_b1fe2f7328_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52956081821_b1fe2f7328_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Bandera mountain sunset hike with Phil
+  urlFullSize: https://live.staticflickr.com/65535/52955482297_87c1a0111d_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52955482297_87c1a0111d_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Bandera mountain sunset hike with Phil
+  urlFullSize: https://live.staticflickr.com/65535/52955482347_8ded4c615f_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52955482347_8ded4c615f_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Bandera mountain sunset hike with Phil
+  urlFullSize: https://live.staticflickr.com/65535/52956082216_d5c132db14_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52956082216_d5c132db14_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Bandera mountain sunset hike with Phil
+  urlFullSize: https://live.staticflickr.com/65535/52956462165_0cb55ab3a5_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52956462165_0cb55ab3a5_s.jpg
+  thumbType: square
+- !ruby/object:Jekyll::FlickrPhoto
+  title: Bandera mountain sunset hike with Phil
+  urlFullSize: https://live.staticflickr.com/65535/52955482497_aa736fe872_b.jpg
+  urlThumbnail: https://live.staticflickr.com/65535/52955482497_aa736fe872_s.jpg
+  thumbType: square

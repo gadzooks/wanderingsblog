@@ -12,14 +12,19 @@ gem "jekyll", "~> 4.2.2"
 # gem 'jekyll-seo-tag'
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "minima", "~> 2.5"
+gem 'down'
+gem "ruby-openai"
+gem "colorize"
+gem 'slop'
+gem 'mongo', '~> 2'
 # If you want to use GitHub Pages, remove the "gem "jekyll"" above and
 # uncomment the line below. To upgrade, run `bundle update github-pages`.
 # gem "github-pages", group: :jekyll_plugins
 # If you have any plugins, put them here!
 group :jekyll_plugins do
+    gem 'jekyll-paginate-v2'
     gem 'jekyll-feed'
     gem 'jekyll-sitemap'
-    gem 'jekyll-paginate'
     gem 'jekyll-seo-tag'
     gem 'jekyll-archives'
     gem 'kramdown'
@@ -28,7 +33,12 @@ group :jekyll_plugins do
     gem 'jekyll-compose'
 end
 
-gem 'jekyll-flickr'
+gem 'retries', '~> 0.0.5'
+gem 'rspec'
+gem 'rake'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
+
+gem 'jekyll-flickr', git: 'https://github.com/gadzooks/jekyll-flickr.git'
 gem 'flickr'
 
 gem 'html-proofer'
